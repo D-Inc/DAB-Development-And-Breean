@@ -14,7 +14,7 @@ public class CommonProxy
     }
     public void init(FMLInitializationEvent e)
     {
-        
+        DABItems.setCreativeTab();
     }
     public void postInit(FMLPostInitializationEvent e)
     {
