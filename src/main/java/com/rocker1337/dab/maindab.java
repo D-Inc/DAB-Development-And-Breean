@@ -1,4 +1,4 @@
-package com.ninjawarrior1337.abos;
+package com.rocker1337.dab;
 
 
 import net.minecraft.client.main.Main;
