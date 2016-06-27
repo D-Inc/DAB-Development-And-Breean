@@ -43,6 +43,7 @@ public class DABItems
     public static void setCreativeTab()
     {
         pussy.setCreativeTab(tabDAB);
+        weed.setCreativeTab(tabDAB);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean") {
