@@ -12,7 +12,9 @@ public class Reference
     //Items
     public static enum DABItems
     {
-        PUSSY("pussy", "ItemPussy");
+        PUSSY("pussy", "ItemPussy"),
+        WEED("weed", "ItemWeed");
+
 
         private String unlocalizedName;
         private String registryName;
@@ -32,5 +34,6 @@ public class Reference
         {
             return unlocalizedName;
         }
+
     }
 }
