@@ -1,10 +1,9 @@
 package com.rocker1337.dab;
 
 
-import net.minecraft.client.main.Main;
+import com.rocker1337.dab.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -14,7 +13,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class maindab
 {
 
-    @SidedProxy(clientSide="com.rocker1337.dab.ClientProxy", serverSide="com.rocker1337.dab.ServerProxy")
+    @SidedProxy(clientSide="com.rocker1337.dab.proxy.ClientProxy", serverSide="com.rocker1337.dab.proxy.ServerProxy")
     public static CommonProxy proxy;
 
     @EventHandler

@@ -1,4 +1,4 @@
-package com.rocker1337.dab;
+package com.rocker1337.dab.proxy;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
