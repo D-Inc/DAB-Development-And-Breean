@@ -21,19 +21,19 @@ public class maindab
     public void preInit(FMLPreInitializationEvent e)
     {
         System.out.println("Starting Pre Init");
-        this.proxy.preInit(e);
+        proxy.preInit(e);
     }
     @EventHandler
     public void init(FMLInitializationEvent e)
     {
         System.out.println("Starting Init");
-        this.proxy.init(e);
+        proxy.init(e);
     }
     @EventHandler
     public void postInit(FMLPostInitializationEvent e)
     {
         System.out.println("Starting Post Init");
         System.out.println("9+10=21");
-        this.proxy.postInit(e);
+        proxy.postInit(e);
     }
 }
