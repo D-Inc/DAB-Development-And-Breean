@@ -15,7 +15,7 @@ public class DABItems
 {
 
     public static Item pussy;
-    public static ItemFood weed;
+    public static Item weed;
     public static Item Derek;
 
 
@@ -42,7 +42,7 @@ public class DABItems
 
     private static void  registerRender(Item item)
     {
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
     }
 
     public static void setCreativeTab()
