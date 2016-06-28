@@ -1,6 +1,5 @@
 package com.rocker1337.dab.init;
 
-import com.rocker1337.dab.Reference;
 import com.rocker1337.dab.init.items.ItemDerek;
 import com.rocker1337.dab.init.items.ItemPussy;
 import com.rocker1337.dab.init.items.FoodWeed;
@@ -8,7 +7,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemFood;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class DABItems
@@ -56,7 +54,7 @@ public class DABItems
         @Override
         public Item getTabIconItem()
         {
-            return DABItems.pussy;
+            return DABItems.weed;
         }
     };
 }
