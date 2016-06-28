@@ -1,6 +1,7 @@
 package com.rocker1337.dab.init;
 
 import com.rocker1337.dab.Reference;
+import com.rocker1337.dab.init.items.ItemDerek;
 import com.rocker1337.dab.init.items.ItemPussy;
 import com.rocker1337.dab.init.items.ItemWeed;
 import net.minecraft.client.Minecraft;
@@ -15,24 +16,28 @@ public class DABItems
 
     public static Item pussy;
     public static Item weed;
+    public static Item Derek;
 
 
     public static void init()
     {
         pussy = new ItemPussy();
         weed = new ItemWeed();
+        Derek = new ItemDerek();
     }
 
     public static void register()
     {
         GameRegistry.register(pussy);
         GameRegistry.register(weed);
+        GameRegistry.register(Derek);
     }
 
     public static void registerRenders()
     {
         registerRender(pussy);
         registerRender(weed);
+        registerRender(Derek);
     }
 
     private static void  registerRender(Item item)
@@ -44,6 +49,7 @@ public class DABItems
     {
         pussy.setCreativeTab(tabDAB);
         weed.setCreativeTab(tabDAB);
+        Derek.setCreativeTab(tabDAB);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean") {

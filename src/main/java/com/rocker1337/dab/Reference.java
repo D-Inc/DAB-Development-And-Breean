@@ -13,7 +13,8 @@ public class Reference
     public static enum DABItems
     {
         PUSSY("pussy", "ItemPussy"),
-        WEED("weed", "ItemWeed");
+        WEED("weed", "ItemWeed"),
+        DEREK("Derek", "ItemDerek");
 
 
         private String unlocalizedName;
