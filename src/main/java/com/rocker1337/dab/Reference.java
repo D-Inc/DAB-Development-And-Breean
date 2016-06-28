@@ -1,12 +1,10 @@
 package com.rocker1337.dab;
 
-import com.rocker1337.dab.init.items.FoodWeed;
-
 public class Reference
 {
     public static final String MODID = "dab";
     public static final String MODNAME = "DAB (Development and Breean)";
-    public static final String VERSION = "0.1";
+    public static final String VERSION = "0.11";
     
     //Items
     public static enum DABItems
