@@ -22,7 +22,7 @@ public class DABItems
     public static void init()
     {
         pussy = new ItemPussy();
-        weed = new FoodWeed(1, 0.3F, true);
+        weed = new FoodWeed(1, 0.3F, true).setAlwaysEdible();
         Derek = new ItemDerek();
     }
 
