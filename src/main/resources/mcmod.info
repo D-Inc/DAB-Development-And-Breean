@@ -3,7 +3,7 @@
   "modid": "dab",
   "name": "Development and Breean",
   "description": "Colab Mod",
-  "version": "0.11",
+  "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
