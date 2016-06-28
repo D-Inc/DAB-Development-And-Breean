@@ -10,5 +10,6 @@ public class DABCrafting
     public static void initCrafting()
     {
         GameRegistry.addSmelting(Items.WHEAT_SEEDS, new ItemStack(DABItems.weed, 1, 0), 1000.0F);
+        1
     }
 }
