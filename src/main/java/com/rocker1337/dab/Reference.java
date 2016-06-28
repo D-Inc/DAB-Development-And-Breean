@@ -1,5 +1,7 @@
 package com.rocker1337.dab;
 
+import com.rocker1337.dab.init.items.FoodWeed;
+
 public class Reference
 {
     public static final String MODID = "dab";
@@ -10,8 +12,8 @@ public class Reference
     public static enum DABItems
     {
         PUSSY("pussy", "ItemPussy"),
-        WEED("weed", "ItemWeed"),
-        DEREK("Derek", "ItemDerek");
+        DEREK("Derek", "ItemDerek"),
+        WEED("weed", "FoodWeed");
 
 
         private String unlocalizedName;
