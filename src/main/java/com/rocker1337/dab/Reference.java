@@ -11,7 +11,8 @@ public class Reference
     {
         PUSSY("pussy", "ItemPussy"),
         DEREK("Derek", "ItemDerek"),
-        WEED("weed", "FoodWeed");
+        WEED("weed", "FoodWeed"),
+        LAUSD("LAUSD", "ItemLAUSD");
 
 
         private String unlocalizedName;
