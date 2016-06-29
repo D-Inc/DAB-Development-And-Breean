@@ -22,7 +22,7 @@ plugins {
 */
 version = "0.1"
 group= "com.rocker1337.dab" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "DAB"
+archivesBaseName = "dab"
 
 minecraft {
     version = "1.10-12.18.0.2000-1.10.0"
