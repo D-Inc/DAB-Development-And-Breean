@@ -1,8 +1,5 @@
 package com.rocker1337.dab.init.items;
 
-/**
- * Created by troth on 6/29/2016.
- */
 public class ItemSetNames
 {
     //Items
