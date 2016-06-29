@@ -5,10 +5,10 @@ public class ItemSetNames
     //Items
     public static enum DABItems
     {
-        PUSSY("pussy", "ItemPussy"),
-        DEREK("Derek", "ItemDerek"),
-        WEED("weed", "FoodWeed"),
-        LAUSD("LAUSD", "ItemLAUSD");
+        PUSSY("pussy", "pussy"),
+        DEREK("Derek", "derek"),
+        WEED("weed", "weed"),
+        LAUSD("LAUSD", "LAUSD");
 
 
         private String unlocalizedName;

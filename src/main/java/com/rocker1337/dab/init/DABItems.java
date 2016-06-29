@@ -1,14 +1,13 @@
 package com.rocker1337.dab.init;
 
-import com.rocker1337.dab.init.items.ItemDerek;
-import com.rocker1337.dab.init.items.ItemLAUSD;
-import com.rocker1337.dab.init.items.ItemPussy;
-import com.rocker1337.dab.init.items.FoodWeed;
+import com.rocker1337.dab.init.items.derek;
+import com.rocker1337.dab.init.items.LAUSD;
+import com.rocker1337.dab.init.items.pussy;
+import com.rocker1337.dab.init.items.weed;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class DABItems
@@ -22,10 +21,10 @@ public class DABItems
 
     public static void init()
     {
-        pussy = new ItemPussy();
-        weed = new FoodWeed(1, 0.3F, true).setAlwaysEdible().setMaxStackSize(16);
-        Derek = new ItemDerek();
-        LAUSD = new ItemLAUSD().setMaxStackSize(1).setMaxDamage(21);
+        pussy = new pussy();
+        weed = new weed(1, 0.3F, true).setAlwaysEdible().setMaxStackSize(16);
+        Derek = new derek();
+        LAUSD = new LAUSD().setMaxStackSize(1).setMaxDamage(21);
     }
 
     public static void register()
