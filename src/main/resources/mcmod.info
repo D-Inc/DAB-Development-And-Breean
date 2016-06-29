@@ -1,7 +1,7 @@
 [
 {
   "modid": "dab",
-  "name": "Development and Breean",
+  "name": "DAB (Development and Breean)",
   "description": "Colab Mod",
   "version": "${version}",
   "mcversion": "${mcversion}",
