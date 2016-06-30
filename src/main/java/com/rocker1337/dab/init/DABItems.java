@@ -1,9 +1,6 @@
 package com.rocker1337.dab.init;
 
-import com.rocker1337.dab.init.items.derek;
-import com.rocker1337.dab.init.items.LAUSD;
-import com.rocker1337.dab.init.items.pussy;
-import com.rocker1337.dab.init.items.weed;
+import com.rocker1337.dab.init.items.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -17,6 +14,7 @@ public class DABItems
     public static Item weed;
     public static Item Derek;
     public static Item LAUSD;
+    public static Item bobatea;
 
 
     public static void init()
@@ -25,6 +23,7 @@ public class DABItems
         weed = new weed(1, 0.3F, true).setAlwaysEdible().setMaxStackSize(16);
         Derek = new derek();
         LAUSD = new LAUSD().setMaxStackSize(1).setMaxDamage(21);
+        bobatea = new bobatea(20, 5.0F, true).setAlwaysEdible();
     }
 
     public static void register()
@@ -33,14 +32,16 @@ public class DABItems
         GameRegistry.register(weed);
         GameRegistry.register(Derek);
         GameRegistry.register(LAUSD);
+        GameRegistry.register(bobatea);
     }
 
     public static void registerRenders()
     {
-        registerRender(pussy);
         registerRender(weed);
+        registerRender(pussy);
         registerRender(Derek);
         registerRender(LAUSD);
+        registerRender(bobatea);
     }
 
     private static void  registerRender(Item item)
@@ -50,10 +51,11 @@ public class DABItems
 
     public static void setCreativeTab()
     {
-        pussy.setCreativeTab(tabDAB);
         weed.setCreativeTab(tabDAB);
+        pussy.setCreativeTab(tabDAB);
         Derek.setCreativeTab(tabDAB);
         LAUSD.setCreativeTab(tabDAB);
+        bobatea.setCreativeTab(tabDAB);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean") {

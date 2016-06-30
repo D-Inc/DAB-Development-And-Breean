@@ -8,7 +8,8 @@ public class ItemSetNames
         PUSSY("pussy", "pussy"),
         DEREK("Derek", "derek"),
         WEED("weed", "weed"),
-        LAUSD("LAUSD", "LAUSD");
+        LAUSD("LAUSD", "LAUSD"),
+        BOBATEA("bobatea", "bobatea");
 
 
         private String unlocalizedName;
