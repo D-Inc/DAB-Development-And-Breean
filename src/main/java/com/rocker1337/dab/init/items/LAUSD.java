@@ -19,7 +19,7 @@ public class LAUSD extends Item
         setRegistryName(ItemSetNames.DABItems.LAUSD.getRegistryName());
 
         maxStackSize = 1;
-        setMaxDamage(10);
+        setMaxDamage(20);
 
 
 
