@@ -22,7 +22,7 @@ public class DABItems
         pussy = new pussy();
         weed = new weed(1, 0.3F, true).setAlwaysEdible().setMaxStackSize(16);
         Derek = new derek();
-        LAUSD = new LAUSD().setMaxStackSize(1).setMaxDamage(21);
+        LAUSD = new LAUSD();
         bobatea = new bobatea(20, 5.0F, true).setAlwaysEdible();
     }
 
