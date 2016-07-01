@@ -20,7 +20,6 @@ public class CommonProxy
         DABItems.setCreativeTab();
         DABCrafting.initCrafting();
         GameRegistry.registerWorldGenerator(new DabWorldGen(), 0);
-
     }
     public void postInit(FMLPostInitializationEvent e)
     {
