@@ -1,7 +1,10 @@
 package com.rocker1337.dab;
 
 
+import com.rocker1337.dab.events.StrengthSword;
 import com.rocker1337.dab.proxy.CommonProxy;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -25,6 +28,7 @@ public class maindab
     @EventHandler
     public void init(FMLInitializationEvent e)
     {
+        MinecraftForge.EVENT_BUS.register(new StrengthSword());
         System.out.println("Starting Init");
         proxy.init(e);
     }

@@ -34,7 +34,6 @@ public class LAUSD extends Item
         playerIn.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation("hunger"), 525, 2));
         playerIn.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation("levitation"), 525, 4));
         worldIn.spawnEntityInWorld(new EntityTNTPrimed(worldIn, playerIn.posX, playerIn.posY, playerIn.posZ, playerIn));
-        playerIn.addVelocity(playerIn.posX, playerIn.posY+10, playerIn.posZ);
 
         itemStackIn.damageItem(1, playerIn);
 
