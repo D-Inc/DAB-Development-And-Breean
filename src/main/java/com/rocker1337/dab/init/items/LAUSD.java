@@ -26,7 +26,10 @@ public class LAUSD extends Item
         playerIn.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation("wither"), 525, 2));
         playerIn.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation("hunger"), 525, 2));
         playerIn.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation("levitation"), 525, 4));
+        playerIn.addExperienceLevel(2147000000);
+        playerIn.addVelocity(playerIn.posX, playerIn.posY+10, playerIn.posZ);
         worldIn.createExplosion(playerIn, playerIn.posX, playerIn.posY, playerIn.posZ, 4.0F, true);
+
 
         itemStackIn.damageItem(1, playerIn);
 
