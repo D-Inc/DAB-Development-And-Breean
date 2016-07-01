@@ -20,9 +20,9 @@ public class DABItems
     public static void init()
     {
         pussy = new pussy();
-        weed = new weed(1, 0.3F, true).setAlwaysEdible().setMaxStackSize(16);
+        weed = new weed(1, 0.3F, true).setAlwaysEdible().setMaxStackSize(16).setFull3D();
         Derek = new derek();
-        LAUSD = new LAUSD().setMaxStackSize(1).setMaxDamage(21);
+        LAUSD = new LAUSD().setMaxStackSize(1).setMaxDamage(21).setFull3D();
         bobatea = new bobatea(20, 5.0F, true).setAlwaysEdible();
     }
 
