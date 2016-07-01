@@ -9,5 +9,9 @@ public class weed extends ItemFood
         super(amount, saturation, isWolfFood);
         setUnlocalizedName(ItemSetNames.DABItems.WEED.getUnlocalizedName());
         setRegistryName(ItemSetNames.DABItems.WEED.getRegistryName());
+
+        setAlwaysEdible();
+        setMaxStackSize(64);
+
     }
 }
