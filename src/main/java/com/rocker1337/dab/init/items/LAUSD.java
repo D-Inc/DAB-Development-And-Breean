@@ -17,13 +17,6 @@ public class LAUSD extends Item
     {
         setUnlocalizedName(ItemSetNames.DABItems.LAUSD.getUnlocalizedName());
         setRegistryName(ItemSetNames.DABItems.LAUSD.getRegistryName());
-
-        maxStackSize = 1;
-        setMaxDamage(20);
-
-
-
-
     }
 
     @Override
