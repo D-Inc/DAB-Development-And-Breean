@@ -15,6 +15,8 @@ public class DABItems
     public static Item Derek;
     public static Item LAUSD;
     public static Item bobatea;
+    public static Item LessFlight;
+    public static Item GreatFlight;
 
 
     public static void init()
@@ -24,6 +26,8 @@ public class DABItems
         Derek = new derek();
         LAUSD = new LAUSD().setFull3D();
         bobatea = new bobatea(20, 5.0F, true);
+        LessFlight = new LessFlight();
+        GreatFlight = new GreatFlight();
     }
 
     public static void register()
@@ -33,6 +37,8 @@ public class DABItems
         GameRegistry.register(Derek);
         GameRegistry.register(LAUSD);
         GameRegistry.register(bobatea);
+        GameRegistry.register(LessFlight);
+        GameRegistry.register(GreatFlight);
     }
 
     public static void registerRenders()
@@ -42,6 +48,8 @@ public class DABItems
         registerRender(Derek);
         registerRender(LAUSD);
         registerRender(bobatea);
+        registerRender(LessFlight);
+        registerRender(GreatFlight);
     }
 
     private static void  registerRender(Item item)
@@ -56,6 +64,8 @@ public class DABItems
         Derek.setCreativeTab(tabDAB);
         LAUSD.setCreativeTab(tabDAB);
         bobatea.setCreativeTab(tabDAB);
+        LessFlight.setCreativeTab(tabDAB);
+        GreatFlight.setCreativeTab(tabDAB);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean") {

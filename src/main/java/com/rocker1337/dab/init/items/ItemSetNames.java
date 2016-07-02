@@ -9,7 +9,9 @@ public class ItemSetNames
         DEREK("Derek", "derek"),
         WEED("weed", "weed"),
         LAUSD("LAUSD", "LAUSD"),
-        BOBATEA("bobatea", "bobatea");
+        BOBATEA("bobatea", "bobatea"),
+        LESSFLIGHT("lessflight", "lessflight"),
+        GREATFLIGHT("greatflight", "greatflight");
 
 
         private String unlocalizedName;
