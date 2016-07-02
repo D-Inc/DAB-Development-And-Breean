@@ -17,7 +17,8 @@ public class FlyingArrow {
         if (event.getEntity() instanceof EntityPlayer){
             EntityPlayer player = (EntityPlayer) event.getEntity();
             ItemStack heldItem = player.getHeldItemMainhand();
-            if (heldItem != null && heldItem == new ItemStack(Items.ARROW)) {
+
+            if (heldItem != null && heldItem.getItem() == Items.ARROW) {
                 player.capabilities.allowFlying = true;
             }
             else {
