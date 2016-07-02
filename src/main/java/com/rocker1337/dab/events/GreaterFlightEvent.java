@@ -16,8 +16,6 @@ public class GreaterFlightEvent {
             EntityPlayer entity = (EntityPlayer) event.getEntity();
             if (entity.inventory.hasItemStack(new ItemStack(DABItems.GreatFlight))) {
                 entity.capabilities.allowFlying = true;
-            } else {
-                entity.capabilities.allowFlying = entity.capabilities.isCreativeMode ? true : false;
             }
         }
     }
