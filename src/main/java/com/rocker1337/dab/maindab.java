@@ -1,6 +1,5 @@
 package com.rocker1337.dab;
 
-
 import com.rocker1337.dab.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
