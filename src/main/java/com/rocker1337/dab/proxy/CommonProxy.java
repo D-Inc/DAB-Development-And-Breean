@@ -1,6 +1,6 @@
 package com.rocker1337.dab.proxy;
 
-import com.rocker1337.dab.events.FlyingArrow;
+import com.rocker1337.dab.events.LessFlightEvent;
 import com.rocker1337.dab.events.StrengthSword;
 import com.rocker1337.dab.init.DABItems;
 import com.rocker1337.dab.init.crafting.DABCrafting;
@@ -25,7 +25,7 @@ public class CommonProxy
         DABItems.setCreativeTab();
         DABCrafting.initCrafting();
         GameRegistry.registerWorldGenerator(new DabWorldGen(), 0);
-        MinecraftForge.EVENT_BUS.register(new FlyingArrow());
+        MinecraftForge.EVENT_BUS.register(new LessFlightEvent());
         MinecraftForge.EVENT_BUS.register(new StrengthSword());
     }
     public void postInit(FMLPostInitializationEvent e)
