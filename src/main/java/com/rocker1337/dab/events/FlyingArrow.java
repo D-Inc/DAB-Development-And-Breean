@@ -13,22 +13,17 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class FlyingArrow
 {
     @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
-    public void onEvent(LivingEvent.LivingUpdateEvent event)
-    {
+    public void onEvent(LivingEvent.LivingUpdateEvent event) {
         event.getEntity();
-        if (event.getEntity() instanceof EntityPlayer){
+        if (event.getEntity() instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer) event.getEntity();
             ItemStack heldItem = player.getHeldItemMainhand();
 
-            if (heldItem != null && heldItem.getItem() == Items.ARROW)
-            {
+            if (heldItem != null && heldItem.getItem() == Items.ARROW) {
                 player.capabilities.allowFlying = true;
-            }
-            else
-            {
+            } else {
                 player.capabilities.allowFlying = player.capabilities.isCreativeMode ? true : false;
             }
         }
-
     }
 }
