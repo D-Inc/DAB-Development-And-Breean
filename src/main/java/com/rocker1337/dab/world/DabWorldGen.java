@@ -25,16 +25,18 @@ public class DabWorldGen implements IWorldGenerator {
 
                 break;
             case -1: //Nether
-
+                this.runGenerator(netherGoldGenerator, world, random, chunkX, chunkZ, 20, 0, 120);
                 break;
         }
 
     }
 
     public WorldGenerator diamondGenerator;
+    public WorldGenerator netherGoldGenerator;
 
     public DabWorldGen() {
-        diamondGenerator = new WorldGenMinable(Blocks.DIAMOND_BLOCK.getDefaultState(), 8);
+        diamondGenerator = new WorldGenMinable(Blocks.DIAMOND_BLOCK.getDefaultState(), 2);
+        netherGoldGenerator = new WorldGenMinable(Blocks.GOLD_BLOCK.getDefaultState(), 2);
 
     }
 

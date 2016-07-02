@@ -23,22 +23,16 @@ public class maindab
     @EventHandler
     public void preInit(FMLPreInitializationEvent e)
     {
-        System.out.println("Starting Pre Init");
         proxy.preInit(e);
     }
     @EventHandler
     public void init(FMLInitializationEvent e)
     {
-        MinecraftForge.EVENT_BUS.register(new FlyingArrow());
-        MinecraftForge.EVENT_BUS.register(new StrengthSword());
-        System.out.println("Starting Init");
         proxy.init(e);
     }
     @EventHandler
     public void postInit(FMLPostInitializationEvent e)
     {
-        System.out.println("Starting Post Init");
-        System.out.println("9+10=21");
         proxy.postInit(e);
     }
 }
