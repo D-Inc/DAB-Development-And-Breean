@@ -14,9 +14,11 @@ import java.util.Random;
 /**
  * Created by Rocker545 on 7/1/2016.
  */
-public class DabWorldGen implements IWorldGenerator {
+public class DabWorldGen implements IWorldGenerator
+{
     @Override
-    public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
+    public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
+    {
         switch(world.provider.getDimension()) {
             case 0: //Overworld Dimension
                 this.runGenerator(diamondGenerator, world, random, chunkX, chunkZ, 20, 0, 80);
@@ -34,13 +36,15 @@ public class DabWorldGen implements IWorldGenerator {
     public WorldGenerator diamondGenerator;
     public WorldGenerator netherGoldGenerator;
 
-    public DabWorldGen() {
+    public DabWorldGen()
+    {
         diamondGenerator = new WorldGenMinable(Blocks.DIAMOND_BLOCK.getDefaultState(), 2);
         netherGoldGenerator = new WorldGenMinable(Blocks.GOLD_BLOCK.getDefaultState(), 2);
 
     }
 
-    private void runGenerator(WorldGenerator generator, World world, Random rand, int chunk_X, int chunk_Z, int chancesToSpawn, int minHeight, int maxHeight) {
+    private void runGenerator(WorldGenerator generator, World world, Random rand, int chunk_X, int chunk_Z, int chancesToSpawn, int minHeight, int maxHeight)
+    {
         if (minHeight < 0 || maxHeight > 256 || minHeight > maxHeight)
             throw new IllegalArgumentException("Illegal Height Arguments for WorldGenerator");
 
