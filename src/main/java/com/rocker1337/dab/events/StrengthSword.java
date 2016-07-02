@@ -15,9 +15,9 @@ public class StrengthSword {
     public void onEvent(LivingEvent.LivingUpdateEvent event) {
         if (event.getEntity() instanceof EntityPlayer) {
             EntityPlayer entity = (EntityPlayer) event.getEntity();
-            if (entity.inventory.hasItemStack(new ItemStack(Items.DIAMOND_SWORD))) {
-                entity.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation("strength"), 100, 2));
-                System.out.println(entity.getHeldItemMainhand());
+            ItemStack heldItem = entity.getHeldItemMainhand();
+            if (heldItem != null && heldItem.getItem() == Items.DIAMOND_SWORD) {
+                entity.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation("strength"), 25, 2));
             }
         }
     }
