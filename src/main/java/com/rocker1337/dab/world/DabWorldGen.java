@@ -19,7 +19,8 @@ public class DabWorldGen implements IWorldGenerator
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
     {
-        switch(world.provider.getDimension()) {
+        switch(world.provider.getDimension())
+        {
             case 0: //Overworld Dimension
                 this.runGenerator(diamondGenerator, world, random, chunkX, chunkZ, 20, 0, 80);
                 break;
