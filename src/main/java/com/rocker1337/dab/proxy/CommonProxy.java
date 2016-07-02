@@ -1,5 +1,6 @@
 package com.rocker1337.dab.proxy;
 
+import com.rocker1337.dab.events.GreaterFlightEvent;
 import com.rocker1337.dab.events.LessFlightEvent;
 import com.rocker1337.dab.events.StrengthSword;
 import com.rocker1337.dab.init.DABItems;
@@ -27,6 +28,7 @@ public class CommonProxy
         GameRegistry.registerWorldGenerator(new DabWorldGen(), 0);
         MinecraftForge.EVENT_BUS.register(new LessFlightEvent());
         MinecraftForge.EVENT_BUS.register(new StrengthSword());
+        MinecraftForge.EVENT_BUS.register(new GreaterFlightEvent());
     }
     public void postInit(FMLPostInitializationEvent e)
     {
