@@ -1,5 +1,6 @@
 package com.rocker1337.dab.events;
 
+import com.rocker1337.dab.init.DABItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -19,7 +20,7 @@ public class FlyingArrow
             EntityPlayer player = (EntityPlayer) event.getEntity();
             ItemStack heldItem = player.getHeldItemMainhand();
 
-            if (heldItem != null && heldItem.getItem() == Items.ARROW) {
+            if (heldItem != null && heldItem.getItem() == DABItems.LessFlight) {
                 player.capabilities.allowFlying = true;
             } else {
                 player.capabilities.allowFlying = player.capabilities.isCreativeMode ? true : false;
