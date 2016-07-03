@@ -21,7 +21,16 @@ public class GreaterFlightEvent
             {
                 entity.capabilities.allowFlying = true;
             }
+            else
+            {
+                entity.capabilities.isFlying = false;
+                entity.capabilities.allowFlying = false;
 
+            }
+            if (entity.isCreative())
+            {
+                entity.capabilities.allowFlying = true;
+            }
         }
     }
 }
