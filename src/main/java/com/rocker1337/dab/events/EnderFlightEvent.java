@@ -1,7 +1,9 @@
 package com.rocker1337.dab.events;
 
 import com.rocker1337.dab.init.DABItems;
+import com.rocker1337.dab.init.items.EnderFlight;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
@@ -16,7 +18,10 @@ public class EnderFlightEvent
             if (event.getEntity() instanceof EntityPlayer)
             {
                 EntityPlayer entity = (EntityPlayer) event.getEntity();
-                if (entity.getInventoryEnderChest().getStackInSlot(0) == new ItemStack(DABItems.EnderFlight, 1, 0))
+                ItemStack enderflight = new ItemStack(DABItems.EnderFlight);
+                ItemStack enderchest = entity.getInventoryEnderChest().getStackInSlot(0);
+
+                if (enderchest != null && enderchest == new ItemStack(DABItems.EnderFlight))
                 {
                     entity.capabilities.allowFlying = true;
                 }

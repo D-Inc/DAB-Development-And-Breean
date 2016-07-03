@@ -25,10 +25,7 @@ public class LessFlightEvent
             if (heldItem != null && heldItem.getItem() == DABItems.LessFlight)
             {
                 player.capabilities.allowFlying = true;
-            }
-            else
-            {
-                player.capabilities.allowFlying = player.capabilities.isCreativeMode ? true : false;
+
             }
         }
     }

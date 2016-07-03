@@ -27,10 +27,6 @@ public class GreaterFlightEvent
                 entity.capabilities.allowFlying = false;
 
             }
-            if (entity.isCreative())
-            {
-                entity.capabilities.allowFlying = true;
-            }
         }
     }
 }
