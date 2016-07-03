@@ -17,6 +17,7 @@ public class DABItems
     public static Item bobatea;
     public static Item LessFlight;
     public static Item GreatFlight;
+    public static Item EnderFlight;
 
 
     public static void init()
@@ -28,6 +29,7 @@ public class DABItems
         bobatea = new bobatea(20, 5.0F, true);
         LessFlight = new LessFlight();
         GreatFlight = new GreatFlight();
+        EnderFlight = new EnderFlight();
     }
 
     public static void register()
@@ -39,6 +41,7 @@ public class DABItems
         GameRegistry.register(bobatea);
         GameRegistry.register(LessFlight);
         GameRegistry.register(GreatFlight);
+        GameRegistry.register(EnderFlight);
     }
 
     public static void registerRenders()
@@ -50,6 +53,7 @@ public class DABItems
         registerRender(bobatea);
         registerRender(LessFlight);
         registerRender(GreatFlight);
+        registerRender(EnderFlight);
     }
 
     private static void  registerRender(Item item)
@@ -66,6 +70,7 @@ public class DABItems
         bobatea.setCreativeTab(tabDAB);
         LessFlight.setCreativeTab(tabDAB);
         GreatFlight.setCreativeTab(tabDAB);
+        EnderFlight.setCreativeTab(tabDAB);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean") {

@@ -1,5 +1,6 @@
 package com.rocker1337.dab.proxy;
 
+import com.rocker1337.dab.events.EnderFlightEvent;
 import com.rocker1337.dab.events.GreaterFlightEvent;
 import com.rocker1337.dab.events.LessFlightEvent;
 import com.rocker1337.dab.events.StrengthSword;
@@ -29,6 +30,7 @@ public class CommonProxy
         MinecraftForge.EVENT_BUS.register(new LessFlightEvent());
         MinecraftForge.EVENT_BUS.register(new StrengthSword());
         MinecraftForge.EVENT_BUS.register(new GreaterFlightEvent());
+        MinecraftForge.EVENT_BUS.register(new EnderFlightEvent());
     }
     public void postInit(FMLPostInitializationEvent e)
     {
