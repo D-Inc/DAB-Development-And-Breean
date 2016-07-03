@@ -1,10 +1,7 @@
 package com.rocker1337.dab.init.items;
 
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -16,10 +13,12 @@ public class LessFlight extends Item
     {
         setUnlocalizedName(ItemSetNames.DABItems.LESSFLIGHT.getUnlocalizedName());
         setRegistryName(ItemSetNames.DABItems.LESSFLIGHT.getRegistryName());
+        this.setMaxStackSize(1);
     }
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack Item, List<String> tooltip, boolean advanced){
-        tooltip.add("Lesser Flight");
+    public void addInformation(ItemStack Item, List toolTip, boolean advanced)
+    {
+        toolTip.add("Lesser Flight");
 
     }
 }

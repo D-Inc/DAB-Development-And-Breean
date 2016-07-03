@@ -8,5 +8,6 @@ public class GreatFlight extends Item
     {
         setUnlocalizedName(ItemSetNames.DABItems.GREATFLIGHT.getUnlocalizedName());
         setRegistryName(ItemSetNames.DABItems.GREATFLIGHT.getRegistryName());
+        this.setMaxStackSize(1);
     }
 }
