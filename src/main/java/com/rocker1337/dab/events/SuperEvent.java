@@ -23,7 +23,7 @@ public class SuperEvent {
         if (event.getEntity() instanceof EntityPlayer) {
             player = (EntityPlayer) event.getEntity();
             ItemStack heldItem = player.getHeldItemMainhand();
-
+            // LessFlightEvent
             if (heldItem != null && heldItem.getItem() == DABItems.LessFlight) {
                 player.capabilities.allowFlying = true;
                 hasLessFlight = true;
@@ -31,13 +31,14 @@ public class SuperEvent {
                 hasLessFlight = false;
             }
 
-
+            // GreaterFlightEvent
             if (player.inventory.hasItemStack(new ItemStack(DABItems.GreatFlight))) {
                 player.capabilities.allowFlying = true;
                 hasGreatFlight = true;
             } else {
                 hasGreatFlight = false;
             }
+            // Disable flight if they don't have Greater or Lesser Flight ring and if they aren't in creative.
             if (hasGreatFlight == false & hasLessFlight == false & player.capabilities.isCreativeMode == false) {
                 player.capabilities.isFlying = false;
                 player.capabilities.allowFlying = false;
