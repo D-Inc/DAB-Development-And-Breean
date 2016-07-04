@@ -23,7 +23,7 @@ public class DisableWeather {
             worldInfo.setCleanWeatherTime(1);
             worldInfo.setRaining(false);
             worldInfo.setThundering(false);
-        }
+       }
 
     }
 

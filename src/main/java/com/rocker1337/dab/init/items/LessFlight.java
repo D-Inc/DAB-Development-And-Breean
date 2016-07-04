@@ -16,9 +16,10 @@ public class LessFlight extends Item
         this.setMaxStackSize(1);
     }
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack Item, List toolTip, boolean advanced)
+    public void addInformation(ItemStack Item, List<String> toolTip, boolean advanced)
     {
-        toolTip.add("Lesser Flight");
+        toolTip.add("Much Weak Much Wow");
+
 
     }
 }
