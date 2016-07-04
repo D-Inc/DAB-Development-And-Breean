@@ -43,6 +43,10 @@ public class SuperEvent {
                 player.capabilities.isFlying = false;
                 player.capabilities.allowFlying = false;
             }
+            if (player.getInventoryEnderChest().getStackInSlot(0) != null && player.getInventoryEnderChest().getStackInSlot(0).getItem() == DABItems.EnderFlight)
+            {
+                player.capabilities.allowFlying = true;
+            }
         }
     }
 }

@@ -26,6 +26,8 @@ public class CommonProxy
         GameRegistry.registerWorldGenerator(new DabWorldGen(), 0);
         MinecraftForge.EVENT_BUS.register(new StrengthSword());
         MinecraftForge.EVENT_BUS.register(new SuperEvent());
+        MinecraftForge.EVENT_BUS.register(new Gamerules());
+        MinecraftForge.EVENT_BUS.register(new DisableWeather());
     }
     public void postInit(FMLPostInitializationEvent e)
     {
