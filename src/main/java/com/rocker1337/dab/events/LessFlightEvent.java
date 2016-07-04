@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 /**
- * Created by Rocker545 on 7/1/2016.
+ * This class is useless. Do NOT Edit.
  */
 public class LessFlightEvent
 {

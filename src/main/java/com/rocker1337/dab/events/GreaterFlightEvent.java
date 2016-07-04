@@ -7,7 +7,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 /**
- * Created by drkpa on 7/2/2016.
+ * This class is useless. Do NOT Edit.
  */
 public class GreaterFlightEvent
 {
