@@ -26,6 +26,6 @@ public class weed extends ItemFood
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced)
     {
-        toolTip.add(ChatFormatting.GREEN + "Do not consume if not in Colorado");
+        toolTip.add(ChatFormatting.DARK_GREEN + "Do not consume if not in Colorado");
     }
 }

@@ -16,6 +16,7 @@ public class SuperEvent {
     static EntityPlayer player;
     static boolean hasLessFlight;
     static boolean hasGreatFlight;
+    static boolean hasEnderFlight;
 
     @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
     public void onEvent(LivingEvent.LivingUpdateEvent event) {
@@ -38,15 +39,22 @@ public class SuperEvent {
             } else {
                 hasGreatFlight = false;
             }
-            // Disable flight if they don't have Greater or Lesser Flight ring and if they aren't in creative.
-            if (hasGreatFlight == false & hasLessFlight == false & player.capabilities.isCreativeMode == false) {
-                player.capabilities.isFlying = false;
-                player.capabilities.allowFlying = false;
-            }
+            // EnderFlightEvent
             if (player.getInventoryEnderChest().getStackInSlot(0) != null && player.getInventoryEnderChest().getStackInSlot(0).getItem() == DABItems.EnderFlight)
             {
                 player.capabilities.allowFlying = true;
+                hasEnderFlight = true;
             }
+            else
+            {
+                hasEnderFlight = false;
+            }
+            // Disable flight if they don't have Greater or Lesser Flight or EnderFlight ring and if they aren't in creative.
+            if (hasGreatFlight == false & hasLessFlight == false &  player.capabilities.isCreativeMode == false) {
+                player.capabilities.isFlying = false;
+                player.capabilities.allowFlying = false;
+            }
+
         }
     }
 }
