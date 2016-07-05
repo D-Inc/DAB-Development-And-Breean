@@ -9,8 +9,8 @@ public class bobatea extends ItemFood
     public bobatea(int amount, float saturation, boolean isWolfFood)
     {
         super(amount, saturation, isWolfFood);
-        setUnlocalizedName(ItemSetNames.DABItems.BOBATEA.getUnlocalizedName());
-        setRegistryName(ItemSetNames.DABItems.BOBATEA.getRegistryName());
+        setUnlocalizedName(SetItemNames.DABItems.BOBATEA.getUnlocalizedName());
+        setRegistryName(SetItemNames.DABItems.BOBATEA.getRegistryName());
 
         setAlwaysEdible();
     }

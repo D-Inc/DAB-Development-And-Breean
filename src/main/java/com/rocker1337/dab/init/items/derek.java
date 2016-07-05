@@ -6,7 +6,7 @@ public class derek extends Item
 {
     public derek()
     {
-        setUnlocalizedName(ItemSetNames.DABItems.DEREK.getUnlocalizedName());
-        setRegistryName(ItemSetNames.DABItems.DEREK.getRegistryName());
+        setUnlocalizedName(SetItemNames.DABItems.DEREK.getUnlocalizedName());
+        setRegistryName(SetItemNames.DABItems.DEREK.getRegistryName());
     }
 }

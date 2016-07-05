@@ -1,4 +1,4 @@
-item.pussy.name=Pussy
+item.jenna.name=Jenna
 item.weed.name=Weed/Hemp
 itemGroup.Development and Breean=Development and Breean
 item.Derek.name=Derek
@@ -7,3 +7,5 @@ item.bobatea.name=Boba Tea
 item.GreatFlight.name=Greater Flight Ring
 item.LessFlight.name=Lesser Flight Ring
 item.EnderFlight.name=Ender Flight Ring
+
+tile.bell.name=Bell

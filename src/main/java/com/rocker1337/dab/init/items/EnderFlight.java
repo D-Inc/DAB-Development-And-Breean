@@ -9,8 +9,8 @@ public class EnderFlight extends Item
 {
     public EnderFlight()
     {
-        setUnlocalizedName(ItemSetNames.DABItems.ENDERFLIGHT.getUnlocalizedName());
-        setRegistryName(ItemSetNames.DABItems.ENDERFLIGHT.getRegistryName());
+        setUnlocalizedName(SetItemNames.DABItems.ENDERFLIGHT.getUnlocalizedName());
+        setRegistryName(SetItemNames.DABItems.ENDERFLIGHT.getRegistryName());
         this.setMaxStackSize(1);
     }
 }

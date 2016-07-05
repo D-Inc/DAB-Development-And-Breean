@@ -1,11 +1,11 @@
 package com.rocker1337.dab.init.items;
 
-public class ItemSetNames
+public class SetItemNames
 {
     //Items
     public static enum DABItems
     {
-        PUSSY("pussy", "pussy"),
+        JENNA("jenna", "jenna"),
         DEREK("Derek", "derek"),
         WEED("weed", "weed"),
         LAUSD("LAUSD", "LAUSD"),

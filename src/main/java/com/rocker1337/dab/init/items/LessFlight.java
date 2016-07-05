@@ -11,8 +11,8 @@ public class LessFlight extends Item
 {
     public LessFlight()
     {
-        setUnlocalizedName(ItemSetNames.DABItems.LESSFLIGHT.getUnlocalizedName());
-        setRegistryName(ItemSetNames.DABItems.LESSFLIGHT.getRegistryName());
+        setUnlocalizedName(SetItemNames.DABItems.LESSFLIGHT.getUnlocalizedName());
+        setRegistryName(SetItemNames.DABItems.LESSFLIGHT.getRegistryName());
         this.setMaxStackSize(1);
     }
     @SideOnly(Side.CLIENT)

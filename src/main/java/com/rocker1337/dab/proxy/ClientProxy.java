@@ -1,5 +1,6 @@
 package com.rocker1337.dab.proxy;
 
+import com.rocker1337.dab.init.blocks.DABBlocks;
 import com.rocker1337.dab.init.items.DABItems;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -18,6 +19,7 @@ public class ClientProxy extends CommonProxy
     {
         super.init(e);
         DABItems.registerRenders();
+        DABBlocks.registerRenders();
     }
 
     @Override

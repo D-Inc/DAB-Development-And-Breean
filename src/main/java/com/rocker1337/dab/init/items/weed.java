@@ -1,7 +1,6 @@
 package com.rocker1337.dab.init.items;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
-import net.minecraft.client.renderer.BannerTextures;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
@@ -15,8 +14,8 @@ public class weed extends ItemFood
     public weed(int amount, float saturation, boolean isWolfFood)
     {
         super(amount, saturation, isWolfFood);
-        setUnlocalizedName(ItemSetNames.DABItems.WEED.getUnlocalizedName());
-        setRegistryName(ItemSetNames.DABItems.WEED.getRegistryName());
+        setUnlocalizedName(SetItemNames.DABItems.WEED.getUnlocalizedName());
+        setRegistryName(SetItemNames.DABItems.WEED.getRegistryName());
 
         setAlwaysEdible();
         setMaxStackSize(64);

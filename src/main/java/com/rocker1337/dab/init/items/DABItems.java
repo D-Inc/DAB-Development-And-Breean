@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class DABItems
 {
 
-    public static Item pussy;
+    public static Item jenna;
     public static Item weed;
     public static Item Derek;
     public static Item LAUSD;
@@ -21,7 +21,7 @@ public class DABItems
 
     public static void init()
     {
-        pussy = new pussy();
+        jenna = new jenna();
         weed = new weed(1, 0.3F, true).setFull3D();
         Derek = new derek();
         LAUSD = new LAUSD().setFull3D();
@@ -33,7 +33,7 @@ public class DABItems
 
     public static void register()
     {
-        GameRegistry.register(pussy);
+        GameRegistry.register(jenna);
         GameRegistry.register(weed);
         GameRegistry.register(Derek);
         GameRegistry.register(LAUSD);
@@ -46,7 +46,7 @@ public class DABItems
     public static void registerRenders()
     {
         registerRender(weed);
-        registerRender(pussy);
+        registerRender(jenna);
         registerRender(Derek);
         registerRender(LAUSD);
         registerRender(bobatea);
@@ -63,7 +63,7 @@ public class DABItems
     public static void setCreativeTab()
     {
         weed.setCreativeTab(tabDAB);
-        pussy.setCreativeTab(tabDAB);
+        jenna.setCreativeTab(tabDAB);
         Derek.setCreativeTab(tabDAB);
         LAUSD.setCreativeTab(tabDAB);
         bobatea.setCreativeTab(tabDAB);
