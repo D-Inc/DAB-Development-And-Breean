@@ -1,9 +1,7 @@
 package com.rocker1337.dab.events;
 
-import com.rocker1337.dab.init.DABItems;
-import com.rocker1337.dab.init.items.EnderFlight;
+import com.rocker1337.dab.init.items.DABItems;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;

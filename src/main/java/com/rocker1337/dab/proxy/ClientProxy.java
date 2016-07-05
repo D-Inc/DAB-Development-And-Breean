@@ -1,6 +1,6 @@
 package com.rocker1337.dab.proxy;
 
-import com.rocker1337.dab.init.DABItems;
+import com.rocker1337.dab.init.items.DABItems;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;

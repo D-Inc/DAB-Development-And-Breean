@@ -1,6 +1,6 @@
 package com.rocker1337.dab.init.crafting;
 
-import com.rocker1337.dab.init.DABItems;
+import com.rocker1337.dab.init.items.DABItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;

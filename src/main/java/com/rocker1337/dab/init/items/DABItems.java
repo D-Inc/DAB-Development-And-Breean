@@ -1,6 +1,5 @@
-package com.rocker1337.dab.init;
+package com.rocker1337.dab.init.items;
 
-import com.rocker1337.dab.init.items.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;

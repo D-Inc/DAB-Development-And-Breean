@@ -1,7 +1,6 @@
 package com.rocker1337.dab.events;
 
-import com.rocker1337.dab.init.DABItems;
-import net.minecraft.entity.Entity;
+import com.rocker1337.dab.init.items.DABItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingEvent;

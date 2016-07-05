@@ -1,7 +1,7 @@
 package com.rocker1337.dab.proxy;
 
 import com.rocker1337.dab.events.*;
-import com.rocker1337.dab.init.DABItems;
+import com.rocker1337.dab.init.items.DABItems;
 import com.rocker1337.dab.init.crafting.DABCrafting;
 import com.rocker1337.dab.world.DabWorldGen;
 import net.minecraftforge.common.MinecraftForge;
