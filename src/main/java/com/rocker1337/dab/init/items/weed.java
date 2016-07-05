@@ -1,6 +1,7 @@
 package com.rocker1337.dab.init.items;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
+import net.minecraft.client.renderer.BannerTextures;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
@@ -27,5 +28,7 @@ public class weed extends ItemFood
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced)
     {
         toolTip.add(ChatFormatting.DARK_GREEN + "Do not consume if not in Colorado");
+        toolTip.add(ChatFormatting.DARK_RED + "21");
+        toolTip.add(ChatFormatting.RED + "22");
     }
 }
