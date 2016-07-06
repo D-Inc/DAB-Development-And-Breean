@@ -3,6 +3,9 @@ package com.rocker1337.dab.events;
 import com.rocker1337.dab.init.items.DABItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.network.play.client.CPacketPlayerTryUseItem;
+import net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock;
+import net.minecraft.util.EnumHand;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -45,6 +48,7 @@ public class SuperEvent {
             {
                 player.capabilities.allowFlying = true;
                 hasEnderFlight = true;
+                System.out.println(player.capabilities.allowFlying);
             }
             else
             {
@@ -59,4 +63,5 @@ public class SuperEvent {
 
         }
     }
+
 }

@@ -1,7 +1,12 @@
 package com.rocker1337.dab.init.items;
 
+import com.mojang.realmsclient.gui.ChatFormatting;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -15,11 +20,11 @@ public class LessFlight extends Item
         setRegistryName(SetItemNames.DABItems.LESSFLIGHT.getRegistryName());
         this.setMaxStackSize(1);
     }
+
+    @Override
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack Item, List<String> toolTip, boolean advanced)
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced)
     {
-        toolTip.add("Much Weak Much Wow");
-
-
+        toolTip.add(ChatFormatting.DARK_PURPLE + "Only lets you fly while holding");
     }
 }
