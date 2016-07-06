@@ -1,5 +1,6 @@
 package com.rocker1337.dab.init.crafting;
 
+import com.rocker1337.dab.init.blocks.DABBlocks;
 import com.rocker1337.dab.init.items.DABItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -17,5 +18,8 @@ public class DABCrafting
         GameRegistry.addShapelessRecipe(new ItemStack(Items.DYE, 9, 15), new Object[]{Blocks.field_189880_di});
         GameRegistry.addRecipe(new ItemStack(DABItems.LessFlight), new Object[]{"ddd", "g g", "fgf", 'd', Blocks.DIAMOND_BLOCK, 'g', Blocks.GOLD_BLOCK, 'f', Items.FEATHER});
         GameRegistry.addRecipe(new ItemStack(DABItems.GreatFlight), new Object[]{"ddd", "gng", "fgf", 'd', Blocks.DIAMOND_BLOCK, 'g', Blocks.GOLD_BLOCK, 'f', Items.FEATHER, 'n', Items.NETHER_STAR});
+        GameRegistry.addRecipe(new ItemStack(DABBlocks.controller2), new Object[]{"sss", "srs", "sss", 's', Blocks.STONEBRICK, 'r', Items.REDSTONE});
+        GameRegistry.addShapelessRecipe(new ItemStack(DABBlocks.controller, 1, 0), new Object[]{DABBlocks.controller2});
+        GameRegistry.addShapelessRecipe(new ItemStack(DABBlocks.controller2, 1, 0), new Object[]{DABBlocks.controller});
     }
 }
