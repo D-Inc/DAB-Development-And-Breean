@@ -3,6 +3,7 @@ package com.rocker1337.dab.events;
 import baubles.common.container.InventoryBaubles;
 import baubles.common.lib.PlayerHandler;
 import com.rocker1337.dab.init.items.DABItems;
+import com.rocker1337.dab.init.items.GreatFlight;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.play.client.CPacketPlayerTryUseItem;
@@ -42,7 +43,7 @@ public class SuperEvent {
             }
 
             // GreaterFlightEvent
-            if (getGreatRing(player) != null) {
+            if (getGreatRing(player) != null | player.inventory.hasItemStack(new ItemStack(DABItems.GreatFlight))) {
                 player.capabilities.allowFlying = true;
                 hasGreatFlight = true;
             } else {
