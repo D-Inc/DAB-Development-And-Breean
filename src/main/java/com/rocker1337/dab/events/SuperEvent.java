@@ -1,5 +1,7 @@
 package com.rocker1337.dab.events;
 
+import baubles.common.container.InventoryBaubles;
+import baubles.common.lib.PlayerHandler;
 import com.rocker1337.dab.init.items.DABItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -9,6 +11,9 @@ import net.minecraft.util.EnumHand;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+import static com.rocker1337.dab.init.items.GreatFlight.getGreatRing;
+import static com.rocker1337.dab.init.items.GreatFlight.isGreatRing;
 
 /**
  * Created by Rocker545 on 7/3/2016.
@@ -37,7 +42,7 @@ public class SuperEvent {
             }
 
             // GreaterFlightEvent
-            if (player.inventory.hasItemStack(new ItemStack(DABItems.GreatFlight))) {
+            if (getGreatRing(player) != null) {
                 player.capabilities.allowFlying = true;
                 hasGreatFlight = true;
             } else {

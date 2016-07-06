@@ -26,6 +26,6 @@ public class EnderFlight extends Item
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced)
     {
         toolTip.add(ChatFormatting.LIGHT_PURPLE + "Only removes Fall Damage right now");
-        toolTip.add(ChatFormatting.DARK_AQUA + "Put in your fist Ender Chest slot");
+        toolTip.add(ChatFormatting.DARK_AQUA + "Put in your first Ender Chest slot");
     }
 }
