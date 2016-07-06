@@ -48,7 +48,6 @@ public class SuperEvent {
             {
                 player.capabilities.allowFlying = true;
                 hasEnderFlight = true;
-                System.out.println(player.capabilities.allowFlying);
             }
             else
             {

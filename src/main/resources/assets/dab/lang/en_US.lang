@@ -8,4 +8,4 @@ item.GreatFlight.name=Greater Flight Ring
 item.LessFlight.name=Lesser Flight Ring
 item.EnderFlight.name=Ender Flight Ring
 
-tile.bell.name=Bell
+tile.controller.name=DAB Controller
