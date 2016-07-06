@@ -85,6 +85,11 @@ repositories {
     // location of the maven that hosts JEI files
     url "http://dvs1.progwml6.com/files/maven"
   }
+  maven {
+      //WAILA
+      name "Mobius Repo"
+      url "http://mobiusstrip.eu/maven"
+  }
 }
 
 dependencies {
@@ -92,4 +97,5 @@ dependencies {
   deobfCompile "mezz.jei:jei_1.10.2:3.7.4.224:api"
   // at runtime, use the full JEI jar
   runtime "mezz.jei:jei_1.10.2:3.7.4.224"
+  deobfCompile "mcp.mobius.waila:Waila:1.7.0-B3_1.9.4"
 }
