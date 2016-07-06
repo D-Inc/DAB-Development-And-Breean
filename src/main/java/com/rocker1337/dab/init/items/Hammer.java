@@ -14,6 +14,8 @@ import net.minecraftforge.fml.common.Optional;
 public class Hammer extends Item implements IToolHammer {
 
     public Hammer() {
+        setUnlocalizedName(SetItemNames.DABItems.HAMMER.getUnlocalizedName());
+        setRegistryName(SetItemNames.DABItems.HAMMER.getRegistryName());
         setMaxStackSize(1);
     }
 

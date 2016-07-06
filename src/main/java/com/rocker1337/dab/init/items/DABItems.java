@@ -17,6 +17,7 @@ public class DABItems
     public static Item LessFlight;
     public static Item GreatFlight;
     public static Item EnderFlight;
+    public static Item Hammer;
 
 
     public static void init()
@@ -29,6 +30,7 @@ public class DABItems
         LessFlight = new LessFlight();
         GreatFlight = new GreatFlight();
         EnderFlight = new EnderFlight();
+        Hammer = new Hammer();
     }
 
     public static void register()
@@ -41,6 +43,7 @@ public class DABItems
         GameRegistry.register(LessFlight);
         GameRegistry.register(GreatFlight);
         GameRegistry.register(EnderFlight);
+        GameRegistry.register(Hammer);
     }
 
     public static void registerRenders()
@@ -53,6 +56,7 @@ public class DABItems
         registerRender(LessFlight);
         registerRender(GreatFlight);
         registerRender(EnderFlight);
+        registerRender(Hammer);
     }
 
     private static void  registerRender(Item item)
@@ -70,6 +74,7 @@ public class DABItems
         LessFlight.setCreativeTab(tabDAB);
         GreatFlight.setCreativeTab(tabDAB);
         EnderFlight.setCreativeTab(tabDAB);
+        Hammer.setCreativeTab(tabDAB);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean") {

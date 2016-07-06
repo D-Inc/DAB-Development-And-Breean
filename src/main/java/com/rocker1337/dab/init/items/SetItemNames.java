@@ -12,7 +12,9 @@ public class SetItemNames
         BOBATEA("bobatea", "bobatea"),
         LESSFLIGHT("LessFlight", "LessFlight"),
         GREATFLIGHT("GreatFlight", "GreatFlight"),
-        ENDERFLIGHT("EnderFlight", "EnderFlight");
+        ENDERFLIGHT("EnderFlight", "EnderFlight"),
+        HAMMER("Hammer", "Hammer");
+
 
 
         private String unlocalizedName;
