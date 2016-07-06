@@ -12,14 +12,17 @@ import static com.rocker1337.dab.init.items.DABItems.tabDAB;
 public class DABBlocks
 {
     public static Block controller;
+    public static Block controller2;
 
     public static void init()
     {
         controller = new controller();
+        controller2 = new controller2();
     }
     public static void register()
     {
-       registerBlock(controller);
+        registerBlock(controller);
+        registerBlock(controller2);
     }
 
     private static void registerBlock(Block block)
@@ -33,6 +36,7 @@ public class DABBlocks
     public static void registerRenders()
     {
         registerRender(controller);
+        registerRender(controller2);
     }
 
     private static void registerRender(Block block)
