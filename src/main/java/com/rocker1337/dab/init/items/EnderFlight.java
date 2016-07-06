@@ -25,8 +25,7 @@ public class EnderFlight extends Item
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced)
     {
-        toolTip.add(ChatFormatting.DARK_GREEN + "Do not consume if not in Colorado");
-        toolTip.add(ChatFormatting.DARK_RED + "21");
-        toolTip.add(ChatFormatting.RED + "22");
+        toolTip.add(ChatFormatting.LIGHT_PURPLE + "Only removes Fall Damage right now");
+        toolTip.add(ChatFormatting.DARK_AQUA + "Put in your fist Ender Chest slot");
     }
 }
