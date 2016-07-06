@@ -46,6 +46,7 @@ public class DABBlocks
 
     public static void setCreativeTab()
     {
+        controller2.setCreativeTab(tabDAB);
         controller.setCreativeTab(tabDAB);
     }
 }
