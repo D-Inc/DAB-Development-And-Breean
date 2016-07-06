@@ -1,10 +1,8 @@
 package com.rocker1337.dab.init.blocks;
 
-import com.rocker1337.dab.init.items.DABItems;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -13,15 +11,15 @@ import static com.rocker1337.dab.init.items.DABItems.tabDAB;
 
 public class DABBlocks
 {
-    public static Block Bell;
+    public static Block controller;
 
     public static void init()
     {
-        Bell = new Bell();
+        controller = new controller();
     }
     public static void register()
     {
-       registerBlock(Bell);
+       registerBlock(controller);
     }
 
     private static void registerBlock(Block block)
@@ -34,7 +32,7 @@ public class DABBlocks
 
     public static void registerRenders()
     {
-        registerRender(Bell);
+        registerRender(controller);
     }
 
     private static void registerRender(Block block)
@@ -44,6 +42,6 @@ public class DABBlocks
 
     public static void setCreativeTab()
     {
-        Bell.setCreativeTab(tabDAB);
+        controller.setCreativeTab(tabDAB);
     }
 }

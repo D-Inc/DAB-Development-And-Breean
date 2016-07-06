@@ -4,7 +4,7 @@ public class SetBlockNames
 {
     public static enum DABBlocks
     {
-        Bell("bell", "bell");
+        controller("controller", "controller");
 
         private String unlocalizedName;
         private String registryName;
