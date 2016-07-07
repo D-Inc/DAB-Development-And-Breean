@@ -17,7 +17,7 @@ public class PlayerNameChanger {
         }
         if(event.getUsername().contains("ninjawarrior1337"))
         {
-            event.setDisplayname(TextFormatting.DARK_AQUA + "ninjawarrior1337" + TextFormatting.GREEN + TextFormatting.BOLD + "The AE God");
+            event.setDisplayname(TextFormatting.DARK_AQUA + "ninjawarrior1337" + TextFormatting.GREEN + TextFormatting.BOLD + " The AE God");
         }
         if(event.getUsername().contains("Eric_James"))
         {
@@ -26,6 +26,18 @@ public class PlayerNameChanger {
         if(event.getUsername().contains("Apriicot"))
         {
             event.setDisplayname("Apriinot");
+        }
+        if(event.getUsername().contains("Rocket_D"))
+        {
+            event.setDisplayname(TextFormatting.DARK_PURPLE + "Rocket_Dylan Benburah");
+        }
+        if(event.getUsername().contains("JaxonHH"))
+        {
+            event.setDisplayname("JooxonHootchHootch");
+        }
+        if(event.getUsername().contains("etoais"))
+        {
+            event.setDisplayname("Etan the Sucky BobaTea CEO");
         }
     }
 
