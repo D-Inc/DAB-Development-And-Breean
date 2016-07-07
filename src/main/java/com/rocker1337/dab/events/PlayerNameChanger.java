@@ -35,7 +35,7 @@ public class PlayerNameChanger {
         {
             event.setDisplayname("JooxonHootchHootch");
         }
-        if(event.getUsername().contains("etoais"))
+        if(event.getUsername().contains("etonais"))
         {
             event.setDisplayname("Etan the Sucky BobaTea CEO");
         }
