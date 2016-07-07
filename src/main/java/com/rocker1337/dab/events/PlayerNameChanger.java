@@ -29,7 +29,7 @@ public class PlayerNameChanger {
         }
         if(event.getUsername().contains("Rocket_D"))
         {
-            event.setDisplayname(TextFormatting.DARK_PURPLE + "Rocket_Dylan Benburah");
+            event.setDisplayname(TextFormatting.DARK_PURPLE + "LEBRON" + TextFormatting.GOLD + "HUMMUS");
         }
         if(event.getUsername().contains("JaxonHH"))
         {
