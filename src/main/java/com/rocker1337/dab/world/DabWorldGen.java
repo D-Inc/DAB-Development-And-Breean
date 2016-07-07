@@ -39,7 +39,7 @@ public class DabWorldGen implements IWorldGenerator
 
     public DabWorldGen()
     {
-        diamondGenerator = new WorldGenMinable(Blocks.DIAMOND_BLOCK.getDefaultState(), 2);
+        diamondGenerator = new WorldGenMinable(Blocks.DIAMOND_BLOCK.getDefaultState(), 4);
         netherGoldGenerator = new WorldGenMinable(Blocks.GOLD_BLOCK.getDefaultState(), 2);
 
     }

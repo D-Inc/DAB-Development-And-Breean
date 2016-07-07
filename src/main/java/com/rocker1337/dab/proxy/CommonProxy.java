@@ -35,6 +35,7 @@ public class CommonProxy
         MinecraftForge.EVENT_BUS.register(new SuperEvent());
         MinecraftForge.EVENT_BUS.register(new Gamerules());
         MinecraftForge.EVENT_BUS.register(new DisableWeather());
+        MinecraftForge.EVENT_BUS.register(new PlayerNameChanger());
     }
     public void postInit(FMLPostInitializationEvent e)
     {
