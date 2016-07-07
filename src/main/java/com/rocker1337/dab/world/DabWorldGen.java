@@ -22,13 +22,13 @@ public class DabWorldGen implements IWorldGenerator
         switch(world.provider.getDimension())
         {
             case 0: //Overworld Dimension
-                this.runGenerator(diamondGenerator, world, random, chunkX, chunkZ, 20, 0, 80);
+                this.runGenerator(diamondGenerator, world, random, chunkX, chunkZ, 10, 0, 30);
                 break;
             case 1: //End Dimension
 
                 break;
             case -1: //Nether
-                this.runGenerator(netherGoldGenerator, world, random, chunkX, chunkZ, 20, 0, 120);
+                this.runGenerator(netherGoldGenerator, world, random, chunkX, chunkZ, 60, 0, 120);
                 break;
         }
 
@@ -39,8 +39,8 @@ public class DabWorldGen implements IWorldGenerator
 
     public DabWorldGen()
     {
-        diamondGenerator = new WorldGenMinable(Blocks.DIAMOND_BLOCK.getDefaultState(), 4);
-        netherGoldGenerator = new WorldGenMinable(Blocks.GOLD_BLOCK.getDefaultState(), 2);
+        diamondGenerator = new WorldGenMinable(Blocks.DIAMOND_BLOCK.getDefaultState(), 3);
+        netherGoldGenerator = new WorldGenMinable(Blocks.GOLD_BLOCK.getDefaultState(), 8);
 
     }
 
