@@ -1,6 +1,7 @@
 package com.rocker1337.dab.init.blocks;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
+import com.rocker1337.dab.init.items.DABItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
