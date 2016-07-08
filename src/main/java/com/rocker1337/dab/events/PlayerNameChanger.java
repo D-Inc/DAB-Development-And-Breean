@@ -11,31 +11,31 @@ public class PlayerNameChanger {
 
     @SubscribeEvent
     public void onEvent(PlayerEvent.NameFormat event){
-        if(event.getUsername().contains("Rocker545"))
+        if(event.getUsername().equals("Rocker545"))
         {
             event.setDisplayname(TextFormatting.RED + "Rocker545" + TextFormatting.GOLD + TextFormatting.BOLD + " THE GOD");
         }
-        if(event.getUsername().contains("ninjawarrior1337"))
+        if(event.getUsername().equals("ninjawarrior1337"))
         {
             event.setDisplayname(TextFormatting.DARK_AQUA + "ninjawarrior1337" + TextFormatting.GREEN + TextFormatting.BOLD + " The AE God");
         }
-        if(event.getUsername().contains("Eric_James"))
+        if(event.getUsername().equals("Eric_James"))
         {
             event.setDisplayname("Breean_Chan");
         }
-        if(event.getUsername().contains("Apriicot"))
+        if(event.getUsername().equals("Apriicot"))
         {
             event.setDisplayname("Apriinot");
         }
-        if(event.getUsername().contains("Rocket_D"))
+        if(event.getUsername().equals("Rocket_D"))
         {
             event.setDisplayname(TextFormatting.DARK_PURPLE + "LEBRON" + TextFormatting.GOLD + "HUMMUS");
         }
-        if(event.getUsername().contains("JaxonHH"))
+        if(event.getUsername().equals("JaxonHH"))
         {
             event.setDisplayname("JooxonHootchHootch");
         }
-        if(event.getUsername().contains("etonais"))
+        if(event.getUsername().equals("etonais"))
         {
             event.setDisplayname("Etan the Sucky BobaTea CEO");
         }
