@@ -5,12 +5,12 @@
   "description": "Colab Mod",
   "version": "1.5",
   "mcversion": "1.10.2",
-  "url": "",
+  "url": "http://99.186.17.41:943/Mods/DAB",
   "updateUrl": "",
-  "authorList": ["ninjawarrior1337", "Rocker545"],
-  "credits": "This is a credit,
+  "authorList": ["ninjawarrior1337","Rocker545"],
+  "credits": "This is a credit",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": ["Baubles"]
 }
 ]
