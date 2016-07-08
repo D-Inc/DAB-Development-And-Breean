@@ -13,7 +13,8 @@ public class SetItemNames
         LESSFLIGHT("LessFlight", "LessFlight"),
         GREATFLIGHT("GreatFlight", "GreatFlight"),
         ENDERFLIGHT("EnderFlight", "EnderFlight"),
-        HAMMER("Hammer", "Hammer");
+        HAMMER("Hammer", "Hammer"),
+        AIRHORN("airhorn", "airhorn");
 
 
 
