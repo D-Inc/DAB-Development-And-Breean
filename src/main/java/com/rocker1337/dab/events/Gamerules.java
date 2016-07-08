@@ -5,6 +5,7 @@ import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 import net.minecraft.world.storage.WorldInfo;
 import net.minecraftforge.event.world.WorldEvent;
+import net.minecraftforge.fml.client.config.GuiConfigEntries;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
@@ -23,21 +24,15 @@ public class Gamerules {
         if (!rules.hasRule(name)) rules.addGameRule(name, defaultValue, GameRules.ValueType.BOOLEAN_VALUE);
     }
 
-    public void WorldInfo(TickEvent.WorldTickEvent event)
-    {
-        World world = event.world;
-        WorldInfo worldInfo = world.getWorldInfo();
-
-        Boolean a = worldInfo.areCommandsAllowed();
-        String astr = String.valueOf(a);
-    }
-
     @SubscribeEvent
     public void onWorldLoad(WorldEvent.Load evt) {
         final GameRules rules = evt.getWorld().getGameRules();
-
+        World world = evt.getWorld();
+        WorldInfo worldInfo = world.getWorldInfo();
+        Boolean a = worldInfo.areCommandsAllowed();
+        String astr = String.valueOf(a);
 
         addRule(rules, GameRule.DISABLE_WEATHER, "false");
-        addRule(rules, GameRule.ALLOW_CHEATS, );
+        addRule(rules, GameRule.ALLOW_CHEATS, astr);
     }
 }

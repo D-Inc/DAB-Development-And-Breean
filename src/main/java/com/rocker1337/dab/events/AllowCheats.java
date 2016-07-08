@@ -23,6 +23,9 @@ public class AllowCheats
         {
             worldInfo.setAllowCommands(true);
         }
+        if(gameRules.getBoolean(Gamerules.GameRule.ALLOW_CHEATS) == false){
+            worldInfo.setAllowCommands(false);
+        }
 
     }
 
