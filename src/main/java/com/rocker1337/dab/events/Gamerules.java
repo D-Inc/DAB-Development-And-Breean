@@ -17,7 +17,6 @@ public class Gamerules {
     public static class GameRule {
         public static final String DISABLE_WEATHER = "disableWeather";
         public static final String ALLOW_CHEATS = "allowCheats";
-
     }
 
     public static void addRule(GameRules rules, String name, String defaultValue) {

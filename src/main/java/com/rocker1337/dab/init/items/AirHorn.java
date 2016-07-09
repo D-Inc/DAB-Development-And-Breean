@@ -10,7 +10,8 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 
-public class AirHorn extends Item
+public class
+AirHorn extends Item
 {
     public AirHorn()
     {

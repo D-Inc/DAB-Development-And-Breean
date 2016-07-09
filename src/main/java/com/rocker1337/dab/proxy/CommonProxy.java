@@ -40,6 +40,7 @@ public class CommonProxy
         MinecraftForge.EVENT_BUS.register(new DisableWeather());
         MinecraftForge.EVENT_BUS.register(new PlayerNameChanger());
         MinecraftForge.EVENT_BUS.register(new AllowCheats());
+        MinecraftForge.EVENT_BUS.register(new DoorRadius());
     }
     public void postInit(FMLPostInitializationEvent e)
     {
