@@ -1,6 +1,7 @@
 package com.rocker1337.dab.proxy;
 
 import com.rocker1337.dab.events.*;
+import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
 import com.rocker1337.dab.init.blocks.DABBlocks;
 import com.rocker1337.dab.init.blocks.SetBlockNames;
 import com.rocker1337.dab.init.items.DABItems;
@@ -23,6 +24,8 @@ public class CommonProxy
         //Init and Register Blocks
         DABBlocks.init();
         DABBlocks.register();
+        //Init Sounds
+        RegisterSoundEvents.init();
     }
     public void init(FMLInitializationEvent e)
     {

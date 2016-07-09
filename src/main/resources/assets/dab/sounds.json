@@ -1,0 +1,10 @@
+{
+  "airhorn":
+  {
+    "category": "player",
+    "sounds": [
+      "dab:airhorn"
+    ],
+    "subtitle": "airhorn"
+  }
+}

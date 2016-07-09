@@ -1,5 +1,6 @@
 package com.rocker1337.dab.init.items;
 
+import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
 import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
@@ -29,7 +30,7 @@ public class AirHorn extends Item
     @Override
     public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand)
     {
-        worldIn.playSound(playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_BLAZE_DEATH, SoundCategory.PLAYERS, 100.0F, 1.0F, false);
+        worldIn.playSound(playerIn.posX, playerIn.posY, playerIn.posZ, RegisterSoundEvents.airhorn, SoundCategory.PLAYERS, 25.0F, 1.0F, false);
 
         itemStackIn.damageItem(1, playerIn);
         return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStackIn);
