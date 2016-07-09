@@ -23,7 +23,7 @@ public class AirHorn extends Item
     @Override
     public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand)
     {
-        worldIn.playSound(playerIn.posX, playerIn.posY, playerIn.posZ, RegisterSoundEvents.airhorn, SoundCategory.PLAYERS, 25.0F, 1.0F, false);
+        worldIn.playSound(null, playerIn.posX, playerIn.posY, playerIn.posZ, RegisterSoundEvents.airhorn, SoundCategory.PLAYERS, 25.0F, 1.0F);
 
         itemStackIn.damageItem(1, playerIn);
         return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStackIn);
