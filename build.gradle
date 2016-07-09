@@ -20,7 +20,7 @@ plugins {
     id "net.minecraftforge.gradle.forge" version "2.0.2"
 }
 */
-version = "0.1"
+version = "1.5 - 1.10.2"
 group= "com.rocker1337.dab" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "dab"
 
@@ -58,6 +58,8 @@ dependencies {
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    // Added baubles dependency
+    compile files("libs/Baubles-1.9.4-1.2.1.0-deobf.jar")
 
 }
 
