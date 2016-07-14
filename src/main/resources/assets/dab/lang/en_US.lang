@@ -8,6 +8,7 @@ item.GreatFlight.0.name=Greater Flight Ring
 item.LessFlight.name=Lesser Flight Ring
 item.EnderFlight.name=Ender Flight Ring
 item.Hammer.name=Hammer
+item.airhorn.name=MLG Airhorn
 
 tile.controller.name=DAB Controller (Smooth)
 tile.controller2.name=DAB Controller (Original)
