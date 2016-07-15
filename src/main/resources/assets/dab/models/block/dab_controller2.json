@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
-    "textures": {
+    "textures": {2
         "all": "dab:blocks/dab_controller2"
     }
 }
