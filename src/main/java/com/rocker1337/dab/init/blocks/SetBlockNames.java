@@ -4,8 +4,8 @@ public class SetBlockNames
 {
     public static enum DABBlocks
     {
-        controller("dab_controller", "controller"),
-        controller2("dab_controller2", "controller2");
+        controller("dab_controller", "dab_controller"),
+        controller2("dab_controller2", "dab_controller2");
 
         private String unlocalizedName;
         private String registryName;
