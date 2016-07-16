@@ -11,11 +11,13 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class RegisterSoundEvents
 {
     public static SoundEvent airhorn;
+    public static SoundEvent mlgcancan;
 
 
     public static void init()
     {
         airhorn = registerSound("airhorn");
+        mlgcancan = registerSound("mlgcancan");
     }
 
 

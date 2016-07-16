@@ -14,7 +14,8 @@ public class SetItemNames
         GREATFLIGHT("GreatFlight", "GreatFlight"),
         ENDERFLIGHT("EnderFlight", "EnderFlight"),
         HAMMER("Hammer", "Hammer"),
-        AIRHORN("airhorn", "airhorn");
+        AIRHORN("airhorn", "airhorn"),
+        CANCANRECORD("cancanrecord", "cancanrecord");
 
 
 

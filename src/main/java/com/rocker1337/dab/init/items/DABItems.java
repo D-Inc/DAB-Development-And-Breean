@@ -1,5 +1,7 @@
 package com.rocker1337.dab.init.items;
 
+import com.rocker1337.dab.Reference;
+import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -19,6 +21,7 @@ public class DABItems
     public static Item EnderFlight;
     public static Item Hammer;
     public static Item AirHorn;
+    public static Item mlgcancan;
 
 
     public static void init()
@@ -33,6 +36,7 @@ public class DABItems
         EnderFlight = new EnderFlight();
         Hammer = new Hammer();
         AirHorn = new AirHorn();
+        mlgcancan = new MLGCanCanDisk("mlgcancan", RegisterSoundEvents.mlgcancan);
     }
 
     public static void register()
@@ -47,6 +51,7 @@ public class DABItems
         GameRegistry.register(EnderFlight);
         GameRegistry.register(Hammer);
         GameRegistry.register(AirHorn);
+        GameRegistry.register(mlgcancan);
     }
 
     public static void registerRenders()
@@ -61,6 +66,7 @@ public class DABItems
         registerRender(EnderFlight);
         registerRender(Hammer);
         registerRender(AirHorn);
+        registerRender(mlgcancan);
     }
 
     private static void  registerRender(Item item)
@@ -80,6 +86,7 @@ public class DABItems
         EnderFlight.setCreativeTab(tabDAB);
         Hammer.setCreativeTab(tabDAB);
         AirHorn.setCreativeTab(tabDAB);
+        mlgcancan.setCreativeTab(tabDAB);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean") {
