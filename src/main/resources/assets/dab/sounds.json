@@ -20,5 +20,17 @@
           }
 		],
 		"subtitle": "mlgcancan"
- 	}
+ 	},
+    "sadairhorn":
+    {
+        "category": "player",
+        "sounds":
+        [
+          {
+            "name": "dab:sadairhorn",
+            "stream": true
+          }
+        ],
+      "subtitle": "sadairhorn"
+    }
 }

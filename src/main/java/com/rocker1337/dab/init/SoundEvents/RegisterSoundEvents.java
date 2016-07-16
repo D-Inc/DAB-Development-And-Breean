@@ -12,12 +12,14 @@ public class RegisterSoundEvents
 {
     public static SoundEvent airhorn;
     public static SoundEvent mlgcancan;
+    public static SoundEvent sadairhorn;
 
 
     public static void init()
     {
         airhorn = registerSound("airhorn");
         mlgcancan = registerSound("mlgcancan");
+        sadairhorn = registerSound("sadairhorn");
     }
 
 

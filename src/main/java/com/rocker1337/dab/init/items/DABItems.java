@@ -22,6 +22,7 @@ public class DABItems
     public static Item Hammer;
     public static Item AirHorn;
     public static Item mlgcancan;
+    public static Item SadAirHorn;
 
 
     public static void init()
@@ -37,6 +38,7 @@ public class DABItems
         Hammer = new Hammer();
         AirHorn = new AirHorn();
         mlgcancan = new MLGCanCanDisk("mlgcancan", RegisterSoundEvents.mlgcancan);
+        SadAirHorn = new SadAirHorn();
     }
 
     public static void register()
@@ -52,6 +54,7 @@ public class DABItems
         GameRegistry.register(Hammer);
         GameRegistry.register(AirHorn);
         GameRegistry.register(mlgcancan);
+        GameRegistry.register(SadAirHorn);
     }
 
     public static void registerRenders()
@@ -67,6 +70,7 @@ public class DABItems
         registerRender(Hammer);
         registerRender(AirHorn);
         registerRender(mlgcancan);
+        registerRender(SadAirHorn);
     }
 
     private static void  registerRender(Item item)
@@ -87,6 +91,7 @@ public class DABItems
         Hammer.setCreativeTab(tabDAB);
         AirHorn.setCreativeTab(tabDAB);
         mlgcancan.setCreativeTab(tabDAB);
+        SadAirHorn.setCreativeTab(tabDAB);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean") {
