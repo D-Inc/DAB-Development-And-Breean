@@ -37,7 +37,7 @@ public class DABItems
         EnderFlight = new EnderFlight();
         Hammer = new Hammer();
         AirHorn = new AirHorn();
-        mlgcancan = new MLGCanCanDisk("mlgcancan", RegisterSoundEvents.mlgcancan);
+        mlgcancan = new MLGCanCanDisk("mlgcancan", RegisterSoundEvents.records_mlgcancan);
         SadAirHorn = new SadAirHorn();
     }
 
