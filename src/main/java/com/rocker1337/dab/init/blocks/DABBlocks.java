@@ -1,6 +1,7 @@
 package com.rocker1337.dab.init.blocks;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -13,16 +14,19 @@ public class DABBlocks
 {
     public static Block controller2;
     public static Block controller;
+    public static Block specialcobblestone;
 
     public static void init()
     {
         controller2 = new controller2();
         controller = new controller();
+        specialcobblestone = new specialcobblestone(Material.ROCK);
     }
     public static void register()
     {
         registerBlock(controller);
         registerBlock(controller2);
+        registerBlock(specialcobblestone);
     }
 
     private static void registerBlock(Block block)
@@ -37,6 +41,7 @@ public class DABBlocks
     {
         registerRender(controller2);
         registerRender(controller);
+        registerRender(specialcobblestone);
     }
 
     private static void registerRender(Block block)
@@ -48,5 +53,6 @@ public class DABBlocks
     {
         controller2.setCreativeTab(tabDAB);
         controller.setCreativeTab(tabDAB);
+        specialcobblestone.setCreativeTab(tabDAB);
     }
 }
