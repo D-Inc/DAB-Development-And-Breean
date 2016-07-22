@@ -16,7 +16,7 @@ public class MLGCanCanDisk extends ItemRecord
     @Override
     public ResourceLocation getRecordResource(String name)
     {
-        return new ResourceLocation("dab:" + name);
+        return new ResourceLocation("dab:"+name);
     }
 }
 
