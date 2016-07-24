@@ -2,14 +2,24 @@ package com.rocker1337.dab.events;
 
 import baubles.common.container.InventoryBaubles;
 import baubles.common.lib.PlayerHandler;
+import com.rocker1337.dab.init.blocks.DABBlocks;
 import com.rocker1337.dab.init.items.DABItems;
 import com.rocker1337.dab.init.items.GreatFlight;
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.play.client.CPacketPlayerTryUseItem;
 import net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.storage.WorldInfo;
+import net.minecraftforge.client.event.sound.PlaySoundEvent;
+import net.minecraftforge.client.event.sound.SoundEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -26,6 +36,8 @@ public class SuperEvent {
     static boolean hasGreatFlight;
     static boolean hasEnderFlight;
     static boolean isCreativeMode;
+    static World world;
+    static BlockPos BlockPos;
 
     @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
     public void onEvent(LivingEvent.LivingUpdateEvent event) {
@@ -65,6 +77,15 @@ public class SuperEvent {
                 player.capabilities.isFlying = false;
                 player.capabilities.allowFlying = false;
             }
+
+        }
+    }
+    @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
+    public void onEvent(BlockEvent.HarvestDropsEvent event)
+    {
+        if(event.getHarvester() != null);
+        {
+            world.playSound(BlockPos.getX(), BlockPos.getY(), BlockPos.getZ(), SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
 
         }
     }
