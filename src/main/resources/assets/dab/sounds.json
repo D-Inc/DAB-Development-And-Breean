@@ -32,5 +32,16 @@
           }
         ],
       "subtitle": "sadairhorn"
-    }
+    },
+	"specialcobblestone":
+	{
+		"category": "block",
+		"sounds":
+        [
+          {
+            "name": "dab:specialcobblestone"
+          }
+        ],
+		"subtitle": "specialcobblestone"
+	}
 }
