@@ -2,10 +2,12 @@ package com.rocker1337.dab.events;
 
 import baubles.common.container.InventoryBaubles;
 import baubles.common.lib.PlayerHandler;
+import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
 import com.rocker1337.dab.init.blocks.DABBlocks;
 import com.rocker1337.dab.init.items.DABItems;
 import com.rocker1337.dab.init.items.GreatFlight;
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
@@ -36,8 +38,7 @@ public class SuperEvent {
     static boolean hasGreatFlight;
     static boolean hasEnderFlight;
     static boolean isCreativeMode;
-    static World world;
-    static BlockPos BlockPos;
+    static World worldIn;
 
     @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
     public void onEvent(LivingEvent.LivingUpdateEvent event) {
@@ -80,14 +81,13 @@ public class SuperEvent {
 
         }
     }
-    @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
+    /*@SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
     public void onEvent(BlockEvent.HarvestDropsEvent event)
     {
-        if(event.getHarvester() != null);
+        if(event.getState())
         {
-            world.playSound(BlockPos.getX(), BlockPos.getY(), BlockPos.getZ(), SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
-
+            System.out.println("Destroy Cobblestone");
         }
-    }
+    }*/
 
 }

@@ -1,21 +1,20 @@
 package com.rocker1337.dab.init.blocks;
 
-import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
+import com.rocker1337.dab.init.SoundEvents.RegisterSoundTypes;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDirt;
+import net.minecraft.block.BlockStone;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.particle.Particle;
-import net.minecraft.client.particle.ParticleBlockDust;
-import net.minecraft.client.particle.ParticleSimpleAnimated;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.SoundCategory;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.storage.WorldInfo;
-import net.minecraftforge.event.world.BlockEvent;
+
+import javax.annotation.Nullable;
+import java.util.Random;
 
 public class specialcobblestone extends Block
 {
@@ -27,5 +26,12 @@ public class specialcobblestone extends Block
         this.setHardness(1.5F);
         this.setResistance(30.0F);
         this.setHarvestLevel("pickaxe", 1);
+        this.enableStats = true;
+        this.setSoundType(RegisterSoundTypes.specialcobblestone);
+    }
+    @Nullable
+    public Item getItemDropped(IBlockState state, Random rand, int fortune)
+    {
+        return Blocks.COBBLESTONE.getItemDropped(Blocks.COBBLESTONE.getDefaultState(), rand, fortune);
     }
 }
