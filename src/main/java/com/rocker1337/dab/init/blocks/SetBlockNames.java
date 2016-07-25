@@ -6,7 +6,8 @@ public class SetBlockNames
     {
         controller("dab_controller", "dab_controller"),
         controller2("dab_controller2", "dab_controller2"),
-        specialcobblestone("dab_cobblestone", "dab_cobblestone");
+        specialcobblestone("dab_cobblestone", "dab_cobblestone"),
+        moving_smiley_request("moving_smiley", "moving_smiley");
 
         private String unlocalizedName;
         private String registryName;
