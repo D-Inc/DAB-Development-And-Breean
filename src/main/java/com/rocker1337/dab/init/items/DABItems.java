@@ -1,16 +1,16 @@
 package com.rocker1337.dab.init.items;
 
-import com.rocker1337.dab.Reference;
 import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class DABItems
 {
-
+    //Items
     public static Item jenna;
     public static Item weed;
     public static Item Derek;
@@ -23,6 +23,14 @@ public class DABItems
     public static Item AirHorn;
     public static Item mlgcancan;
     public static Item SadAirHorn;
+    public static Item infinitypickaxe;
+    public static Item infinitysword;
+    public static Item infinityaxe;
+    public static Item infinityshovel;
+
+    //Tool Materials
+    public static Item.ToolMaterial infinitymaterial = EnumHelper.addToolMaterial("infinitymaterial", 2147483647, -1, 2147483647.0F, 2147483647.0F, 2147483647);
+
 
 
     public static void init()
@@ -39,6 +47,10 @@ public class DABItems
         AirHorn = new AirHorn();
         mlgcancan = new MLGCanCanDisk("mlgcancan", RegisterSoundEvents.records_mlgcancan);
         SadAirHorn = new SadAirHorn();
+        infinitypickaxe = new infinitypickaxe(DABItems.infinitymaterial);
+        infinityaxe = new infinityaxe(DABItems.infinitymaterial, 2147483647.0F, 2147483647.0F);
+        infinitysword = new infinitysword(DABItems.infinitymaterial);
+        infinityshovel = new infinityshovel(DABItems.infinitymaterial);
     }
 
     public static void register()
@@ -55,6 +67,10 @@ public class DABItems
         GameRegistry.register(AirHorn);
         GameRegistry.register(mlgcancan);
         GameRegistry.register(SadAirHorn);
+        GameRegistry.register(infinitypickaxe);
+        GameRegistry.register(infinityshovel);
+        GameRegistry.register(infinityaxe);
+        GameRegistry.register(infinitysword);
     }
 
     public static void registerRenders()
@@ -71,6 +87,10 @@ public class DABItems
         registerRender(AirHorn);
         registerRender(mlgcancan);
         registerRender(SadAirHorn);
+        registerRender(infinitypickaxe);
+        registerRender(infinityaxe);
+        registerRender(infinitysword);
+        registerRender(infinityshovel);
     }
 
     private static void  registerRender(Item item)
@@ -92,6 +112,10 @@ public class DABItems
         AirHorn.setCreativeTab(tabDAB);
         mlgcancan.setCreativeTab(tabDAB);
         SadAirHorn.setCreativeTab(tabDAB);
+        infinitypickaxe.setCreativeTab(tabDAB);
+        infinityshovel.setCreativeTab(tabDAB);
+        infinityaxe.setCreativeTab(tabDAB);
+        infinitysword.setCreativeTab(tabDAB);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean") {

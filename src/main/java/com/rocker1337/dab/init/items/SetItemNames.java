@@ -16,7 +16,11 @@ public class SetItemNames
         HAMMER("Hammer", "Hammer"),
         AIRHORN("airhorn", "airhorn"),
         CANCANRECORD("cancanrecord", "cancanrecord"),
-        SADAIRHORN("sadairhorn", "sadairhorn");
+        SADAIRHORN("sadairhorn", "sadairhorn"),
+        INFINITYPICKAXE("infinitypickaxe", "infinitypickaxe"),
+        INFINITYSWORD("infinitysword", "infinitysword"),
+        INFINITYAXE("infinityaxe", "infinityaxe"),
+        INFINITYSHOVEL("infinityshovel", "infinityshovel");
 
 
 
