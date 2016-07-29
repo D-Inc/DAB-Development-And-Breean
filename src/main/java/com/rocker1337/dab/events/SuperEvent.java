@@ -6,7 +6,6 @@ import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
 import com.rocker1337.dab.init.blocks.DABBlocks;
 import com.rocker1337.dab.init.items.DABItems;
 import com.rocker1337.dab.init.items.GreatFlight;
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
