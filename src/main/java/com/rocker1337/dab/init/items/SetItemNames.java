@@ -20,9 +20,8 @@ public class SetItemNames
         INFINITYPICKAXE("infinitypickaxe", "infinitypickaxe"),
         INFINITYSWORD("infinitysword", "infinitysword"),
         INFINITYAXE("infinityaxe", "infinityaxe"),
-        INFINITYSHOVEL("infinityshovel", "infinityshovel");
-        MULTITOOL("multitool", "multitool");
-
+        INFINITYSHOVEL("infinityshovel", "infinityshovel"),
+        MULTITOOL("multitool","multitool");
 
 
         private String unlocalizedName;
