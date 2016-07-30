@@ -41,6 +41,8 @@ public class multitool extends ItemTool
         this.attackSpeed = 2147483647.0F;
         this.setCreativeTab(CreativeTabs.TOOLS);
         this.setCreativeTab(DABItems.tabDAB);
+        setUnlocalizedName(SetItemNames.DABItems.MULTITOOL.getUnlocalizedName());
+        setRegistryName(SetItemNames.DABItems.MULTITOOL.getRegistryName());
     }
 
     public boolean canHarvestBlock(IBlockState blockIn) {
