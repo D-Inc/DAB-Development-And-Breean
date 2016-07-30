@@ -1,6 +1,7 @@
 package com.rocker1337.dab.init.items;
 
 import com.google.common.collect.Sets;
+import com.mojang.realmsclient.gui.ChatFormatting;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -18,7 +19,10 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -142,5 +146,12 @@ public class multitool extends ItemTool
         Material material = state.getMaterial();
         return material != Material.WOOD && material != Material.PLANTS &&
                 material != Material.VINE && material != Material.IRON && material != Material.ANVIL && material != Material.ROCK ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced)
+    {
+        toolTip.add(ChatFormatting.AQUA + "Does not work on snow.");
     }
 }
