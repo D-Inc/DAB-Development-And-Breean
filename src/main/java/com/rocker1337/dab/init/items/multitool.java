@@ -52,6 +52,11 @@ public class multitool extends ItemTool
     public boolean canHarvestBlock(IBlockState blockIn) {
         Block block = blockIn.getBlock();
 
+        if(block == Blocks.SNOW || block == Blocks.SNOW_LAYER)
+        {
+            return block == Blocks.SNOW_LAYER ? true : block == Blocks.SNOW;
+        }
+
         if (block == Blocks.OBSIDIAN)
         {
             return this.toolMaterial.getHarvestLevel() == 3;
@@ -152,6 +157,6 @@ public class multitool extends ItemTool
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced)
     {
-        toolTip.add(ChatFormatting.AQUA + "Does not work on snow.");
+        toolTip.add(ChatFormatting.AQUA + "Pickaxe + Shovel + Axe + Sword");
     }
 }
