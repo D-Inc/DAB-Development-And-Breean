@@ -27,11 +27,10 @@ public class DABItems
     public static Item infinitysword;
     public static Item infinityaxe;
     public static Item infinityshovel;
+    public static Item multitool;
 
     //Tool Materials
     public static Item.ToolMaterial infinitymaterial = EnumHelper.addToolMaterial("infinitymaterial", 2147483647, -1, 2147483647.0F, 2147483647.0F, 2147483647);
-
-
 
     public static void init()
     {
@@ -51,6 +50,7 @@ public class DABItems
         infinityaxe = new infinityaxe(DABItems.infinitymaterial, 2147483647.0F, 2147483647.0F);
         infinitysword = new infinitysword(DABItems.infinitymaterial);
         infinityshovel = new infinityshovel(DABItems.infinitymaterial);
+        multitool = new multitool(DABItems.infinitymaterial);
     }
 
     public static void register()
@@ -71,6 +71,7 @@ public class DABItems
         GameRegistry.register(infinityshovel);
         GameRegistry.register(infinityaxe);
         GameRegistry.register(infinitysword);
+        GameRegistry.register(multitool);
     }
 
     public static void registerRenders()
@@ -91,6 +92,7 @@ public class DABItems
         registerRender(infinityaxe);
         registerRender(infinitysword);
         registerRender(infinityshovel);
+        registerRender(multitool);
     }
 
     private static void  registerRender(Item item)

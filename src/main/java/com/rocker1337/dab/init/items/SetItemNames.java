@@ -21,6 +21,7 @@ public class SetItemNames
         INFINITYSWORD("infinitysword", "infinitysword"),
         INFINITYAXE("infinityaxe", "infinityaxe"),
         INFINITYSHOVEL("infinityshovel", "infinityshovel");
+        MULTITOOL("multitool", "multitool");
 
 
 
