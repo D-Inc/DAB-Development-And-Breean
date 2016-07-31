@@ -12,6 +12,8 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.play.client.CPacketPlayerTryUseItem;
 import net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
@@ -82,6 +84,10 @@ public class SuperEvent {
             else
             {
                 hasThoriumFlight = false;
+            }
+            if(player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == DABItems.thoriumhelmet)
+            {
+                player.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation("night_vision"), 25, 1));
             }
             // Disable flight if they don't have Greater or Lesser Flight or EnderFlight ring and if they aren't in creative.
             if (!hasGreatFlight & !hasLessFlight & !hasEnderFlight & !hasThoriumFlight & !isCreativeMode)

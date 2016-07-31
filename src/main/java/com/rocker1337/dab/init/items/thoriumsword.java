@@ -1,5 +1,6 @@
 package com.rocker1337.dab.init.items;
 
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
 
@@ -13,5 +14,10 @@ public class thoriumsword extends ItemSword
         super(material);
         setUnlocalizedName(SetItemNames.DABItems.THORIUMSWORD.getUnlocalizedName());
         setRegistryName(SetItemNames.DABItems.THORIUMSWORD.getRegistryName());
+    }
+    @Override
+    public boolean hasEffect(ItemStack itemStack)
+    {
+        return true;
     }
 }

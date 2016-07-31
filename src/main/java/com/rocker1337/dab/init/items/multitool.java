@@ -161,4 +161,9 @@ public class multitool extends ItemTool
     {
         toolTip.add(ChatFormatting.AQUA + "Pickaxe + Shovel + Axe + Sword");
     }
+    @Override
+    public boolean hasEffect(ItemStack itemStack)
+    {
+        return true;
+    }
 }
