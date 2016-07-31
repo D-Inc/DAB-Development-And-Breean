@@ -20,6 +20,7 @@ import net.minecraft.world.storage.WorldInfo;
 import net.minecraftforge.client.event.sound.PlaySoundEvent;
 import net.minecraftforge.client.event.sound.SoundEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -36,11 +37,13 @@ public class SuperEvent {
     static boolean hasLessFlight;
     static boolean hasGreatFlight;
     static boolean hasEnderFlight;
+    static boolean hasInfinityFlight;
     static boolean isCreativeMode;
     static World worldIn;
 
     @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
-    public void onEvent(LivingEvent.LivingUpdateEvent event) {
+    public void onEvent(LivingEvent.LivingUpdateEvent event)
+    {
         event.getEntity();
         if (event.getEntity() instanceof EntityPlayer) {
             player = (EntityPlayer) event.getEntity();
@@ -71,8 +74,17 @@ public class SuperEvent {
             {
                 hasEnderFlight = false;
             }
+            if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == DABItems.infinityhelmet && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == DABItems.infinitychestplate && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == DABItems.infinityleggings && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == DABItems.infinityboots)
+            {
+                player.capabilities.allowFlying = true;
+                hasInfinityFlight = true;
+            }
+            else
+            {
+                hasInfinityFlight = false;
+            }
             // Disable flight if they don't have Greater or Lesser Flight or EnderFlight ring and if they aren't in creative.
-            if (!hasGreatFlight & !hasLessFlight & !hasEnderFlight & !isCreativeMode)
+            if (!hasGreatFlight & !hasLessFlight & !hasEnderFlight & !hasInfinityFlight & !isCreativeMode)
             {
                 player.capabilities.isFlying = false;
                 player.capabilities.allowFlying = false;
@@ -80,13 +92,15 @@ public class SuperEvent {
 
         }
     }
-    /*@SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
-    public void onEvent(BlockEvent.HarvestDropsEvent event)
+    @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
+    public void onEntityGetHurt(LivingHurtEvent e)
     {
-        if(event.getState())
+        if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == DABItems.infinityhelmet && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == DABItems.infinitychestplate && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == DABItems.infinityleggings && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == DABItems.infinityboots)
         {
-            System.out.println("Destroy Cobblestone");
+            if (e.getEntity() instanceof EntityPlayer)
+            {
+                e.setCanceled(true);
+            }
         }
-    }*/
-
+    }
 }

@@ -21,7 +21,11 @@ public class SetItemNames
         INFINITYSWORD("infinitysword", "infinitysword"),
         INFINITYAXE("infinityaxe", "infinityaxe"),
         INFINITYSHOVEL("infinityshovel", "infinityshovel"),
-        MULTITOOL("multitool","multitool");
+        MULTITOOL("multitool","multitool"),
+        INFINITYHELMET("infinity_helmet", "infinity_helmet"),
+        INFINITYCHESTPLATE("infinity_chestplate", "infinity_chestplate"),
+        INFINITYLEGS("infinity_legs", "infinity_legs"),
+        INFINITYBOOTS("infinity_boots", "infinity_boots");
 
 
         private String unlocalizedName;

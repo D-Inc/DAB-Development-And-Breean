@@ -4,7 +4,11 @@ import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -28,9 +32,15 @@ public class DABItems
     public static Item infinityaxe;
     public static Item infinityshovel;
     public static Item multitool;
+    public static Item infinityhelmet;
+    public static Item infinitychestplate;
+    public static Item infinityleggings;
+    public static Item infinityboots;
 
     //Tool Materials
     public static Item.ToolMaterial infinitymaterial = EnumHelper.addToolMaterial("infinitymaterial", 2147483647, -1, 2147483647.0F, 2147483647.0F, 2147483647);
+    //Armor Materials
+    public static ItemArmor.ArmorMaterial InfinityArmor = EnumHelper.addArmorMaterial("InfinityArmor", "dab:infinity", -1, new int[] {7, 7, 7, 7}, 2147483647, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2147483647.0F);
 
     public static void init()
     {
@@ -51,6 +61,10 @@ public class DABItems
         infinitysword = new infinitysword(DABItems.infinitymaterial);
         infinityshovel = new infinityshovel(DABItems.infinitymaterial);
         multitool = new multitool(DABItems.infinitymaterial);
+        infinityhelmet = new InfinityArmor(SetItemNames.DABItems.INFINITYHELMET.getUnlocalizedName(), SetItemNames.DABItems.INFINITYHELMET.getRegistryName(), DABItems.InfinityArmor, 1, EntityEquipmentSlot.HEAD);
+        infinitychestplate = new InfinityArmor(SetItemNames.DABItems.INFINITYCHESTPLATE.getUnlocalizedName(), SetItemNames.DABItems.INFINITYCHESTPLATE.getRegistryName(), DABItems.InfinityArmor, 1, EntityEquipmentSlot.CHEST);
+        infinityleggings = new InfinityArmor(SetItemNames.DABItems.INFINITYLEGS.getUnlocalizedName(), SetItemNames.DABItems.INFINITYLEGS.getRegistryName(), DABItems.InfinityArmor, 2, EntityEquipmentSlot.LEGS);
+        infinityboots = new InfinityArmor(SetItemNames.DABItems.INFINITYBOOTS.getUnlocalizedName(), SetItemNames.DABItems.INFINITYBOOTS.getRegistryName(), DABItems.InfinityArmor, 1, EntityEquipmentSlot.FEET);
     }
 
     public static void register()
@@ -72,6 +86,11 @@ public class DABItems
         GameRegistry.register(infinityaxe);
         GameRegistry.register(infinitysword);
         GameRegistry.register(multitool);
+        GameRegistry.register(infinityhelmet);
+        GameRegistry.register(infinitychestplate);
+        GameRegistry.register(infinityleggings);
+        GameRegistry.register(infinityboots);
+
     }
 
     public static void registerRenders()
@@ -93,6 +112,10 @@ public class DABItems
         registerRender(infinitysword);
         registerRender(infinityshovel);
         registerRender(multitool);
+        registerRender(infinityhelmet);
+        registerRender(infinitychestplate);
+        registerRender(infinityleggings);
+        registerRender(infinityboots);
     }
 
     private static void  registerRender(Item item)
@@ -118,6 +141,10 @@ public class DABItems
         infinityshovel.setCreativeTab(tabDAB);
         infinityaxe.setCreativeTab(tabDAB);
         infinitysword.setCreativeTab(tabDAB);
+        infinityhelmet.setCreativeTab(tabDAB);
+        infinityboots.setCreativeTab(tabDAB);
+        infinityleggings.setCreativeTab(tabDAB);
+        infinitychestplate.setCreativeTab(tabDAB);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean") {
