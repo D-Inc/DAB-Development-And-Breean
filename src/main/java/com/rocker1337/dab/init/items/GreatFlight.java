@@ -46,5 +46,12 @@ public class GreatFlight extends ItemRing {
     public static boolean isGreatRing(ItemStack stack) {
         return stack != null && (stack.getItem() == DABItems.GreatFlight);
     }
+
+    @Override
+    public void onWornTick(ItemStack itemstack, EntityLivingBase player) {
+        if(itemstack.getItemDamage() == 0 && player.ticksExisted % 39 == 0) {
+        }
+
+    }
 }
 
