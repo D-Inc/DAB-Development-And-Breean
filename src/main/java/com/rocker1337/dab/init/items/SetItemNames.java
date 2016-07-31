@@ -25,7 +25,7 @@ public class SetItemNames
         THORIUMHELMET("thorium_helmet", "thorium_helmet"),
         THORIUMCHESTPLATE("thorium_chestplate", "thorium_chestplate"),
         THORIUMLEGS("thorium_legs", "thorium_legs"),
-        THORIUMBOOTS("thorium_boots", "thorium_boots");
+        THORIUMBOOTS("thorium_boots", "thorium_boots"),
         THORIUMGEM("thorium_gem", "thorium_gem");
 
 

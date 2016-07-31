@@ -55,5 +55,10 @@ public class GreatFlight extends ItemRing {
         }
 
     }
+    @Override
+    public boolean hasEffect(ItemStack itemStack)
+    {
+        return false;
+    }
 }
 
