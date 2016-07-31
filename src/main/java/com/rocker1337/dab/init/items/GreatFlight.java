@@ -17,8 +17,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.List;
 
-@Optional.InterfaceList({
-        @Optional.Interface(iface = "baubles.common.items.ItemRing", modid = "CoFHLib")})
 public class GreatFlight extends ItemRing {
     public GreatFlight() {
         setUnlocalizedName(SetItemNames.DABItems.GREATFLIGHT.getUnlocalizedName());
@@ -47,13 +45,6 @@ public class GreatFlight extends ItemRing {
 
     public static boolean isGreatRing(ItemStack stack) {
         return stack != null && (stack.getItem() == DABItems.GreatFlight);
-    }
-
-    @Override
-    public void onWornTick(ItemStack itemstack, EntityLivingBase player) {
-        if(itemstack.getItemDamage() == 0 && player.ticksExisted % 39 == 0) {
-        }
-
     }
 }
 
