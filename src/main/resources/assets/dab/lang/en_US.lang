@@ -11,6 +11,14 @@ item.Hammer.name=Hammer
 item.airhorn.name=MLG Airhorn
 item.sadairhorn.name=Sad Airhorn
 item.multitool.name=Shickaxe
+item.thorium_helmet.name=Thorium Helmet
+item.thorium_boots.name=Thorium Boots
+item.thorium_legs.name=Thorium Leggings
+item.thorium_chestplate.name=Thorium Chestplate
+item.thoriumsword.name=Thorium Sword
+item.thoriumaxe.name=Thorium Axe
+item.thoriumshovel.name=Thorium Shovel
+item.thoriumpickaxe.name=Thorium Pickaxe
 
 item.cancanrecord.name=Music Disc
 item.record.mlgcancan.desc=Derek on Weed - MLG Can Can

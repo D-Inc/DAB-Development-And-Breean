@@ -5,9 +5,9 @@ import net.minecraft.item.ItemArmor;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 
-public class InfinityArmor extends ItemArmor
+public class ThoriumArmor extends ItemArmor
 {
-    public InfinityArmor(String unlocalizedname, String registryname, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
+    public ThoriumArmor(String unlocalizedname, String registryname, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
     {
         super(materialIn, renderIndexIn, equipmentSlotIn);
         this.setUnlocalizedName(unlocalizedname);

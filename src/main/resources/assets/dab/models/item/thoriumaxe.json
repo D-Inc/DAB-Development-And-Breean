@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dab:items/infinity_pickaxe"
+    "layer0": "dab:items/thorium_axe"
   },
   "display": {
     "thirdperson": {

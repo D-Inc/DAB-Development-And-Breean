@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dab:items/infinity_boots"
+    "layer0": "dab:items/thorium_legs"
   }
 }

@@ -37,7 +37,7 @@ public class SuperEvent {
     static boolean hasLessFlight;
     static boolean hasGreatFlight;
     static boolean hasEnderFlight;
-    static boolean hasInfinityFlight;
+    static boolean hasThoriumFlight;
     static boolean isCreativeMode;
     static World worldIn;
 
@@ -74,17 +74,17 @@ public class SuperEvent {
             {
                 hasEnderFlight = false;
             }
-            if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == DABItems.infinityhelmet && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == DABItems.infinitychestplate && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == DABItems.infinityleggings && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == DABItems.infinityboots)
+            if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == DABItems.thoriumhelmet && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == DABItems.thoriumchestplate && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == DABItems.thoriumleggings && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == DABItems.thoriumboots)
             {
                 player.capabilities.allowFlying = true;
-                hasInfinityFlight = true;
+                hasThoriumFlight = true;
             }
             else
             {
-                hasInfinityFlight = false;
+                hasThoriumFlight = false;
             }
             // Disable flight if they don't have Greater or Lesser Flight or EnderFlight ring and if they aren't in creative.
-            if (!hasGreatFlight & !hasLessFlight & !hasEnderFlight & !hasInfinityFlight & !isCreativeMode)
+            if (!hasGreatFlight & !hasLessFlight & !hasEnderFlight & !hasThoriumFlight & !isCreativeMode)
             {
                 player.capabilities.isFlying = false;
                 player.capabilities.allowFlying = false;
@@ -95,7 +95,7 @@ public class SuperEvent {
     @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
     public void onEntityGetHurt(LivingHurtEvent e)
     {
-        if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == DABItems.infinityhelmet && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == DABItems.infinitychestplate && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == DABItems.infinityleggings && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == DABItems.infinityboots)
+        if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == DABItems.thoriumhelmet && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == DABItems.thoriumchestplate && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == DABItems.thoriumleggings && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == DABItems.thoriumboots)
         {
             if (e.getEntity() instanceof EntityPlayer)
             {
