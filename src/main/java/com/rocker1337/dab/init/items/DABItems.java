@@ -27,21 +27,21 @@ public class DABItems
     public static Item AirHorn;
     public static Item mlgcancan;
     public static Item SadAirHorn;
-    public static Item infinitypickaxe;
-    public static Item infinitysword;
-    public static Item infinityaxe;
-    public static Item infinityshovel;
+    public static Item thoriumpickaxe;
+    public static Item thoriumsword;
+    public static Item thoriumaxe;
+    public static Item thoriumshovel;
     public static Item multitool;
-    public static Item infinityhelmet;
-    public static Item infinitychestplate;
-    public static Item infinityleggings;
-    public static Item infinityboots;
+    public static Item thoriumhelmet;
+    public static Item thoriumchestplate;
+    public static Item thoriumleggings;
+    public static Item thoriumboots;
     public static Item thorium_gem;
 
     //Tool Materials
-    public static Item.ToolMaterial infinitymaterial = EnumHelper.addToolMaterial("infinitymaterial", 2147483647, -1, 2147483647.0F, 2147483647.0F, 2147483647);
+    public static Item.ToolMaterial thoriummaterial = EnumHelper.addToolMaterial("thoriummaterial", 2147483647, -1, 2147483647.0F, 2147483647.0F, 2147483647);
     //Armor Materials
-    public static ItemArmor.ArmorMaterial InfinityArmor = EnumHelper.addArmorMaterial("InfinityArmor", "dab:infinity", -1, new int[] {7, 7, 7, 7}, 2147483647, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2147483647.0F);
+    public static ItemArmor.ArmorMaterial ThoriumArmor = EnumHelper.addArmorMaterial("ThoriumArmor", "dab:thorium", -1, new int[] {7, 7, 7, 7}, 2147483647, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2147483647.0F);
 
     public static void init()
     {
@@ -57,15 +57,15 @@ public class DABItems
         AirHorn = new AirHorn();
         mlgcancan = new MLGCanCanDisk("mlgcancan", RegisterSoundEvents.records_mlgcancan);
         SadAirHorn = new SadAirHorn();
-        infinitypickaxe = new infinitypickaxe(DABItems.infinitymaterial);
-        infinityaxe = new infinityaxe(DABItems.infinitymaterial, 2147483647.0F, 2147483647.0F);
-        infinitysword = new infinitysword(DABItems.infinitymaterial);
-        infinityshovel = new infinityshovel(DABItems.infinitymaterial);
-        multitool = new multitool(DABItems.infinitymaterial);
-        infinityhelmet = new InfinityArmor(SetItemNames.DABItems.INFINITYHELMET.getUnlocalizedName(), SetItemNames.DABItems.INFINITYHELMET.getRegistryName(), DABItems.InfinityArmor, 1, EntityEquipmentSlot.HEAD);
-        infinitychestplate = new InfinityArmor(SetItemNames.DABItems.INFINITYCHESTPLATE.getUnlocalizedName(), SetItemNames.DABItems.INFINITYCHESTPLATE.getRegistryName(), DABItems.InfinityArmor, 1, EntityEquipmentSlot.CHEST);
-        infinityleggings = new InfinityArmor(SetItemNames.DABItems.INFINITYLEGS.getUnlocalizedName(), SetItemNames.DABItems.INFINITYLEGS.getRegistryName(), DABItems.InfinityArmor, 2, EntityEquipmentSlot.LEGS);
-        infinityboots = new InfinityArmor(SetItemNames.DABItems.INFINITYBOOTS.getUnlocalizedName(), SetItemNames.DABItems.INFINITYBOOTS.getRegistryName(), DABItems.InfinityArmor, 1, EntityEquipmentSlot.FEET);
+        thoriumpickaxe = new thoriumpickaxe(DABItems.thoriummaterial);
+        thoriumaxe = new thoriumaxe(DABItems.thoriummaterial, 2147483647.0F, 2147483647.0F);
+        thoriumsword = new thoriumsword(DABItems.thoriummaterial);
+        thoriumshovel = new thoriumshovel(DABItems.thoriummaterial);
+        multitool = new multitool(DABItems.thoriummaterial);
+        thoriumhelmet = new ThoriumArmor(SetItemNames.DABItems.THORIUMHELMET.getUnlocalizedName(), SetItemNames.DABItems.THORIUMHELMET.getRegistryName(), DABItems.ThoriumArmor, 1, EntityEquipmentSlot.HEAD);
+        thoriumchestplate = new ThoriumArmor(SetItemNames.DABItems.THORIUMCHESTPLATE.getUnlocalizedName(), SetItemNames.DABItems.THORIUMCHESTPLATE.getRegistryName(), DABItems.ThoriumArmor, 1, EntityEquipmentSlot.CHEST);
+        thoriumleggings = new ThoriumArmor(SetItemNames.DABItems.THORIUMLEGS.getUnlocalizedName(), SetItemNames.DABItems.THORIUMLEGS.getRegistryName(), DABItems.ThoriumArmor, 2, EntityEquipmentSlot.LEGS);
+        thoriumboots = new ThoriumArmor(SetItemNames.DABItems.THORIUMBOOTS.getUnlocalizedName(), SetItemNames.DABItems.THORIUMBOOTS.getRegistryName(), DABItems.ThoriumArmor, 1, EntityEquipmentSlot.FEET);
         thorium_gem = new ThoriumGem();
     }
 
@@ -83,15 +83,15 @@ public class DABItems
         GameRegistry.register(AirHorn);
         GameRegistry.register(mlgcancan);
         GameRegistry.register(SadAirHorn);
-        GameRegistry.register(infinitypickaxe);
-        GameRegistry.register(infinityshovel);
-        GameRegistry.register(infinityaxe);
-        GameRegistry.register(infinitysword);
+        GameRegistry.register(thoriumpickaxe);
+        GameRegistry.register(thoriumshovel);
+        GameRegistry.register(thoriumaxe);
+        GameRegistry.register(thoriumsword);
         GameRegistry.register(multitool);
-        GameRegistry.register(infinityhelmet);
-        GameRegistry.register(infinitychestplate);
-        GameRegistry.register(infinityleggings);
-        GameRegistry.register(infinityboots);
+        GameRegistry.register(thoriumhelmet);
+        GameRegistry.register(thoriumchestplate);
+        GameRegistry.register(thoriumleggings);
+        GameRegistry.register(thoriumboots);
         GameRegistry.register(thorium_gem);
 
     }
@@ -110,15 +110,15 @@ public class DABItems
         registerRender(AirHorn);
         registerRender(mlgcancan);
         registerRender(SadAirHorn);
-        registerRender(infinitypickaxe);
-        registerRender(infinityaxe);
-        registerRender(infinitysword);
-        registerRender(infinityshovel);
+        registerRender(thoriumpickaxe);
+        registerRender(thoriumaxe);
+        registerRender(thoriumsword);
+        registerRender(thoriumshovel);
         registerRender(multitool);
-        registerRender(infinityhelmet);
-        registerRender(infinitychestplate);
-        registerRender(infinityleggings);
-        registerRender(infinityboots);
+        registerRender(thoriumhelmet);
+        registerRender(thoriumchestplate);
+        registerRender(thoriumleggings);
+        registerRender(thoriumboots);
         registerRender(thorium_gem);
     }
 
@@ -141,14 +141,14 @@ public class DABItems
         AirHorn.setCreativeTab(tabDAB);
         mlgcancan.setCreativeTab(tabDAB);
         SadAirHorn.setCreativeTab(tabDAB);
-        infinitypickaxe.setCreativeTab(tabDAB);
-        infinityshovel.setCreativeTab(tabDAB);
-        infinityaxe.setCreativeTab(tabDAB);
-        infinitysword.setCreativeTab(tabDAB);
-        infinityhelmet.setCreativeTab(tabDAB);
-        infinityboots.setCreativeTab(tabDAB);
-        infinityleggings.setCreativeTab(tabDAB);
-        infinitychestplate.setCreativeTab(tabDAB);
+        thoriumpickaxe.setCreativeTab(tabDAB);
+        thoriumshovel.setCreativeTab(tabDAB);
+        thoriumaxe.setCreativeTab(tabDAB);
+        thoriumsword.setCreativeTab(tabDAB);
+        thoriumhelmet.setCreativeTab(tabDAB);
+        thoriumboots.setCreativeTab(tabDAB);
+        thoriumleggings.setCreativeTab(tabDAB);
+        thoriumchestplate.setCreativeTab(tabDAB);
         thorium_gem.setCreativeTab(tabDAB);
     }
 

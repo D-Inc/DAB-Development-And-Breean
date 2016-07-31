@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dab:items/infinity_sword"
+    "layer0": "dab:items/thorium_shovel"
   },
   "display": {
     "thirdperson": {
