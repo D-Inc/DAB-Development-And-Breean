@@ -3,7 +3,6 @@ package com.rocker1337.dab.proxy;
 import com.rocker1337.dab.events.*;
 import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
 import com.rocker1337.dab.init.blocks.DABBlocks;
-import com.rocker1337.dab.init.blocks.SetBlockNames;
 import com.rocker1337.dab.init.items.DABItems;
 import com.rocker1337.dab.init.crafting.DABCrafting;
 import com.rocker1337.dab.world.DabWorldGen;
@@ -40,6 +39,7 @@ public class CommonProxy
         MinecraftForge.EVENT_BUS.register(new DisableWeather());
         MinecraftForge.EVENT_BUS.register(new PlayerNameChanger());
         MinecraftForge.EVENT_BUS.register(new AllowCheats());
+        MinecraftForge.EVENT_BUS.register(new ThoriumChestplateMagnet());
     }
     public void postInit(FMLPostInitializationEvent e)
     {
