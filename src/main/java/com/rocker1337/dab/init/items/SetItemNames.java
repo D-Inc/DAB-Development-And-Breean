@@ -25,7 +25,8 @@ public class SetItemNames
         INFINITYHELMET("infinity_helmet", "infinity_helmet"),
         INFINITYCHESTPLATE("infinity_chestplate", "infinity_chestplate"),
         INFINITYLEGS("infinity_legs", "infinity_legs"),
-        INFINITYBOOTS("infinity_boots", "infinity_boots");
+        INFINITYBOOTS("infinity_boots", "infinity_boots"),
+        THORIUMGEM("thorium_gem", "thorium_gem");
 
 
         private String unlocalizedName;

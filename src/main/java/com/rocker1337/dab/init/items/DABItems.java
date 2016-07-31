@@ -36,6 +36,7 @@ public class DABItems
     public static Item infinitychestplate;
     public static Item infinityleggings;
     public static Item infinityboots;
+    public static Item thorium_gem;
 
     //Tool Materials
     public static Item.ToolMaterial infinitymaterial = EnumHelper.addToolMaterial("infinitymaterial", 2147483647, -1, 2147483647.0F, 2147483647.0F, 2147483647);
@@ -65,6 +66,7 @@ public class DABItems
         infinitychestplate = new InfinityArmor(SetItemNames.DABItems.INFINITYCHESTPLATE.getUnlocalizedName(), SetItemNames.DABItems.INFINITYCHESTPLATE.getRegistryName(), DABItems.InfinityArmor, 1, EntityEquipmentSlot.CHEST);
         infinityleggings = new InfinityArmor(SetItemNames.DABItems.INFINITYLEGS.getUnlocalizedName(), SetItemNames.DABItems.INFINITYLEGS.getRegistryName(), DABItems.InfinityArmor, 2, EntityEquipmentSlot.LEGS);
         infinityboots = new InfinityArmor(SetItemNames.DABItems.INFINITYBOOTS.getUnlocalizedName(), SetItemNames.DABItems.INFINITYBOOTS.getRegistryName(), DABItems.InfinityArmor, 1, EntityEquipmentSlot.FEET);
+        thorium_gem = new ThoriumGem();
     }
 
     public static void register()
@@ -90,6 +92,7 @@ public class DABItems
         GameRegistry.register(infinitychestplate);
         GameRegistry.register(infinityleggings);
         GameRegistry.register(infinityboots);
+        GameRegistry.register(thorium_gem);
 
     }
 
@@ -116,6 +119,7 @@ public class DABItems
         registerRender(infinitychestplate);
         registerRender(infinityleggings);
         registerRender(infinityboots);
+        registerRender(thorium_gem);
     }
 
     private static void  registerRender(Item item)
@@ -145,6 +149,7 @@ public class DABItems
         infinityboots.setCreativeTab(tabDAB);
         infinityleggings.setCreativeTab(tabDAB);
         infinitychestplate.setCreativeTab(tabDAB);
+        thorium_gem.setCreativeTab(tabDAB);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean") {
