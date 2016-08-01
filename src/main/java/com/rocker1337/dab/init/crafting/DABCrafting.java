@@ -21,6 +21,7 @@ public class DABCrafting
         GameRegistry.addRecipe(new ItemStack(DABBlocks.controller2, 8, 0), new Object[]{"sss", "srs", "sss", 's', new ItemStack(Blocks.STONEBRICK, 1, 0), 'r', Items.REDSTONE});
         GameRegistry.addShapelessRecipe(new ItemStack(DABBlocks.controller, 1, 0), new Object[]{DABBlocks.controller2});
         GameRegistry.addShapelessRecipe(new ItemStack(DABBlocks.controller2, 1, 0), new Object[]{DABBlocks.controller});
+        GameRegistry.addShapedRecipe(new ItemStack(DABItems.multitool, 1, 0), new Object[]{"psa", " c ", " g ", 'p', DABItems.thoriumpickaxe, 's', DABItems.thoriumshovel, 'a', DABItems.thoriumaxe, 'c', DABItems.thoriumcore, 'g', DABItems.thorium_gem});
         //Armor Crafting
         GameRegistry.addRecipe(new ItemStack(DABItems.thoriumhelmet), new Object[]{"ttt", "tct", "   ", 't', new ItemStack(DABItems.thorium_gem), 'c', new ItemStack(DABItems.thoriumcore)});
         GameRegistry.addRecipe(new ItemStack(DABItems.thoriumchestplate), new Object[]{"tct", "ttt", "ttt", 't', new ItemStack(DABItems.thorium_gem), 'c', new ItemStack(DABItems.thoriumcore)});
