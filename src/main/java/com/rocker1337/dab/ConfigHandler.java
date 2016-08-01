@@ -1,25 +1,28 @@
 package com.rocker1337.dab;
 
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
+import java.io.File;
 
 /**
  * Created by Rocker545 on 7/31/2016.
  */
 public class ConfigHandler {
-    //CONFIG ENTRY VARIABLES
-    public static Boolean test;
-    public static Boolean chestplatemagnet;
 
-    public void preInit(FMLPreInitializationEvent e)
+    public static Configuration config;
+
+    //Settings
+    public static boolean chestplateMagnet;
+    public static boolean test;
+
+    public static void init(File file)
     {
-        //Configuration
-        Configuration config = new Configuration(e.getSuggestedConfigurationFile());
-        config.load();
-        //CONFIG ENTRIES START
-        test = config.getBoolean("PUT NAME HERE", Configuration.CATEGORY_GENERAL, true, "PUT DESCRIPTION HERE");
-        chestplatemagnet = config.getBoolean("Thorium Chestplate Magnet", Configuration.CATEGORY_GENERAL, true, "True to enable magnet and false to disable");
-        //CONFIG ENTRIES END
+        config = new Configuration(file);
+        syncConfig();
+    }
+
+    private static void syncConfig() {
+        chestplateMagnet = config.getBoolean("Thorium Chestplate Item Magnet", Configuration.CATEGORY_GENERAL, true, "True to enable magnet");
         config.save();
     }
 }
