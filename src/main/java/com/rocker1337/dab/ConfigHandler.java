@@ -25,7 +25,6 @@ public class ConfigHandler {
     public static void syncConfig() {
         chestplateMagnet = config.getBoolean("Thorium Chestplate Item Magnet", Configuration.CATEGORY_GENERAL, true, "True to enable magnet");
         swordxpmultiplier = config.getInt("Thorium Sword XP Multiplier", Configuration.CATEGORY_GENERAL, 2, 1, 2147483647, "This is the XP multiplyer when a player is holding the Thorium Sowrd");
-        config.save();
 
         if(config.hasChanged())
         {
