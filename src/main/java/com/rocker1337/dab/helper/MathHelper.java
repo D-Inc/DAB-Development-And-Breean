@@ -2,7 +2,6 @@ package com.rocker1337.dab.helper;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.BlockPos;
-import com.rocker1337.dab.helper.VanillaPacketDispatcher;
 
 /**
  * Created by Rocker545 on 7/31/2016.

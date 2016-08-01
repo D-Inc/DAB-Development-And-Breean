@@ -2,7 +2,6 @@ package com.rocker1337.dab.init.items;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
-import net.minecraft.item.ItemTool;
 
 /**
  * Created by ninjawarrior1337 on 7/28/16.

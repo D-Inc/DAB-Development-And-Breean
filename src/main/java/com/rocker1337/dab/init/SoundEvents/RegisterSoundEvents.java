@@ -1,7 +1,6 @@
 package com.rocker1337.dab.init.SoundEvents;
 
 import com.rocker1337.dab.Reference;
-import net.minecraft.client.audio.Sound;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;

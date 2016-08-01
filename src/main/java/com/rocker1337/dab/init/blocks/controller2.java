@@ -2,7 +2,6 @@ package com.rocker1337.dab.init.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 
 /**
  * Created by ninjawarrior1337 on 7/5/2016.

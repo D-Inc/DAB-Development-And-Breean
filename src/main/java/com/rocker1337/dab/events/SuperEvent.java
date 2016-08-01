@@ -12,8 +12,8 @@ import net.minecraftforge.event.entity.player.PlayerPickupXpEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import static com.rocker1337.dab.init.items.GreatFlight.getGreatRing;
 import static com.rocker1337.dab.ConfigHandler.swordxpmultiplier;
+import static com.rocker1337.dab.init.items.GreatFlight.getGreatRing;
 
 /**
  * Created by Rocker545 on 7/3/2016.

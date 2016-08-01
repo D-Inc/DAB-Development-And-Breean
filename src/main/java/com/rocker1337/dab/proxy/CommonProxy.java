@@ -1,12 +1,10 @@
 package com.rocker1337.dab.proxy;
 
-import com.rocker1337.dab.ConfigHandler;
-import com.rocker1337.dab.Reference;
 import com.rocker1337.dab.events.*;
 import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
 import com.rocker1337.dab.init.blocks.DABBlocks;
-import com.rocker1337.dab.init.items.DABItems;
 import com.rocker1337.dab.init.crafting.DABCrafting;
+import com.rocker1337.dab.init.items.DABItems;
 import com.rocker1337.dab.world.DABBiomeRegistry;
 import com.rocker1337.dab.world.DabWorldGen;
 import net.minecraftforge.common.MinecraftForge;
@@ -14,8 +12,6 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-
-import java.io.File;
 
 
 public class CommonProxy

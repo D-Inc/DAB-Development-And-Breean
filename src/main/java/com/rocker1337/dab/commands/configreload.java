@@ -10,7 +10,6 @@ import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.rocker1337.dab.ConfigHandler.config;
 import static com.rocker1337.dab.ConfigHandler.syncConfig;
 
 /**
