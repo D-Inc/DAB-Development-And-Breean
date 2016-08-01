@@ -10,7 +10,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 
 public class MLGCanCanDisk extends ItemRecord
@@ -44,11 +43,6 @@ public class MLGCanCanDisk extends ItemRecord
             return EnumActionResult.PASS;
         }
 
-    }
-    @Override
-    public String getRecordNameLocal()
-    {
-        return I18n.translateToLocal("Derek on Weed - MLG Can Can");
     }
 }
 
