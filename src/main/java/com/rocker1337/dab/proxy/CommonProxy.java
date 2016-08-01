@@ -1,6 +1,7 @@
 package com.rocker1337.dab.proxy;
 
 import com.rocker1337.dab.ConfigHandler;
+import com.rocker1337.dab.Reference;
 import com.rocker1337.dab.events.*;
 import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
 import com.rocker1337.dab.init.blocks.DABBlocks;
@@ -14,14 +15,14 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import java.io.File;
+
 
 public class CommonProxy
 {
-    public static ConfigHandler handler;
     public void preInit(FMLPreInitializationEvent e)
     {
         System.out.println("Starting Pre Init");
-        //handler.preInit(e);
         //Init Biomes
         DABBiomeRegistry.MainRegistry();
         //Init and Register Items
