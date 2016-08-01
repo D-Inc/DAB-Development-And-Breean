@@ -10,7 +10,6 @@ import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.rocker1337.dab.ConfigHandler.chestplateMagnet;
 import static com.rocker1337.dab.ConfigHandler.syncConfig;
 
 /**
@@ -48,9 +47,9 @@ public class configreload implements ICommand {
     @Override
     public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException
     {
+        //System.out.println("Command was ran successfully.");
         syncConfig();
-        System.out.println("Command was ran successfully.");
-        System.out.println(chestplateMagnet);
+        //System.out.println(chestplateMagnet);
     }
 
     @Override
