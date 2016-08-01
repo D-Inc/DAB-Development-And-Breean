@@ -1,9 +1,16 @@
 package com.rocker1337.dab.init.items;
 
+import com.mojang.realmsclient.gui.ChatFormatting;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+import java.util.List;
+
+import static com.rocker1337.dab.ConfigHandler.chestplateMagnet;
 
 
 public class ThoriumArmor extends ItemArmor
@@ -18,5 +25,12 @@ public class ThoriumArmor extends ItemArmor
     public boolean hasEffect(ItemStack itemStack)
     {
         return true;
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced)
+    {
+        toolTip.add(ChatFormatting.DARK_BLUE + "Magnet Mode = " + chestplateMagnet);
     }
 }

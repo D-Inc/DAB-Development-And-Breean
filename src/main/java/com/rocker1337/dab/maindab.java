@@ -1,5 +1,6 @@
 package com.rocker1337.dab;
 
+import com.rocker1337.dab.commands.configreload;
 import com.rocker1337.dab.proxy.CommonProxy;
 import com.typesafe.config.Config;
 import net.minecraftforge.common.config.Configuration;
@@ -9,6 +10,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.io.File;
@@ -43,5 +45,10 @@ public class maindab
     public void postInit(FMLPostInitializationEvent e)
     {
         proxy.postInit(e);
+    }
+    @EventHandler
+    public void serverLoad(FMLServerStartingEvent event)
+    {
+        event.registerServerCommand(new configreload());
     }
 }
