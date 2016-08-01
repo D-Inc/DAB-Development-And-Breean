@@ -2,6 +2,7 @@ package com.rocker1337.dab;
 
 import com.rocker1337.dab.commands.configreload;
 import com.rocker1337.dab.proxy.CommonProxy;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -23,6 +24,11 @@ public class maindab
     public static File getConfigDir()
     {
         return configDir;
+    }
+
+    static
+    {
+        FluidRegistry.enableUniversalBucket();
     }
 
     @EventHandler
