@@ -99,10 +99,9 @@ public class SuperEvent {
     public void onPlayerPickupXP(PlayerPickupXpEvent xpEvent)
     {
         ItemStack heldItem = player.getHeldItemMainhand();
-        if(heldItem != null && heldItem.getItem() == DABItems.thoriumsword);
+        if (heldItem != null && heldItem.getItem() == DABItems.thoriumsword)
         {
             xpEvent.getOrb().xpValue *=swordxpmultiplier;
-            System.out.println("XP Doubbled");
         }
     }
 }
