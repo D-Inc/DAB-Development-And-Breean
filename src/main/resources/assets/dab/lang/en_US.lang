@@ -20,9 +20,11 @@ item.thoriumaxe.name=Thorium Axe
 item.thoriumshovel.name=Thorium Shovel
 item.thoriumpickaxe.name=Thorium Pickaxe
 item.thorium_gem.name=Thorium Gem
+item.derek_essence.name=Derek Essence
 
 item.cancanrecord.name=Music Disc
 item.record.mlgcancan.desc=Derek on Weed - MLG Can Can
 
 tile.dab_controller.name=DAB Controller (Smooth)
 tile.dab_controller2.name=DAB Controller (Original)
+tile.derek_crop.name=Derek Essenence Crop

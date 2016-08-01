@@ -1,9 +1,11 @@
 package com.rocker1337.dab.init.items;
 
 import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
+import com.rocker1337.dab.init.blocks.DABBlocks;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
