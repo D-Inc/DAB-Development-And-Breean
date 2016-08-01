@@ -15,7 +15,8 @@
 		"sounds": 
 		[
           {
-            "name": "dab:mlgcancan",
+            "name": "dab:records/mlgcancan",
+			"stream": true
           }
 		],
 		"subtitle": "mlgcancan"
