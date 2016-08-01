@@ -9,14 +9,13 @@
 		"subtitle": "airhorn"
  	},
 
-	"records.mlgcancan":
+	"mlgcancan":
 	{
 		"category": "record",
 		"sounds": 
 		[
           {
             "name": "dab:mlgcancan",
-            "stream": true
           }
 		],
 		"subtitle": "mlgcancan"
