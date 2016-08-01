@@ -15,13 +15,11 @@ public class maindab
 {
     @SidedProxy(clientSide="com.rocker1337.dab.proxy.ClientProxy", serverSide="com.rocker1337.dab.proxy.ServerProxy")
     public static CommonProxy proxy;
-    public static ConfigHandler handler;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent e)
     {
         proxy.preInit(e);
-        handler.preInit(e);
      }
     @EventHandler
     public void init(FMLInitializationEvent e)
