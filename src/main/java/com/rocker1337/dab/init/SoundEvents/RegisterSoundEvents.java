@@ -20,7 +20,7 @@ public class RegisterSoundEvents
     public static void init()
     {
         airhorn = registerSound("airhorn");
-        records_mlgcancan = registerSound("records.mlgcancan");
+        records_mlgcancan = registerSound("mlgcancan");
         sadairhorn = registerSound("sadairhorn");
         specialcobblestone = registerSound("specialcobblestone");
     }
