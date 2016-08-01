@@ -24,6 +24,7 @@ public class ThoriumChestplateMagnet {
     @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
     public void onEvent(LivingEvent.LivingUpdateEvent event) {
         event.getEntity();
+        // DEBUG System.out.println(chestplateMagnet);
         if (event.getEntity() instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer) event.getEntity();
             ItemStack heldItem = player.getHeldItemMainhand();

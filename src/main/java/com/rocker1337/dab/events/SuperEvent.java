@@ -73,7 +73,7 @@ public class SuperEvent {
             }
             if(player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == DABItems.thoriumhelmet)
             {
-                player.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation("night_vision"), 25, 1));
+                player.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation("night_vision"), 25, 6));
             }
             // Disable flight if they don't have Greater or Lesser Flight or EnderFlight ring and if they aren't in creative.
             if (!hasGreatFlight & !hasLessFlight & !hasEnderFlight & !hasThoriumFlight & !isCreativeMode)
