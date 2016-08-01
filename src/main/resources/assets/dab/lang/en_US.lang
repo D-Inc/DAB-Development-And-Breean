@@ -28,3 +28,5 @@ item.record.mlgcancan.desc=Derek on Weed - MLG Can Can
 tile.dab_controller.name=DAB Controller (Smooth)
 tile.dab_controller2.name=DAB Controller (Original)
 tile.derek_crop.name=Derek Essenence Crop
+tile.tyler_fluid.name=Tyler Fluid
+fluid.tyler_fluid=Tyler Fluid
