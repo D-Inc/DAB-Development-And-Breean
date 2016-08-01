@@ -23,6 +23,7 @@ import net.minecraftforge.client.event.sound.PlaySoundEvent;
 import net.minecraftforge.client.event.sound.SoundEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.player.PlayerPickupXpEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -107,6 +108,16 @@ public class SuperEvent {
             {
                 e.setCanceled(true);
             }
+        }
+    }
+    @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
+    public void onPlayerPickupXP(PlayerPickupXpEvent xpEvent)
+    {
+        ItemStack heldItem = player.getHeldItemMainhand();
+        if(heldItem != null && heldItem.getItem() == DABItems.thoriumsword);
+        {
+            xpEvent.getOrb().xpValue *= 2;
+            System.out.println("XP Doubbled");
         }
     }
 }

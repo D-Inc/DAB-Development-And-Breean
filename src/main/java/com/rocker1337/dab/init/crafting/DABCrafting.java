@@ -22,6 +22,10 @@ public class DABCrafting
         GameRegistry.addShapelessRecipe(new ItemStack(DABBlocks.controller, 1, 0), new Object[]{DABBlocks.controller2});
         GameRegistry.addShapelessRecipe(new ItemStack(DABBlocks.controller2, 1, 0), new Object[]{DABBlocks.controller});
         //Armor Crafting
-        //GameRegistry.addRecipe(new ItemStack(DABItems.thoriumhelmet), new Object[]{"ttt", "t t"});
+        GameRegistry.addRecipe(new ItemStack(DABItems.thoriumhelmet), new Object[]{"ttt", "tct", "   ", 't', new ItemStack(DABItems.thorium_gem), 'c', new ItemStack(DABItems.thoriumcore)});
+        GameRegistry.addRecipe(new ItemStack(DABItems.thoriumchestplate), new Object[]{"tct", "ttt", "ttt", 't', new ItemStack(DABItems.thorium_gem), 'c', new ItemStack(DABItems.thoriumcore)});
+        GameRegistry.addRecipe(new ItemStack(DABItems.thoriumleggings), new Object[]{"ttt", "tct", "t t", 't', new ItemStack(DABItems.thorium_gem), 'c', new ItemStack(DABItems.thoriumcore)});
+        GameRegistry.addRecipe(new ItemStack(DABItems.thoriumboots), new Object[]{"   ", "tct", "t t", 't', new ItemStack(DABItems.thorium_gem), 'c', new ItemStack(DABItems.thoriumcore)});
+
     }
 }

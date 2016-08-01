@@ -26,7 +26,8 @@ public class SetItemNames
         THORIUMCHESTPLATE("thorium_chestplate", "thorium_chestplate"),
         THORIUMLEGS("thorium_legs", "thorium_legs"),
         THORIUMBOOTS("thorium_boots", "thorium_boots"),
-        THORIUMGEM("thorium_gem", "thorium_gem");
+        THORIUMGEM("thorium_gem", "thorium_gem"),
+        THORIUMCORE("thorium_core", "thorium_core");
 
 
         private String unlocalizedName;

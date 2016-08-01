@@ -37,6 +37,7 @@ public class DABItems
     public static Item thoriumleggings;
     public static Item thoriumboots;
     public static Item thorium_gem;
+    public static Item thoriumcore;
 
     //Tool Materials
     public static Item.ToolMaterial thoriummaterial = EnumHelper.addToolMaterial("thoriummaterial", 2147483647, -1, 2147483647.0F, 2147483647.0F, 2147483647);
@@ -67,6 +68,7 @@ public class DABItems
         thoriumleggings = new ThoriumArmor(SetItemNames.DABItems.THORIUMLEGS.getUnlocalizedName(), SetItemNames.DABItems.THORIUMLEGS.getRegistryName(), DABItems.ThoriumArmor, 2, EntityEquipmentSlot.LEGS);
         thoriumboots = new ThoriumArmor(SetItemNames.DABItems.THORIUMBOOTS.getUnlocalizedName(), SetItemNames.DABItems.THORIUMBOOTS.getRegistryName(), DABItems.ThoriumArmor, 1, EntityEquipmentSlot.FEET);
         thorium_gem = new ThoriumGem();
+        thoriumcore = new ThoriumCore();
     }
 
     public static void register()
@@ -93,6 +95,7 @@ public class DABItems
         GameRegistry.register(thoriumleggings);
         GameRegistry.register(thoriumboots);
         GameRegistry.register(thorium_gem);
+        GameRegistry.register(thoriumcore);
 
     }
 
@@ -120,6 +123,7 @@ public class DABItems
         registerRender(thoriumleggings);
         registerRender(thoriumboots);
         registerRender(thorium_gem);
+        registerRender(thoriumcore);
     }
 
     private static void  registerRender(Item item)
@@ -150,6 +154,7 @@ public class DABItems
         thoriumleggings.setCreativeTab(tabDAB);
         thoriumchestplate.setCreativeTab(tabDAB);
         thorium_gem.setCreativeTab(tabDAB);
+        thoriumcore.setCreativeTab(tabDAB);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean") {
