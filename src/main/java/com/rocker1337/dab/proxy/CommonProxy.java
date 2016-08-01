@@ -1,5 +1,6 @@
 package com.rocker1337.dab.proxy;
 
+import com.rocker1337.dab.ConfigHandler;
 import com.rocker1337.dab.events.*;
 import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
 import com.rocker1337.dab.init.blocks.DABBlocks;
@@ -50,6 +51,7 @@ public class CommonProxy
         MinecraftForge.EVENT_BUS.register(new PlayerNameChanger());
         MinecraftForge.EVENT_BUS.register(new AllowCheats());
         MinecraftForge.EVENT_BUS.register(new ThoriumChestplateMagnet());
+        MinecraftForge.EVENT_BUS.register(new ConfigHandler());
     }
     public void postInit(FMLPostInitializationEvent e)
     {

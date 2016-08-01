@@ -1,6 +1,8 @@
 package com.rocker1337.dab;
 
 import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.io.File;
 
@@ -19,20 +21,33 @@ public class ConfigHandler {
 
     public static void init(File file)
     {
-        config = new Configuration(file);
-        syncConfig();
+        if(config == null)
+        {
+            config = new Configuration(file);
+            syncConfig();
+        }
     }
 
-    public static void syncConfig() {
-        System.out.println("syncConfig has ran.");
-        chestplateMagnet = config.getBoolean("Thorium Chestplate Item Magnet", CATEGORY_GENERAL, true, "True to enable magnet");
-        swordxpmultiplier = config.getInt("Thorium Sword XP Multiplier", CATEGORY_GENERAL, 2, 1, 2147483647, "This is the XP multiplyer when a player is holding the Thorium Sowrd");
-        config.save();
-        //boolean configChanged = config.hasChanged();
-        //System.out.println(configChanged);
-        //if(configChanged)
-        //{
-         //   config.save();
-        //}
+    public static void syncConfig()
+    {
+        try {
+            chestplateMagnet = config.getBoolean("Thorium Chestplate Item Magnet", CATEGORY_GENERAL, true, "True to enable magnet");
+            swordxpmultiplier = config.getInt("Thorium Sword XP Multiplier", CATEGORY_GENERAL, 2, 1, 2147483647, "This is the XP multiplyer when a player is holding the Thorium Sowrd");
+        }
+        catch (Exception e)
+        {
+            System.out.println("CONFIG WAS DESTROYED");
+        }
+        finally
+        {
+            if (config.hasChanged()) config.save();
+        }
+    }
+    @SubscribeEvent
+    public void onConfigurationChangedEvent(ConfigChangedEvent.PostConfigChangedEvent event)
+    {
+        String test = event.getModID();
+        System.out.println("onConfigChangeEvent " + test);
+        syncConfig();
     }
 }
