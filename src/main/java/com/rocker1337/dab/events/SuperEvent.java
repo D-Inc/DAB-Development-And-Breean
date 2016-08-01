@@ -102,7 +102,6 @@ public class SuperEvent {
         if (heldItem != null && heldItem.getItem() == DABItems.thoriumsword)
         {
             xpEvent.getOrb().xpValue *=swordxpmultiplier;
-            System.out.println("XP Doubbled");
         }
     }
 }
