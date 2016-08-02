@@ -11,6 +11,6 @@ public class ConfigGUI extends GuiConfig
 {
     public ConfigGUI(GuiScreen parentScreen)
     {
-        super(parentScreen, new ConfigElement(ConfigHandler.config.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(), "DAB", false, false, GuiConfig.getAbridgedConfigPath(ConfigHandler.config.toString()));
+        super(parentScreen, new ConfigElement(ConfigHandler.config.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(), "dab", false, false, GuiConfig.getAbridgedConfigPath(ConfigHandler.config.toString()));
     }
 }

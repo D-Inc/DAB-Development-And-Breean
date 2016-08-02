@@ -32,13 +32,18 @@ public class ConfigHandler {
         swordxpmultiplier = config.getInt("Thorium Sword XP Multiplier", CATEGORY_GENERAL, 2, 1, 2147483647, "This is the XP multiplier when a player is holding the Thorium Sword");
         multitoolaoemining = config.getBoolean("Shickaxe Ore AOE Mining", CATEGORY_GENERAL, true, "When you click all ores around you get mined and put into inventory");
         if(config.hasChanged())
+        {
             config.save();
+        }
     }
+
     @SubscribeEvent
     public void onConfigurationChangedEvent(ConfigChangedEvent.OnConfigChangedEvent event)
     {
-        if(event.getModID().equals("dab"))
+        if(event.getModID().equalsIgnoreCase(Reference.MODID))
+        {
             syncConfig();
+        }
 
     }
 }
