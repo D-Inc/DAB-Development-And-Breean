@@ -3,6 +3,7 @@ package com.rocker1337.dab;
 import com.rocker1337.dab.commands.configreload;
 import com.rocker1337.dab.proxy.CommonProxy;
 import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -13,7 +14,7 @@ import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
 import java.io.File;
 
-@Mod(modid = Reference.MODID, name = Reference.MODNAME, version = Reference.VERSION)
+@Mod(modid = Reference.MODID, name = Reference.MODNAME, version = Reference.VERSION, guiFactory = "com.rocker1337.dab.gui.DABGuiFactory")
 public class maindab
 {
     @SidedProxy(clientSide="com.rocker1337.dab.proxy.ClientProxy", serverSide="com.rocker1337.dab.proxy.ServerProxy")
@@ -31,6 +32,9 @@ public class maindab
         FluidRegistry.enableUniversalBucket();
     }
 
+    @Mod.Instance("dab")
+    public static maindab instance;
+
     @EventHandler
     public void preInit(FMLPreInitializationEvent e)
     {
@@ -42,6 +46,7 @@ public class maindab
     @EventHandler
     public void init(FMLInitializationEvent e)
     {
+        FMLCommonHandler.instance().bus().register(instance);
         proxy.init(e);
     }
     @EventHandler
