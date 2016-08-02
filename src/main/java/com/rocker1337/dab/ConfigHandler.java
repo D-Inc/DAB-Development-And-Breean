@@ -18,6 +18,7 @@ public class ConfigHandler {
     //Settings
     public static boolean chestplateMagnet;
     public static int swordxpmultiplier;
+    public static boolean multitoolaoemining;
 
     public static void init(File file)
     {
@@ -30,18 +31,10 @@ public class ConfigHandler {
 
     public static void syncConfig()
     {
-        try {
-            chestplateMagnet = config.getBoolean("Thorium Chestplate Item Magnet", CATEGORY_GENERAL, true, "True to enable magnet");
-            swordxpmultiplier = config.getInt("Thorium Sword XP Multiplier", CATEGORY_GENERAL, 2, 1, 2147483647, "This is the XP multiplyer when a player is holding the Thorium Sowrd");
-        }
-        catch (Exception e)
-        {
-            System.out.println("CONFIG WAS DESTROYED");
-        }
-        finally
-        {
-            if (config.hasChanged()) config.save();
-        }
+        chestplateMagnet = config.getBoolean("Thorium Chestplate Item Magnet", CATEGORY_GENERAL, true, "True to enable magnet");
+        swordxpmultiplier = config.getInt("Thorium Sword XP Multiplier", CATEGORY_GENERAL, 2, 1, 2147483647, "This is the XP multiplier when a player is holding the Thorium Sword");
+        multitoolaoemining = config.getBoolean("Shickaxe Ore AOE Mining", CATEGORY_GENERAL, true, "When you click all ores around you get mined and put into inventory");
+        config.save();
     }
     @SubscribeEvent
     public void onConfigurationChangedEvent(ConfigChangedEvent.PostConfigChangedEvent event)
