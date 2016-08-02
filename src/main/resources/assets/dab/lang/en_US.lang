@@ -22,6 +22,9 @@ item.thoriumpickaxe.name=Thorium Pickaxe
 item.thorium_gem.name=Thorium Gem
 item.derek_essence.name=Derek Essence
 item.thorium_core.name=Thorium Core
+key.thoriumtoolspeed.desc=Change Thorium tools' speed
+key.dab.category=DAB Keys
+key.decreasetoolspeed.desc=Decrease Thorium tools' speed
 
 item.cancanrecord.name=Music Disc
 item.record.mlgcancan.desc=Derek on Weed - MLG Can Can
