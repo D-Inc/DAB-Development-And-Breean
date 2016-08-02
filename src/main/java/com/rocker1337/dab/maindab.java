@@ -1,6 +1,8 @@
 package com.rocker1337.dab;
 
 import com.rocker1337.dab.commands.configreload;
+import com.rocker1337.dab.commands.gamemodec;
+import com.rocker1337.dab.commands.gamemodes;
 import com.rocker1337.dab.proxy.CommonProxy;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -53,5 +55,7 @@ public class maindab
     public void serverLoad(FMLServerStartingEvent event)
     {
         event.registerServerCommand(new configreload());
+        event.registerServerCommand(new gamemodec());
+        event.registerServerCommand(new gamemodes());
     }
 }

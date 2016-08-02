@@ -22,7 +22,6 @@ public class configreload implements ICommand {
     public configreload() {
         aliases = new ArrayList();
         aliases.add("configreload");
-        aliases.add("configload");
     }
 
     @Override
