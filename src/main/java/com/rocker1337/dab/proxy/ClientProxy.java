@@ -1,8 +1,10 @@
 package com.rocker1337.dab.proxy;
 
+import com.rocker1337.dab.events.KeyPressEvent;
+import com.rocker1337.dab.helper.ClientKeyHelper;
 import com.rocker1337.dab.init.blocks.DABBlocks;
 import com.rocker1337.dab.init.items.DABItems;
-import net.minecraft.client.settings.KeyBinding;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -10,7 +12,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class ClientProxy extends CommonProxy
 {
 
-    public static KeyBinding[] keyBindings;
+    //public static KeyBinding increasespeed;
+    //public static KeyBinding decreasespeed;
 
     @Override
     public void preInit(FMLPreInitializationEvent e)
@@ -25,14 +28,17 @@ public class ClientProxy extends CommonProxy
         DABItems.registerRenders();
         DABBlocks.registerRenders();
 
-        /*keyBindings = new KeyBinding[0];
-        keyBindings = new KeyBinding[1];
-        keyBindings[0] = new KeyBinding("key.thoriumtoolspeed.desc", Keyboard.KEY_V, "key.dab.category");
-        keyBindings[1] = new KeyBinding("key.decreasetoolspeed.desc", Keyboard.KEY_B, "key.dab.category");
-        for (int i = 0; i < keyBindings.length; ++i)
-        {
-            ClientRegistry.registerKeyBinding(keyBindings[i]);
-        }*/
+        //increasespeed = new KeyBinding("key.thoriumtoolspeed.desc", Keyboard.KEY_V, "key.dab.category");
+        //decreasespeed = new KeyBinding("key.decreasetoolspeed.desc", Keyboard.KEY_B, "key.dab.category");
+        //for (int i = 0; i < keyBindings.length; ++i)
+        //{
+         //   ClientRegistry.registerKeyBinding(keyBindings[i]);
+        //}
+        //ClientRegistry.registerKeyBinding(increasespeed);
+        //ClientRegistry.registerKeyBinding(decreasespeed);
+        ClientKeyHelper.registerMCBindings();
+
+        MinecraftForge.EVENT_BUS.register(new KeyPressEvent());
     }
 
     @Override

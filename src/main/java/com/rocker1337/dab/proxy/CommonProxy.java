@@ -8,6 +8,7 @@ import com.rocker1337.dab.init.crafting.DABCrafting;
 import com.rocker1337.dab.init.fluid.DABFluid;
 import com.rocker1337.dab.init.fluid.tylerfluid;
 import com.rocker1337.dab.init.items.DABItems;
+import com.rocker1337.dab.init.items.thoriumpickaxe;
 import com.rocker1337.dab.world.DABBiomeRegistry;
 import com.rocker1337.dab.world.DabWorldGen;
 import net.minecraftforge.common.MinecraftForge;
@@ -52,6 +53,7 @@ public class CommonProxy
         MinecraftForge.EVENT_BUS.register(new AllowCheats());
         MinecraftForge.EVENT_BUS.register(new ThoriumChestplateMagnet());
         MinecraftForge.EVENT_BUS.register(new ConfigHandler());
+        MinecraftForge.EVENT_BUS.register(new thoriumpickaxe());
     }
     public void postInit(FMLPostInitializationEvent e)
     {

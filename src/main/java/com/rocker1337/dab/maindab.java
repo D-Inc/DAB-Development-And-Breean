@@ -3,6 +3,7 @@ package com.rocker1337.dab;
 import com.rocker1337.dab.commands.configreload;
 import com.rocker1337.dab.commands.gamemodec;
 import com.rocker1337.dab.commands.gamemodes;
+import com.rocker1337.dab.helper.PacketHandler;
 import com.rocker1337.dab.proxy.CommonProxy;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.FMLCommonHandler;
@@ -40,6 +41,7 @@ public class maindab
     @EventHandler
     public void preInit(FMLPreInitializationEvent e)
     {
+        PacketHandler.register();
         proxy.preInit(e);
         configDir = new File(e.getModConfigurationDirectory() + "/" + Reference.MODID);
         configDir.mkdirs();
