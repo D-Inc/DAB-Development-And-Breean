@@ -47,17 +47,14 @@ public class KeyPressPKT implements IMessage{
                         if(speed == 15F)
                         {
                             speed = 20F;
-                            System.out.println(speed);
                         }
                         else if(speed == 20F)
                         {
                             speed = 25F;
-                            System.out.println(speed);
                         }
                         else if(speed == 25F)
                         {
                             speed = 30F;
-                            System.out.println(speed);
                         }
                     }
                     if(message.key == DABKeybind.DECREASE_SPEED)
@@ -66,17 +63,14 @@ public class KeyPressPKT implements IMessage{
                         if(speed == 20F)
                         {
                             speed = 15F;
-                            System.out.println(speed);
                         }
                         else if(speed == 25F)
                         {
                             speed = 20F;
-                            System.out.println(speed);
                         }
                         else if(speed == 30F)
                         {
                             speed = 25F;
-                            System.out.println(speed);
                         }
                     }
                 }
