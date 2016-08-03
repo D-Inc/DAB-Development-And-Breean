@@ -26,14 +26,14 @@ public class CommonProxy
         //Init Fluid
         DABFluid.register();
         FluidRegistry.addBucketForFluid(tylerfluid.instance);
-        //Init Biomes
-        DABBiomeRegistry.MainRegistry();
         //Init and Register Items
         DABItems.init();
         DABItems.register();
         //Init and Register Blocks
         DABBlocks.init();
         DABBlocks.register();
+        //Init Biomes
+        DABBiomeRegistry.MainRegistry();
         //Init Sounds
         RegisterSoundEvents.init();
     }
