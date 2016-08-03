@@ -46,8 +46,7 @@ public class thoriumpickaxe extends ItemPickaxe {
     @Override
     public void onUpdate(ItemStack stack, World world, Entity entity, int metadata, boolean bool)
     {
-        if(stack.getTagCompound() == null)
-        {
+        if(stack.getTagCompound() == null) {
             stack.setTagCompound(new NBTTagCompound());
         }
 
@@ -56,8 +55,6 @@ public class thoriumpickaxe extends ItemPickaxe {
             EntityPlayer player = (EntityPlayer)entity;
             stack.getTagCompound().setString("Owner", player.getDisplayNameString());
         }
-
-        stack.getTagCompound().setFloat("Speed", 15F);
         speed = stack.getTagCompound().getFloat("Speed");
     }
 

@@ -1,8 +1,10 @@
 package com.rocker1337.dab.packets;
 
 import com.rocker1337.dab.helper.DABKeybind;
+import com.rocker1337.dab.init.items.DABItems;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
@@ -41,20 +43,21 @@ public class KeyPressPKT implements IMessage{
                 @Override
                 public void run() {
                     EntityPlayerMP player = ctx.getServerHandler().playerEntity;
-                    if(message.key == DABKeybind.INCREASE_SPEED)
+                    ItemStack heldItem = player.getHeldItemMainhand();
+                    if(message.key == DABKeybind.INCREASE_SPEED && heldItem.getItem() != null && heldItem.getItem() == DABItems.thoriumpickaxe)
                     {
                         System.out.println("Packet was sent.");
-                        if(speed == 15F)
+                        if(heldItem.getTagCompound().getFloat("Speed") == 15F)
                         {
-                            speed = 20F;
+                            heldItem.getTagCompound().setFloat("Speed", 20F);
                         }
-                        else if(speed == 20F)
+                        else if(heldItem.getTagCompound().getFloat("Speed") == 20F)
                         {
-                            speed = 25F;
+                            heldItem.getTagCompound().setFloat("Speed", 25F);
                         }
-                        else if(speed == 25F)
+                        else if(heldItem.getTagCompound().getFloat("Speed") == 25F)
                         {
-                            speed = 30F;
+                            heldItem.getTagCompound().setFloat("Speed", 30F);
                         }
                     }
                     if(message.key == DABKeybind.DECREASE_SPEED)
