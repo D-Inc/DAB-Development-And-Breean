@@ -21,7 +21,7 @@ import java.util.List;
  */
 public class thoriumpickaxe extends ItemPickaxe {
 
-    public static float speed = 15F;
+    public static float speed;
 
     public static Item.ToolMaterial firststage = EnumHelper.addToolMaterial("firststage", 2147483647, -1, speed, 2147483647.0F, 2147483647);
 
@@ -40,7 +40,7 @@ public class thoriumpickaxe extends ItemPickaxe {
     public float getStrVsBlock(ItemStack stack, IBlockState state)
     {
         Material material = state.getMaterial();
-        return material != Material.IRON && material != Material.ANVIL && material != Material.ROCK ? super.getStrVsBlock(stack, state) : speed;
+        return material != Material.IRON && material != Material.ANVIL && material != Material.ROCK ? super.getStrVsBlock(stack, state) : stack.getTagCompound().getFloat("Speed");
     }
 
     @Override
@@ -51,13 +51,14 @@ public class thoriumpickaxe extends ItemPickaxe {
             stack.setTagCompound(new NBTTagCompound());
         }
 
-        stack.getTagCompound().setInteger("testInt", 1);
-
         if(entity instanceof EntityPlayer)
         {
             EntityPlayer player = (EntityPlayer)entity;
             stack.getTagCompound().setString("Owner", player.getDisplayNameString());
         }
+
+        stack.getTagCompound().setFloat("Speed", 15F);
+        speed = stack.getTagCompound().getFloat("Speed");
     }
 
     @Override
