@@ -1,5 +1,6 @@
 package com.rocker1337.dab.init.items;
 
+import com.mojang.realmsclient.gui.ChatFormatting;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
@@ -10,6 +11,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+import java.util.List;
 
 /**
  * Created by ninjawarrior1337 on 7/28/16.
@@ -53,5 +58,12 @@ public class thoriumpickaxe extends ItemPickaxe {
             EntityPlayer player = (EntityPlayer)entity;
             stack.getTagCompound().setString("Owner", player.getDisplayNameString());
         }
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced)
+    {
+        toolTip.add(ChatFormatting.LIGHT_PURPLE + "Speed = " + speed);
     }
 }
