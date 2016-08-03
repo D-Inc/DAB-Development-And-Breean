@@ -1,0 +1,9 @@
+{
+"parent": "block/inner_stairs",
+"textures":
+{
+"bottom": "dab:blocks/dab_controller",
+"top": "dab:blocks/dab_controller",
+"side": "dab:blocks/dab_controller"
+}
+}

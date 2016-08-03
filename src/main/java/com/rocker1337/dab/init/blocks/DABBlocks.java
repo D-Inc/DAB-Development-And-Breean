@@ -16,6 +16,7 @@ public class DABBlocks
     public static Block controller;
     public static Block specialcobblestone;
     public static Block moving_smiley;
+    public static Block dab_controller_stairs;
 
     public static void init()
     {
@@ -23,6 +24,7 @@ public class DABBlocks
         controller = new controller();
         specialcobblestone = new specialcobblestone(Material.ROCK);
         moving_smiley = new moving_smiley_request(Material.ROCK);
+        dab_controller_stairs = new dab_controller_stairs(controller.getDefaultState());
     }
     public static void register()
     {
@@ -30,6 +32,7 @@ public class DABBlocks
         registerBlock(controller2);
         registerBlock(specialcobblestone);
         registerBlock(moving_smiley);
+        registerBlock(dab_controller_stairs);
     }
 
     private static void registerBlock(Block block)
@@ -46,6 +49,7 @@ public class DABBlocks
         registerRender(controller);
         registerRender(specialcobblestone);
         registerRender(moving_smiley);
+        registerRender(dab_controller_stairs);
     }
 
     private static void registerRender(Block block)
@@ -59,5 +63,6 @@ public class DABBlocks
         controller.setCreativeTab(tabDAB);
         specialcobblestone.setCreativeTab(tabDAB);
         moving_smiley.setCreativeTab(tabDAB);
+        dab_controller_stairs.setCreativeTab(tabDAB);
     }
 }
