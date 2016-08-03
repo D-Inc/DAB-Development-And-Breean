@@ -11,6 +11,7 @@ public class thoriumaxe extends ItemAxe
         super(material, damage, speed);
         setUnlocalizedName(SetItemNames.DABItems.THORIUMAXE.getUnlocalizedName());
         setRegistryName(SetItemNames.DABItems.THORIUMAXE.getRegistryName());
+        this.attackSpeed = 2147483647.0F;
     }
     @Override
     public boolean hasEffect(ItemStack itemStack)
