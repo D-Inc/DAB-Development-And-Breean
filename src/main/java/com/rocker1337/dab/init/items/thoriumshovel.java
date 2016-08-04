@@ -13,7 +13,7 @@ public class thoriumshovel extends ItemSpade
         super(material);
         setUnlocalizedName(SetItemNames.DABItems.THORIUMSHOVEL.getUnlocalizedName());
         setRegistryName(SetItemNames.DABItems.THORIUMSHOVEL.getRegistryName());
-        this.attackSpeed = 2147483647.0F;
+        this.attackSpeed = Float.intBitsToFloat(0x7f800000);
     }
     @Override
     public boolean hasEffect(ItemStack itemStack)

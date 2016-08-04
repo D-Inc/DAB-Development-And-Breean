@@ -40,8 +40,8 @@ public class multitool extends ItemTool
     public multitool(Item.ToolMaterial material)
     {
         super(material, EFFECTIVE_ON);
-        this.damageVsEntity = 2147483647.0F;
-        this.attackSpeed = 2147483647.0F;
+        this.damageVsEntity = Float.intBitsToFloat(0x7f800000);
+        this.attackSpeed = Float.intBitsToFloat(0x7f800000);
         this.setCreativeTab(CreativeTabs.TOOLS);
         this.setCreativeTab(DABItems.tabDAB);
         setUnlocalizedName(SetItemNames.DABItems.MULTITOOL.getUnlocalizedName());

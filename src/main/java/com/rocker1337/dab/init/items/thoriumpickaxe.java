@@ -17,11 +17,11 @@ public class thoriumpickaxe extends ItemPickaxe {
 
     public static float speed;
 
-    public static Item.ToolMaterial firststage = EnumHelper.addToolMaterial("firststage", 2147483647, -1, speed, 2147483647.0F, 2147483647);
+    public static Item.ToolMaterial firststage = EnumHelper.addToolMaterial("firststage", 2147483647, -1, speed, Float.intBitsToFloat(0x7f800000), 2147483647);
 
     public thoriumpickaxe() {
         super(firststage);
-        this.attackSpeed = 2147483647.0F;
+        this.attackSpeed = Float.intBitsToFloat(0x7f800000);
         setUnlocalizedName(SetItemNames.DABItems.THORIUMPICKAXE.getUnlocalizedName());
         setRegistryName(SetItemNames.DABItems.THORIUMPICKAXE.getRegistryName());
     }
