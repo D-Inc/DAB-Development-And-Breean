@@ -61,7 +61,7 @@ public class DABItems
         thoriumaxe = new thoriumaxe(DABItems.thoriummaterial, Float.intBitsToFloat(0x7f800000), Float.intBitsToFloat(0x7f800000));
         thoriumsword = new thoriumsword(DABItems.thoriummaterial);
         thoriumshovel = new thoriumshovel(DABItems.thoriummaterial);
-        multitool = new multitool(DABItems.thoriummaterial);
+        multitool = new multitool();
         thoriumhelmet = new ThoriumArmor(SetItemNames.DABItems.THORIUMHELMET.getUnlocalizedName(), SetItemNames.DABItems.THORIUMHELMET.getRegistryName(), DABItems.ThoriumArmor, 1, EntityEquipmentSlot.HEAD);
         thoriumchestplate = new ThoriumArmor(SetItemNames.DABItems.THORIUMCHESTPLATE.getUnlocalizedName(), SetItemNames.DABItems.THORIUMCHESTPLATE.getRegistryName(), DABItems.ThoriumArmor, 1, EntityEquipmentSlot.CHEST);
         thoriumleggings = new ThoriumArmor(SetItemNames.DABItems.THORIUMLEGS.getUnlocalizedName(), SetItemNames.DABItems.THORIUMLEGS.getRegistryName(), DABItems.ThoriumArmor, 2, EntityEquipmentSlot.LEGS);

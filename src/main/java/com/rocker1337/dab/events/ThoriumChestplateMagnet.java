@@ -37,23 +37,23 @@ public class ThoriumChestplateMagnet {
                 List<EntityItem> items = player.worldObj.getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(x - 10, y - 10, z - 10, x + 10, y + 10, z + 10));
                 List<EntityXPOrb> xporbs = player.worldObj.getEntitiesWithinAABB(EntityXPOrb.class, new AxisAlignedBB(x - 10, y - 10, z - 10, x + 10, y + 10, z + 10));
                 int pulled = 0;
-                for(EntityItem item : items)
-                    if(canPullItem(item))
-                    {
-                        if(pulled > 200)
+                for(EntityItem item : items) {
+                    if (canPullItem(item)) {
+                        if (pulled > 200)
                             break;
 
                         MathHelper.setEntityMotionFromVector(item, new Vector3(x, y, z), 0.45F);
                         pulled++;
                     }
-                for(EntityXPOrb xpOrb : xporbs)
-                    if(canPullXP(xpOrb))
-                    {
-                        if(pulled > 200)
+                }
+                for(EntityXPOrb xpOrb : xporbs) {
+                    if (canPullXP(xpOrb)) {
+                        if (pulled > 200)
                             break;
 
                         MathHelper.setEntityMotionFromVector(xpOrb, new Vector3(x, y, z), 0.45F);
                     }
+                }
             }
         }
     }

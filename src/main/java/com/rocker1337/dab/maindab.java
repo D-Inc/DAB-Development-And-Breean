@@ -5,8 +5,8 @@ import com.rocker1337.dab.commands.gamemodec;
 import com.rocker1337.dab.commands.gamemodes;
 import com.rocker1337.dab.helper.PacketHandler;
 import com.rocker1337.dab.proxy.CommonProxy;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fluids.FluidRegistry;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -50,7 +50,7 @@ public class maindab
     @EventHandler
     public void init(FMLInitializationEvent e)
     {
-        FMLCommonHandler.instance().bus().register(instance);
+        MinecraftForge.EVENT_BUS.register(instance);
         proxy.init(e);
     }
     @EventHandler

@@ -21,9 +21,9 @@ import java.util.List;
  */
 public class thoriumpickaxe extends ItemPickaxe {
 
-    public static float speed;
+    static float speed;
 
-    public static Item.ToolMaterial firststage = EnumHelper.addToolMaterial("firststage", 2147483647, -1, speed, Float.intBitsToFloat(0x7f800000), 2147483647);
+    static Item.ToolMaterial firststage = EnumHelper.addToolMaterial("firststage", 2147483647, -1, speed, Float.intBitsToFloat(0x7f800000), 2147483647);
 
     public thoriumpickaxe() {
         super(firststage);
