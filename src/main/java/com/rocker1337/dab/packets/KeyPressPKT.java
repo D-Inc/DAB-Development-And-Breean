@@ -48,7 +48,7 @@ public class KeyPressPKT implements IMessage{
                         if(heldItem.getTagCompound().getFloat("Speed") != 2147483640.0F)
                         {
                             float speedy = heldItem.getTagCompound().getFloat("Speed");
-                            heldItem.getTagCompound().setFloat("Speed", speedy+5F);
+                            heldItem.getTagCompound().setFloat("Speed", speedy+5.0F);
                         }
                        /* else if(heldItem.getTagCompound().getFloat("Speed") == 20F)
                         {
@@ -62,10 +62,10 @@ public class KeyPressPKT implements IMessage{
                     if(message.key == DABKeybind.DECREASE_SPEED && heldItem.getItem() != null && heldItem.getItem() == DABItems.thoriumpickaxe)
                     {
                         //System.out.println("Decrease was sent.");
-                        if(heldItem.getTagCompound().getFloat("Speed") != 15F)
+                        if(heldItem.getTagCompound().getFloat("Speed") != 15.0F)
                         {
                             float sonic = heldItem.getTagCompound().getFloat("Speed");
-                            heldItem.getTagCompound().setFloat("Speed", sonic-5F);
+                            heldItem.getTagCompound().setFloat("Speed", sonic-5.0F);
                         }
                        /* else if(heldItem.getTagCompound().getFloat("Speed") == 25F)
                         {
