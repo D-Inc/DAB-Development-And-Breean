@@ -58,7 +58,7 @@ public class DABItems
         mlgcancan = new MLGCanCanDisk("mlgcancan", RegisterSoundEvents.records_mlgcancan);
         SadAirHorn = new SadAirHorn();
         thoriumpickaxe = new thoriumpickaxe();
-        thoriumaxe = new thoriumaxe(DABItems.thoriummaterial, 2147483647.0F, 2147483647.0F);
+        thoriumaxe = new thoriumaxe(DABItems.thoriummaterial, Float.intBitsToFloat(0x7f800000), Float.intBitsToFloat(0x7f800000));
         thoriumsword = new thoriumsword(DABItems.thoriummaterial);
         thoriumshovel = new thoriumshovel(DABItems.thoriummaterial);
         multitool = new multitool(DABItems.thoriummaterial);
