@@ -50,7 +50,7 @@ public class thoriumpickaxe extends ItemPickaxe {
         {
             stack.setTagCompound(new NBTTagCompound());
         }
-        if(stack.getTagCompound().hasKey("Speed"))
+        if(!stack.getTagCompound().hasKey("Speed"))
         {
             stack.getTagCompound().setFloat("Speed", 15F);
         }
@@ -61,6 +61,8 @@ public class thoriumpickaxe extends ItemPickaxe {
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced)
     {
-        toolTip.add(TextFormatting.LIGHT_PURPLE + "Speed = " + stack.getTagCompound().getFloat("Speed"));
+        if(stack.getTagCompound() != null) {
+            toolTip.add(TextFormatting.LIGHT_PURPLE + "Speed = " + stack.getTagCompound().getFloat("Speed"));
+        }
     }
 }
