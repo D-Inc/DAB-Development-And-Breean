@@ -1,9 +1,9 @@
 package com.rocker1337.dab.init.items;
 
-import com.mojang.realmsclient.gui.ChatFormatting;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -26,6 +26,6 @@ public class weed extends ItemFood
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced)
     {
-        toolTip.add(ChatFormatting.DARK_GREEN + "Do not consume if not in Colorado");
+        toolTip.add(TextFormatting.DARK_GREEN + "Do not consume if not in Colorado");
     }
 }

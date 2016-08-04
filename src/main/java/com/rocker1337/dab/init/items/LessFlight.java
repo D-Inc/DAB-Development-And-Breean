@@ -1,9 +1,9 @@
 package com.rocker1337.dab.init.items;
 
-import com.mojang.realmsclient.gui.ChatFormatting;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -22,6 +22,6 @@ public class LessFlight extends Item
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced)
     {
-        toolTip.add(ChatFormatting.DARK_PURPLE + "Only lets you fly while holding");
+        toolTip.add(TextFormatting.DARK_PURPLE + "Only lets you fly while holding");
     }
 }

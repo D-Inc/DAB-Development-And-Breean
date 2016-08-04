@@ -4,10 +4,10 @@ import baubles.api.BaubleType;
 import baubles.common.container.InventoryBaubles;
 import baubles.common.items.ItemRing;
 import baubles.common.lib.PlayerHandler;
-import com.mojang.realmsclient.gui.ChatFormatting;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -23,8 +23,8 @@ public class GreatFlight extends ItemRing {
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced) {
-        toolTip.add(ChatFormatting.DARK_AQUA + "Works anywhere in your inventory!");
-        toolTip.add(ChatFormatting.AQUA + "Works in Baubles™");
+        toolTip.add(TextFormatting.DARK_AQUA + "Works anywhere in your inventory!");
+        toolTip.add(TextFormatting.AQUA + "Works in Baubles™");
     }
 
     @Override
