@@ -6,6 +6,8 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.GameType;
 import net.minecraft.world.WorldSettings;
 
@@ -47,7 +49,8 @@ public class gamemodes implements ICommand {
         GameType survival = WorldSettings.getGameTypeById(0);
         EntityPlayer commander = (EntityPlayer)sender;
         commander.setGameType(survival);
-
+        EntityPlayer player = (EntityPlayer)sender;
+        player.addChatMessage(new TextComponentString("Your game mode has been updated to " + TextFormatting.ITALIC + TextFormatting.GRAY + "Survival Mode"));
     }
 
     @Override

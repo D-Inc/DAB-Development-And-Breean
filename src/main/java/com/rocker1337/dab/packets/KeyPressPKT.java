@@ -9,8 +9,6 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 
-import static com.rocker1337.dab.init.items.thoriumpickaxe.speed;
-
 /**
  * Created by drkpa on 8/2/2016.
  */
@@ -60,20 +58,20 @@ public class KeyPressPKT implements IMessage{
                             heldItem.getTagCompound().setFloat("Speed", 30F);
                         }
                     }
-                    if(message.key == DABKeybind.DECREASE_SPEED)
+                    if(message.key == DABKeybind.DECREASE_SPEED && heldItem.getItem() != null && heldItem.getItem() == DABItems.thoriumpickaxe)
                     {
                         System.out.println("Decrease was sent.");
-                        if(speed == 20F)
+                        if(heldItem.getTagCompound().getFloat("Speed") == 20F)
                         {
-                            speed = 15F;
+                            heldItem.getTagCompound().setFloat("Speed", 15F);
                         }
-                        else if(speed == 25F)
+                        else if(heldItem.getTagCompound().getFloat("Speed") == 25F)
                         {
-                            speed = 20F;
+                            heldItem.getTagCompound().setFloat("Speed", 20F);
                         }
-                        else if(speed == 30F)
+                        else if(heldItem.getTagCompound().getFloat("Speed") == 30F)
                         {
-                            speed = 25F;
+                            heldItem.getTagCompound().setFloat("Speed", 25F);
                         }
                     }
                 }

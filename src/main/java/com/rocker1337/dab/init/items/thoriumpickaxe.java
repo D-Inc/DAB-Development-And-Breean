@@ -46,14 +46,13 @@ public class thoriumpickaxe extends ItemPickaxe {
     @Override
     public void onUpdate(ItemStack stack, World world, Entity entity, int metadata, boolean bool)
     {
-        if(stack.getTagCompound() == null) {
+        if(stack.getTagCompound() == null)
+        {
             stack.setTagCompound(new NBTTagCompound());
         }
-
-        if(entity instanceof EntityPlayer)
+        if(stack.getTagCompound().getFloat("Speed") == 0.0F)
         {
-            EntityPlayer player = (EntityPlayer)entity;
-            stack.getTagCompound().setString("Owner", player.getDisplayNameString());
+            stack.getTagCompound().setFloat("Speed", 15F);
         }
         speed = stack.getTagCompound().getFloat("Speed");
     }
@@ -62,6 +61,6 @@ public class thoriumpickaxe extends ItemPickaxe {
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced)
     {
-        toolTip.add(ChatFormatting.LIGHT_PURPLE + "Speed = " + speed);
+        toolTip.add(ChatFormatting.LIGHT_PURPLE + "Speed = " + stack.getTagCompound().getFloat("Speed"));
     }
 }
