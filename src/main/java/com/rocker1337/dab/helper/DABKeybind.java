@@ -7,7 +7,8 @@ import org.lwjgl.input.Keyboard;
  */
 public enum DABKeybind {
     INCREASE_SPEED("dab.increasetoolspeed", Keyboard.KEY_V),
-    DECREASE_SPEED("dab.decreasetoolspeed", Keyboard.KEY_B);
+    DECREASE_SPEED("dab.decreasetoolspeed", Keyboard.KEY_B),
+    RESET_SPEED("dab.resettoolspeed", Keyboard.KEY_C);
 
     public final String keyName;
     public final int defaultKeyCode;
