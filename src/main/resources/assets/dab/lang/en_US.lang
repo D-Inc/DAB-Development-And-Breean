@@ -25,6 +25,7 @@ item.thorium_core.name=Thorium Core
 dab.increasetoolspeed=Increase Thorium tools' speed
 key.dab.category=DAB Keys
 dab.decreasetoolspeed=Decrease Thorium tools' speed
+dab.resettoolspeed=Reset tool speed
 
 item.cancanrecord.name=Music Disc
 item.record.mlgcancan.desc=Derek on Weed - MLG Can Can

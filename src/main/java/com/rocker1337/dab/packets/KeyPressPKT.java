@@ -76,6 +76,13 @@ public class KeyPressPKT implements IMessage{
                             heldItem.getTagCompound().setFloat("Speed", 25F);
                         } */
                     }
+                    if(message.key == DABKeybind.RESET_SPEED && heldItem.getItem() != null && heldItem.getItem() == DABItems.thoriumpickaxe)
+                    {
+                        if(heldItem.getTagCompound().getFloat("Speed") != 15F)
+                        {
+                            heldItem.getTagCompound().setFloat("Speed", 15F);
+                        }
+                    }
                 }
             });
             return null;
