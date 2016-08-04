@@ -4,6 +4,7 @@ import com.rocker1337.dab.helper.MathHelper;
 import com.rocker1337.dab.helper.Vector3;
 import com.rocker1337.dab.init.items.DABItems;
 import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -31,22 +32,37 @@ public class ThoriumChestplateMagnet {
             double x = player.posX;
             double y = player.posY + 0.75;
             double z = player.posZ;
-            if (player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == DABItems.thoriumchestplate && chestplateMagnet) {
+            if (player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == DABItems.thoriumchestplate && chestplateMagnet)
+            {
                 List<EntityItem> items = player.worldObj.getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(x - 10, y - 10, z - 10, x + 10, y + 10, z + 10));
+                List<EntityXPOrb> xporbs = player.worldObj.getEntitiesWithinAABB(EntityXPOrb.class, new AxisAlignedBB(x - 10, y - 10, z - 10, x + 10, y + 10, z + 10));
                 int pulled = 0;
                 for(EntityItem item : items)
-                    if(canPullItem(item)) {
+                    if(canPullItem(item))
+                    {
                         if(pulled > 200)
                             break;
 
                         MathHelper.setEntityMotionFromVector(item, new Vector3(x, y, z), 0.45F);
                         pulled++;
                     }
+                for(EntityXPOrb xpOrb : xporbs)
+                    if(canPullXP(xpOrb))
+                    {
+                        if(pulled > 200)
+                            break;
+
+                        MathHelper.setEntityMotionFromVector(xpOrb, new Vector3(x, y, z), 0.45F);
+                    }
             }
         }
     }
 
     private boolean canPullItem(EntityItem item) {
+        return true;
+    }
+    private boolean canPullXP(EntityXPOrb xpOrb)
+    {
         return true;
     }
 }
