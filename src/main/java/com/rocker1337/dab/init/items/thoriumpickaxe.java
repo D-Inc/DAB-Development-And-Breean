@@ -3,12 +3,18 @@ package com.rocker1337.dab.init.items;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+import java.util.List;
 
 /**
  * Created by ninjawarrior1337 on 7/28/16.
@@ -44,17 +50,17 @@ public class thoriumpickaxe extends ItemPickaxe {
         {
             stack.setTagCompound(new NBTTagCompound());
         }
-        if(stack.getTagCompound().getFloat("Speed") == 0.0F)
+        if(stack.getTagCompound().hasKey("Speed"))
         {
             stack.getTagCompound().setFloat("Speed", 15F);
         }
         speed = stack.getTagCompound().getFloat("Speed");
     }
 
-    /*@Override
+    @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced)
     {
-        toolTip.add(ChatFormatting.LIGHT_PURPLE + "Speed = " + stack.getTagCompound().getFloat("Speed"));
-    }*/
+        toolTip.add(TextFormatting.LIGHT_PURPLE + "Speed = " + stack.getTagCompound().getFloat("Speed"));
+    }
 }
