@@ -44,35 +44,37 @@ public class KeyPressPKT implements IMessage{
                     ItemStack heldItem = player.getHeldItemMainhand();
                     if(message.key == DABKeybind.INCREASE_SPEED && heldItem.getItem() != null && heldItem.getItem() == DABItems.thoriumpickaxe)
                     {
-                        System.out.println("Packet was sent.");
-                        if(heldItem.getTagCompound().getFloat("Speed") == 15F)
+                        //System.out.println("Packet was sent.");
+                        if(heldItem.getTagCompound().getFloat("Speed") != 2147483640.0F)
                         {
-                            heldItem.getTagCompound().setFloat("Speed", 20F);
+                            float speedy = heldItem.getTagCompound().getFloat("Speed");
+                            heldItem.getTagCompound().setFloat("Speed", speedy+5F);
                         }
-                        else if(heldItem.getTagCompound().getFloat("Speed") == 20F)
+                       /* else if(heldItem.getTagCompound().getFloat("Speed") == 20F)
                         {
                             heldItem.getTagCompound().setFloat("Speed", 25F);
                         }
                         else if(heldItem.getTagCompound().getFloat("Speed") == 25F)
                         {
                             heldItem.getTagCompound().setFloat("Speed", 30F);
-                        }
+                        } */
                     }
                     if(message.key == DABKeybind.DECREASE_SPEED && heldItem.getItem() != null && heldItem.getItem() == DABItems.thoriumpickaxe)
                     {
-                        System.out.println("Decrease was sent.");
-                        if(heldItem.getTagCompound().getFloat("Speed") == 20F)
+                        //System.out.println("Decrease was sent.");
+                        if(heldItem.getTagCompound().getFloat("Speed") != 15F)
                         {
-                            heldItem.getTagCompound().setFloat("Speed", 15F);
+                            float sonic = heldItem.getTagCompound().getFloat("Speed");
+                            heldItem.getTagCompound().setFloat("Speed", sonic-5F);
                         }
-                        else if(heldItem.getTagCompound().getFloat("Speed") == 25F)
+                       /* else if(heldItem.getTagCompound().getFloat("Speed") == 25F)
                         {
                             heldItem.getTagCompound().setFloat("Speed", 20F);
                         }
                         else if(heldItem.getTagCompound().getFloat("Speed") == 30F)
                         {
                             heldItem.getTagCompound().setFloat("Speed", 25F);
-                        }
+                        } */
                     }
                 }
             });
