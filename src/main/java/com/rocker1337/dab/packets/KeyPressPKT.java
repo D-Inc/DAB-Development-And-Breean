@@ -1,14 +1,15 @@
 package com.rocker1337.dab.packets;
 
 import com.rocker1337.dab.helper.DABKeybind;
-import com.rocker1337.dab.helper.SpeedChangeables;
+import com.rocker1337.dab.init.items.DABItems;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+
+import java.util.List;
 
 /**
  * Created by drkpa on 8/2/2016.
@@ -43,25 +44,23 @@ public class KeyPressPKT implements IMessage{
                 public void run() {
                     EntityPlayerMP player = ctx.getServerHandler().playerEntity;
                     ItemStack heldItem = player.getHeldItemMainhand();
-                    for(Item item : SpeedChangeables.speedItems) {
-                        if (message.key == DABKeybind.INCREASE_SPEED && heldItem.getItem() != null && heldItem.getItem() == item) {
+                    if (message.key == DABKeybind.INCREASE_SPEED && heldItem.getItem() != null && heldItem.getItem() == DABItems.thoriumpickaxe) {
                             if (heldItem.getTagCompound().getFloat("Speed") != 2147483640.0F) {
                                 float speedy = heldItem.getTagCompound().getFloat("Speed");
                                 heldItem.getTagCompound().setFloat("Speed", speedy + 5.0F);
                             }
                         }
-                        if (message.key == DABKeybind.DECREASE_SPEED && heldItem.getItem() != null && heldItem.getItem() == item) {
+                        if (message.key == DABKeybind.DECREASE_SPEED && heldItem.getItem() != null && heldItem.getItem() == DABItems.thoriumpickaxe) {
                             if (heldItem.getTagCompound().getFloat("Speed") != 15.0F) {
                                 float sonic = heldItem.getTagCompound().getFloat("Speed");
                                 heldItem.getTagCompound().setFloat("Speed", sonic - 5.0F);
                             }
                         }
-                        if (message.key == DABKeybind.RESET_SPEED && heldItem.getItem() != null && heldItem.getItem() == item) {
+                        if (message.key == DABKeybind.RESET_SPEED && heldItem.getItem() != null && heldItem.getItem() == DABItems.thoriumpickaxe) {
                             if (heldItem.getTagCompound().getFloat("Speed") != 15F) {
                                 heldItem.getTagCompound().setFloat("Speed", 15F);
                             }
                         }
-                    }
                 }
             });
             return null;

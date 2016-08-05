@@ -148,8 +148,13 @@ public class multitool extends ItemTool
     public float getStrVsBlock(ItemStack stack, IBlockState state)
     {
         Material material = state.getMaterial();
+        if(state.getBlock() == Blocks.SNOW)
+        {
+            return stack.getTagCompound().getFloat("Speed");
+        }
         return material != Material.WOOD && material != Material.PLANTS &&
-                material != Material.VINE && material != Material.IRON && material != Material.ANVIL && material != Material.ROCK ? super.getStrVsBlock(stack, state) : stack.getTagCompound().getFloat("Speed");
+                material != Material.VINE && material != Material.IRON && material != Material.ANVIL && material != Material.ROCK && material != Material.GROUND &&
+                material != Material.GRASS && material != Material.SNOW && material != Material.SAND ? super.getStrVsBlock(stack, state) : stack.getTagCompound().getFloat("Speed");
     }
 
     @Override

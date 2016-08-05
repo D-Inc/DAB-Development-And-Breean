@@ -11,6 +11,8 @@ import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import static com.rocker1337.dab.init.items.multitool.multitoolmaterial;
+
 public class DABItems
 {
     //Items
