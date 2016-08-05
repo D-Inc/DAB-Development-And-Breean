@@ -24,7 +24,7 @@ public class DABItems
     public static Item EnderFlight;
     public static Item Hammer;
     public static Item AirHorn;
-    public static Item mlgcancan;
+    public static DABRecord mlgcancan;
     public static Item SadAirHorn;
     public static Item thoriumpickaxe;
     public static Item thoriumsword;
@@ -55,7 +55,7 @@ public class DABItems
         EnderFlight = new EnderFlight();
         Hammer = new Hammer();
         AirHorn = new AirHorn();
-        mlgcancan = new MLGCanCanDisk("mlgcancan", RegisterSoundEvents.records_mlgcancan);
+        mlgcancan = new DABRecord("mlgcancan", RegisterSoundEvents.records_mlgcancan);
         SadAirHorn = new SadAirHorn();
         thoriumpickaxe = new thoriumpickaxe();
         thoriumaxe = new thoriumaxe(DABItems.thoriummaterial, Float.intBitsToFloat(0x7f800000), Float.intBitsToFloat(0x7f800000));
