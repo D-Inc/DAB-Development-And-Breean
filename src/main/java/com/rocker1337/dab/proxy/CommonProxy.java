@@ -54,6 +54,7 @@ public class CommonProxy
         MinecraftForge.EVENT_BUS.register(new ThoriumChestplateMagnet());
         MinecraftForge.EVENT_BUS.register(new ConfigHandler());
         MinecraftForge.EVENT_BUS.register(new thoriumpickaxe());
+        MinecraftForge.EVENT_BUS.register(new FastFlyBreak());
     }
     public void postInit(FMLPostInitializationEvent e)
     {
