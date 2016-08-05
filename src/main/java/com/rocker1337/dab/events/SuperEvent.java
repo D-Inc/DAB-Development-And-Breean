@@ -100,9 +100,9 @@ public class SuperEvent {
     public void onPlayerPickupXP(PlayerPickupXpEvent xpEvent)
     {
         ItemStack heldItem = player.getHeldItemMainhand();
-        if (heldItem != null && heldItem.getItem() == DABItems.thoriumsword)
+        if (heldItem != null && heldItem.getItem() == DABItems.thoriumsword | heldItem.getItem() == DABItems.multitool)
         {
-            xpEvent.getOrb().xpValue *=swordxpmultiplier;
+            xpEvent.getOrb().xpValue *= swordxpmultiplier;
         }
     }
 }
