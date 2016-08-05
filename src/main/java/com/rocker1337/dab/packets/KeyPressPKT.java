@@ -44,19 +44,19 @@ public class KeyPressPKT implements IMessage{
                 public void run() {
                     EntityPlayerMP player = ctx.getServerHandler().playerEntity;
                     ItemStack heldItem = player.getHeldItemMainhand();
-                    if (message.key == DABKeybind.INCREASE_SPEED && heldItem.getItem() != null && heldItem.getItem() == DABItems.thoriumpickaxe) {
+                    if (message.key == DABKeybind.INCREASE_SPEED && heldItem.getItem() != null && heldItem.getItem() == DABItems.thoriumpickaxe | heldItem.getItem() == DABItems.multitool) {
                             if (heldItem.getTagCompound().getFloat("Speed") != 2147483640.0F) {
                                 float speedy = heldItem.getTagCompound().getFloat("Speed");
                                 heldItem.getTagCompound().setFloat("Speed", speedy + 5.0F);
                             }
                         }
-                        if (message.key == DABKeybind.DECREASE_SPEED && heldItem.getItem() != null && heldItem.getItem() == DABItems.thoriumpickaxe) {
+                        if (message.key == DABKeybind.DECREASE_SPEED && heldItem.getItem() != null && heldItem.getItem() == DABItems.thoriumpickaxe | heldItem.getItem() == DABItems.multitool) {
                             if (heldItem.getTagCompound().getFloat("Speed") != 15.0F) {
                                 float sonic = heldItem.getTagCompound().getFloat("Speed");
                                 heldItem.getTagCompound().setFloat("Speed", sonic - 5.0F);
                             }
                         }
-                        if (message.key == DABKeybind.RESET_SPEED && heldItem.getItem() != null && heldItem.getItem() == DABItems.thoriumpickaxe) {
+                        if (message.key == DABKeybind.RESET_SPEED && heldItem.getItem() != null && heldItem.getItem() == DABItems.thoriumpickaxe | heldItem.getItem() == DABItems.multitool) {
                             if (heldItem.getTagCompound().getFloat("Speed") != 15F) {
                                 heldItem.getTagCompound().setFloat("Speed", 15F);
                             }
