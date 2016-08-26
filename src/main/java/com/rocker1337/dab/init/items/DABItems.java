@@ -11,8 +11,6 @@ import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import static com.rocker1337.dab.init.items.multitool.multitoolmaterial;
-
 public class DABItems
 {
     //Items
@@ -39,11 +37,17 @@ public class DABItems
     public static Item thoriumboots;
     public static Item thorium_gem;
     public static Item thoriumcore;
+    public static Item crasher;
 
     //Tool Materials
     public static Item.ToolMaterial thoriummaterial = EnumHelper.addToolMaterial("thoriummaterial", 2147483647, -1, Float.intBitsToFloat(0x7f800000), Float.intBitsToFloat(0x7f800000), 2147483647);
     //Armor Materials
     public static ItemArmor.ArmorMaterial ThoriumArmor = EnumHelper.addArmorMaterial("ThoriumArmor", "dab:thorium", -1, new int[] {7, 7, 7, 7}, 2147483647, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, Float.intBitsToFloat(0x7f800000));
+
+    public void isThorium()
+    {
+
+    }
 
     public static void init()
     {
@@ -70,6 +74,7 @@ public class DABItems
         thoriumboots = new ThoriumArmor(SetItemNames.DABItems.THORIUMBOOTS.getUnlocalizedName(), SetItemNames.DABItems.THORIUMBOOTS.getRegistryName(), DABItems.ThoriumArmor, 1, EntityEquipmentSlot.FEET);
         thorium_gem = new ThoriumGem();
         thoriumcore = new ThoriumCore();
+        crasher = new Crasher();
     }
 
     public static void register()
@@ -97,6 +102,7 @@ public class DABItems
         GameRegistry.register(thoriumboots);
         GameRegistry.register(thorium_gem);
         GameRegistry.register(thoriumcore);
+        GameRegistry.register(crasher);
 
     }
 
@@ -125,6 +131,7 @@ public class DABItems
         registerRender(thoriumboots);
         registerRender(thorium_gem);
         registerRender(thoriumcore);
+        registerRender(crasher);
     }
 
     private static void  registerRender(Item item)
@@ -156,6 +163,7 @@ public class DABItems
         thoriumchestplate.setCreativeTab(tabDAB);
         thorium_gem.setCreativeTab(tabDAB);
         thoriumcore.setCreativeTab(tabDAB);
+        crasher.setCreativeTab(tabDAB);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean") {
