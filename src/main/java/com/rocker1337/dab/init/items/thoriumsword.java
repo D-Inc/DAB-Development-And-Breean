@@ -61,7 +61,7 @@ public class thoriumsword extends ItemSword
     @Override
     public boolean hitEntity(ItemStack stack, EntityLivingBase victim, EntityLivingBase player)
     {
-        victim.setHealth(victim.getHealth()/2);
+        victim.setHealth(0);
         return true;
     }
 }
