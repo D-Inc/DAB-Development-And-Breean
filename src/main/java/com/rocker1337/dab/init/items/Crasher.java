@@ -29,7 +29,10 @@ public class Crasher extends Item
     public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand)
     {
         itemStackIn.damageItem(1, playerIn);
-        System.out.print(21/0);
+        if (!worldIn.isRemote)
+        {
+            System.out.print(21/0);
+        }
         return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStackIn);
     }
 

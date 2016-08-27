@@ -5,14 +5,11 @@ import com.rocker1337.dab.events.*;
 import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
 import com.rocker1337.dab.init.blocks.DABBlocks;
 import com.rocker1337.dab.init.crafting.DABCrafting;
-import com.rocker1337.dab.init.fluid.DABFluid;
-import com.rocker1337.dab.init.fluid.tylerfluid;
 import com.rocker1337.dab.init.items.DABItems;
 import com.rocker1337.dab.init.items.thoriumpickaxe;
 import com.rocker1337.dab.world.DABBiomeRegistry;
 import com.rocker1337.dab.world.DabWorldGen;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -24,9 +21,6 @@ public class CommonProxy
     public void preInit(FMLPreInitializationEvent e)
     {
         System.out.println("Starting Pre Init");
-        //Init Fluid
-        DABFluid.register();
-        FluidRegistry.addBucketForFluid(tylerfluid.instance);
         //Init and Register Items
         DABItems.init();
         DABItems.register();

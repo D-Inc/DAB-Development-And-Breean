@@ -21,7 +21,7 @@ public class ThoriumEvents
 
             if (player.getHeldItemMainhand().getItem() != null && player.getHeldItemMainhand().getItem() == DABItems.thoriumsword)
             {
-                entityEvent.getTarget().setDead();
+                entityEvent.getTarget().isDead = true;
             }
         }
     }
