@@ -4,6 +4,7 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -55,5 +56,12 @@ public class thoriumsword extends ItemSword
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced)
     {
         toolTip.add(ChatFormatting.AQUA + "The sword multiplies the xp given to you by " + swordxpmultiplier);
+    }
+
+    @Override
+    public boolean hitEntity(ItemStack stack, EntityLivingBase victim, EntityLivingBase player)
+    {
+        victim.setHealth(victim.getHealth()/2);
+        return true;
     }
 }
