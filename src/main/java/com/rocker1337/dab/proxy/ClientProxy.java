@@ -3,8 +3,11 @@ package com.rocker1337.dab.proxy;
 import com.rocker1337.dab.events.KeyPressEvent;
 import com.rocker1337.dab.helper.ClientKeyHelper;
 import com.rocker1337.dab.init.blocks.DABBlocks;
+import com.rocker1337.dab.init.entities.platypus.EntityPlatypus;
+import com.rocker1337.dab.init.entities.platypus.RenderPlatypus;
 import com.rocker1337.dab.init.items.DABItems;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -19,6 +22,7 @@ public class ClientProxy extends CommonProxy
     public void preInit(FMLPreInitializationEvent e)
     {
         super.preInit(e);
+        RenderingRegistry.registerEntityRenderingHandler(EntityPlatypus.class, RenderPlatypus.FACTORY);
     }
 
     @Override
