@@ -94,21 +94,34 @@ public class SuperEvent {
     @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
     public void onEntityGetHurt(LivingHurtEvent e)
     {
-        if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == DABItems.thoriumhelmet && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == DABItems.thoriumchestplate && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == DABItems.thoriumleggings && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == DABItems.thoriumboots)
+        if (e.getEntity() instanceof EntityPlayer)
         {
-            if (e.getEntity() instanceof EntityPlayer)
-            {
-                e.setCanceled(true);
+            player = (EntityPlayer) e.getEntity();
+            isCreativeMode = player.capabilities.isCreativeMode;
+            isSpectatorMode = player.isSpectator();
+            ItemStack heldItem = player.getHeldItemMainhand();
+
+            if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == DABItems.thoriumhelmet && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == DABItems.thoriumchestplate && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == DABItems.thoriumleggings && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == DABItems.thoriumboots) {
+                if (e.getEntity() instanceof EntityPlayer) {
+                    e.setCanceled(true);
+                }
             }
         }
     }
     @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
     public void onPlayerPickupXP(PlayerPickupXpEvent xpEvent)
     {
-        ItemStack heldItem = player.getHeldItemMainhand();
-        if (heldItem != null && heldItem.getItem() == DABItems.thoriumsword | heldItem.getItem() == DABItems.multitool)
+        if (xpEvent.getEntity() instanceof EntityPlayer)
         {
-            xpEvent.getOrb().xpValue *= swordxpmultiplier;
+            player = (EntityPlayer) xpEvent.getEntity();
+            isCreativeMode = player.capabilities.isCreativeMode;
+            isSpectatorMode = player.isSpectator();
+            ItemStack heldItem = player.getHeldItemMainhand();
+
+            if (heldItem != null && heldItem.getItem() == DABItems.thoriumsword | heldItem.getItem() == DABItems.multitool)
+            {
+                xpEvent.getOrb().xpValue *= swordxpmultiplier;
+            }
         }
     }
 }
