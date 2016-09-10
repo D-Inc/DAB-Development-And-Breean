@@ -33,7 +33,8 @@ public class SuperEvent {
     public void onEvent(LivingEvent.LivingUpdateEvent event)
     {
         event.getEntity();
-        if (event.getEntity() instanceof EntityPlayer) {
+        if (event.getEntity() instanceof EntityPlayer)
+        {
             player = (EntityPlayer) event.getEntity();
             isCreativeMode = player.capabilities.isCreativeMode;
             isSpectatorMode = player.isSpectator();
