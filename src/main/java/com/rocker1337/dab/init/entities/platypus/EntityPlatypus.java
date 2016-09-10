@@ -1,9 +1,11 @@
 package com.rocker1337.dab.init.entities.platypus;
 
+import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
 import com.rocker1337.dab.init.items.DABItems;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.item.Item;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 
 /**
@@ -27,5 +29,11 @@ public class EntityPlatypus extends EntityCreature
     protected Item getDropItem()
     {
         return DABItems.bobatea;
+    }
+
+    @Override
+    protected SoundEvent getAmbientSound()
+    {
+        return RegisterSoundEvents.perry_chatter;
     }
 }

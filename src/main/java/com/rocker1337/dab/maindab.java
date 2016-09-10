@@ -4,6 +4,7 @@ import com.rocker1337.dab.commands.configreload;
 import com.rocker1337.dab.commands.gamemodec;
 import com.rocker1337.dab.commands.gamemodes;
 import com.rocker1337.dab.helper.PacketHandler;
+import com.rocker1337.dab.init.entities.platypus.EntityPlatypus;
 import com.rocker1337.dab.proxy.CommonProxy;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fluids.FluidRegistry;
@@ -14,6 +15,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 import java.io.File;
 
@@ -46,6 +48,8 @@ public class maindab
         configDir = new File(e.getModConfigurationDirectory() + "/" + Reference.MODID);
         configDir.mkdirs();
         ConfigHandler.init(new File(configDir.getPath(), Reference.MODID + ".cfg"));
+        //Init Mobs
+        EntityRegistry.registerModEntity(EntityPlatypus.class, "platypus", 1, this, 80, 3, true, 1609872, 14180352);
     }
     @EventHandler
     public void init(FMLInitializationEvent e)

@@ -14,6 +14,7 @@ public class RegisterSoundEvents
     public static SoundEvent records_mlgcancan;
     public static SoundEvent sadairhorn;
     public static SoundEvent specialcobblestone;
+    public static SoundEvent perry_chatter;
 
 
     public static void init()
@@ -22,6 +23,7 @@ public class RegisterSoundEvents
         records_mlgcancan = registerSound("mlgcancan");
         sadairhorn = registerSound("sadairhorn");
         specialcobblestone = registerSound("specialcobblestone");
+        perry_chatter = registerSound("platypus_chatter");
     }
 
 

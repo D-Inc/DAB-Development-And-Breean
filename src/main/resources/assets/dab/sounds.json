@@ -43,5 +43,16 @@
           }
         ],
 		"subtitle": "specialcobblestone"
-	}
+	},
+	"platypus_chatter":
+    {
+      "category": "neutral",
+      "sounds":
+              [
+                {
+                  "name": "dab:platypus_chatter"
+                }
+              ],
+      "subtitle": "Platypus Chatters"
+    }
 }
