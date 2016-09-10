@@ -38,9 +38,11 @@ public class DABItems
     public static Item thorium_gem;
     public static Item thoriumcore;
     public static Item crasher;
+    public static Item nvidiasword;
 
     //Tool Materials
     public static Item.ToolMaterial thoriummaterial = EnumHelper.addToolMaterial("thoriummaterial", 2147483647, -1, Float.intBitsToFloat(0x7f800000), Float.intBitsToFloat(0x7f800000), 2147483647);
+    public static Item.ToolMaterial nvidiamaterial = EnumHelper.addToolMaterial("nvidiamaterial", 0, 2560, 1607.0F, 1733.0F, 320);
     //Armor Materials
     public static ItemArmor.ArmorMaterial ThoriumArmor = EnumHelper.addArmorMaterial("ThoriumArmor", "dab:thorium", -1, new int[] {7, 7, 7, 7}, 2147483647, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, Float.intBitsToFloat(0x7f800000));
 
@@ -75,6 +77,7 @@ public class DABItems
         thorium_gem = new ThoriumGem();
         thoriumcore = new ThoriumCore();
         crasher = new Crasher();
+        nvidiasword = new SwordOfNvidia(nvidiamaterial);
     }
 
     public static void register()
@@ -103,6 +106,7 @@ public class DABItems
         GameRegistry.register(thorium_gem);
         GameRegistry.register(thoriumcore);
         GameRegistry.register(crasher);
+        GameRegistry.register(nvidiasword);
 
     }
 
@@ -132,6 +136,7 @@ public class DABItems
         registerRender(thorium_gem);
         registerRender(thoriumcore);
         registerRender(crasher);
+        registerRender(nvidiasword);
     }
 
     private static void  registerRender(Item item)
@@ -164,6 +169,7 @@ public class DABItems
         thorium_gem.setCreativeTab(tabDAB);
         thoriumcore.setCreativeTab(tabDAB);
         crasher.setCreativeTab(tabDAB);
+        nvidiasword.setCreativeTab(tabDAB);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean") {

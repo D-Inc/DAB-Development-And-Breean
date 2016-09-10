@@ -1,6 +1,7 @@
 package com.rocker1337.dab.init.items;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
@@ -29,8 +30,17 @@ public class Crasher extends Item
     public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand)
     {
         itemStackIn.damageItem(1, playerIn);
-        if (!worldIn.isRemote)
+        if (worldIn.isRemote)
         {
+            try
+            {
+                Thread.currentThread().sleep(1200);
+            }
+            catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+            playerIn.inventory.setInventorySlotContents(103, new ItemStack(Blocks.DIAMOND_BLOCK));
             System.out.print(21/0);
         }
         return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStackIn);

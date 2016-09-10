@@ -26,6 +26,7 @@ public class SuperEvent {
     static boolean hasEnderFlight;
     static boolean hasThoriumFlight;
     static boolean isCreativeMode;
+    static boolean isSpectatorMode;
     static World worldIn;
 
     @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
@@ -35,6 +36,7 @@ public class SuperEvent {
         if (event.getEntity() instanceof EntityPlayer) {
             player = (EntityPlayer) event.getEntity();
             isCreativeMode = player.capabilities.isCreativeMode;
+            isSpectatorMode = player.isSpectator();
             ItemStack heldItem = player.getHeldItemMainhand();
 
             // LessFlightEvent
@@ -65,6 +67,8 @@ public class SuperEvent {
             if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == DABItems.thoriumhelmet && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == DABItems.thoriumchestplate && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == DABItems.thoriumleggings && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == DABItems.thoriumboots)
             {
                 player.capabilities.allowFlying = true;
+                player.capabilities.setFlySpeed(2.0F);
+                player.capabilities.setPlayerWalkSpeed(2.0F);
                 hasThoriumFlight = true;
             }
             else
@@ -76,11 +80,13 @@ public class SuperEvent {
                 player.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation("night_vision"), 20, 6, false, false));
                 player.addPotionEffect(new PotionEffect(Potion.getPotionById(23), 20, 0, false, false));
             }
-            // Disable flight if they don't have Greater or Lesser Flight or EnderFlight ring and if they aren't in creative.
-            if (!hasGreatFlight & !hasLessFlight & !hasEnderFlight & !hasThoriumFlight & !isCreativeMode)
+            // Disable flight if they don't have Greater or Lesser Flight or EnderFlight ring and if they aren't in creative or spectator mode.
+            if (!hasGreatFlight & !hasLessFlight & !hasEnderFlight & !hasThoriumFlight & !isCreativeMode & !isSpectatorMode)
             {
                 player.capabilities.isFlying = false;
                 player.capabilities.allowFlying = false;
+                player.capabilities.setFlySpeed(0.2F);
+                player.capabilities.setPlayerWalkSpeed(0.1F);
             }
 
         }
