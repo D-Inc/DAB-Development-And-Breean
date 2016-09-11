@@ -30,7 +30,7 @@ public class SuperEvent {
     static World worldIn;
 
     @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
-    public void onEvent(LivingEvent.LivingUpdateEvent event)
+    public void onDABLivingEvent(LivingEvent.LivingUpdateEvent event)
     {
         event.getEntity();
         if (event.getEntity() instanceof EntityPlayer)
@@ -86,6 +86,9 @@ public class SuperEvent {
             {
                 player.capabilities.isFlying = false;
                 player.capabilities.allowFlying = false;
+            }
+            if (!hasThoriumFlight & !isSpectatorMode)
+            {
                 player.capabilities.setFlySpeed(0.2F);
                 player.capabilities.setPlayerWalkSpeed(0.1F);
             }

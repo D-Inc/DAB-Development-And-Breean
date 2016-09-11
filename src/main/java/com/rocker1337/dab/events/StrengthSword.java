@@ -13,7 +13,7 @@ public class StrengthSword
 {
 
     @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
-    public void onEvent(LivingEvent.LivingUpdateEvent event)
+    public void holdDiamondSwordEvent(LivingEvent.LivingUpdateEvent event)
     {
         if (event.getEntity() instanceof EntityPlayer)
         {
