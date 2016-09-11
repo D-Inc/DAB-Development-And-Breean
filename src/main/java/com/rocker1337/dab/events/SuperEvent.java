@@ -35,12 +35,6 @@ public class SuperEvent {
         event.getEntity();
         if (event.getEntity() instanceof EntityPlayer) {
             player = (EntityPlayer) event.getEntity();
-            //System.out.println(player.inventory.armorInventory.toString());
-            System.out.println(player.getEquipmentAndArmor().toString());
-            if (player.inventory.getStackInSlot(103) != null)
-            {
-                System.out.println(player.inventory.getStackInSlot(103).toString());
-            }
             isCreativeMode = player.capabilities.isCreativeMode;
             isSpectatorMode = player.isSpectator();
             ItemStack heldItem = player.getHeldItemMainhand();
