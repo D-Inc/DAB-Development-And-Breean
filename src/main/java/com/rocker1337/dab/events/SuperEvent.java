@@ -67,7 +67,7 @@ public class SuperEvent {
             if (player.getEquipmentAndArmor().toString().contains("1xitem.thorium_boots@0, 1xitem.thorium_legs@0, 1xitem.thorium_chestplate@0, 1xitem.thorium_helmet@0"))
             {
                 player.capabilities.allowFlying = true;
-                player.capabilities.setFlySpeed(2.0F);
+                player.capabilities.setFlySpeed(0.3F);
                 player.capabilities.setPlayerWalkSpeed(2.0F);
                 hasThoriumFlight = true;
             }
@@ -88,7 +88,7 @@ public class SuperEvent {
             }
             if (!hasThoriumFlight & !isSpectatorMode)
             {
-                player.capabilities.setFlySpeed(0.2F);
+                player.capabilities.setFlySpeed(0.1F);
                 player.capabilities.setPlayerWalkSpeed(0.1F);
             }
 
