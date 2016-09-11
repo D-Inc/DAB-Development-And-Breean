@@ -33,9 +33,14 @@ public class SuperEvent {
     public void onDABLivingEvent(LivingEvent.LivingUpdateEvent event)
     {
         event.getEntity();
-        if (event.getEntity() instanceof EntityPlayer)
-        {
+        if (event.getEntity() instanceof EntityPlayer) {
             player = (EntityPlayer) event.getEntity();
+            //System.out.println(player.inventory.armorInventory.toString());
+            System.out.println(player.getEquipmentAndArmor().toString());
+            if (player.inventory.getStackInSlot(103) != null)
+            {
+                System.out.println(player.inventory.getStackInSlot(103).toString());
+            }
             isCreativeMode = player.capabilities.isCreativeMode;
             isSpectatorMode = player.isSpectator();
             ItemStack heldItem = player.getHeldItemMainhand();
@@ -65,7 +70,7 @@ public class SuperEvent {
             {
                 hasEnderFlight = false;
             }
-            if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == DABItems.thoriumhelmet && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == DABItems.thoriumchestplate && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == DABItems.thoriumleggings && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == DABItems.thoriumboots)
+            if (player.getEquipmentAndArmor().toString().contains("1xitem.thorium_boots@0, 1xitem.thorium_legs@0, 1xitem.thorium_chestplate@0, 1xitem.thorium_helmet@0"))
             {
                 player.capabilities.allowFlying = true;
                 player.capabilities.setFlySpeed(2.0F);
