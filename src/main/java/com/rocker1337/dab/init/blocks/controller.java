@@ -30,6 +30,6 @@ public class controller extends Block
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List toolTip, boolean advanced)
     {
-        toolTip.add(ChatFormatting.WHITE + "Its Smoothr!");
+        toolTip.add(ChatFormatting.WHITE + "Its Smoother!");
     }
 }
