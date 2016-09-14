@@ -3,6 +3,10 @@ package com.rocker1337.dab.proxy;
 import com.rocker1337.dab.events.KeyPressEvent;
 import com.rocker1337.dab.helper.ClientKeyHelper;
 import com.rocker1337.dab.init.blocks.DABBlocks;
+import com.rocker1337.dab.init.entities.derek.EntityDerek;
+import com.rocker1337.dab.init.entities.derek.RenderDerek;
+import com.rocker1337.dab.init.entities.jenna.EntityJenna;
+import com.rocker1337.dab.init.entities.jenna.RenderJenna;
 import com.rocker1337.dab.init.entities.platypus.EntityPlatypus;
 import com.rocker1337.dab.init.entities.platypus.RenderPlatypus;
 import com.rocker1337.dab.init.items.DABItems;
@@ -23,6 +27,8 @@ public class ClientProxy extends CommonProxy
     {
         super.preInit(e);
         RenderingRegistry.registerEntityRenderingHandler(EntityPlatypus.class, RenderPlatypus.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityDerek.class, RenderDerek.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityJenna.class, RenderJenna.FACTORY);
     }
 
     @Override

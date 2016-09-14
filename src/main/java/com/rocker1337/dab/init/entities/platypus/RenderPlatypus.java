@@ -10,9 +10,6 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 
-/**
- * Created by troth on 9/10/2016.
- */
 public class RenderPlatypus extends RenderLiving {
     protected ResourceLocation platypusTexture;
     public static final Factory FACTORY = new Factory();
