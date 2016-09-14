@@ -6,9 +6,15 @@ import com.rocker1337.dab.init.items.DABItems;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
+import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -25,13 +31,13 @@ public class ThoriumChestplateMagnet {
     @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
     public void onThroiumOnPlayerEvent(LivingEvent.LivingUpdateEvent event) {
         event.getEntity();
-        // DEBUG System.out.println(chestplateMagnet);
         if (event.getEntity() instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer) event.getEntity();
             ItemStack heldItem = player.getHeldItemMainhand();
             double x = player.posX;
             double y = player.posY + 0.75;
             double z = player.posZ;
+            World world = player.getEntityWorld();
             if (player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == DABItems.thoriumchestplate && chestplateMagnet)
             {
                 List<EntityItem> items = player.worldObj.getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(x - 10, y - 10, z - 10, x + 10, y + 10, z + 10));
@@ -42,7 +48,18 @@ public class ThoriumChestplateMagnet {
                         if (pulled > 200)
                             break;
 
-                        MathHelper.setEntityMotionFromVector(item, new Vector3(x, y, z), 0.45F);
+                        EntityItemPickupEvent pickupEvent = new EntityItemPickupEvent(player, item);
+                        MinecraftForge.EVENT_BUS.post(pickupEvent);
+                        ItemStack itemStackToGet = item.getEntityItem();
+                        int stackSize = itemStackToGet.stackSize;
+
+                        if(pickupEvent.getResult() == Event.Result.ALLOW || player.inventory.addItemStackToInventory(itemStackToGet))
+                        {
+                            player.onItemPickup(item, stackSize);
+                            world.playSound(player, player.getPosition(), SoundEvents.ENTITY_ITEM_PICKUP , SoundCategory.AMBIENT,
+                                    0.15F, ((world.rand.nextFloat() - world.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
+                        }
+                        //MathHelper.setEntityMotionFromVector(item, new Vector3(x, y, z), 1.5F);
                         pulled++;
                     }
                 }
@@ -51,7 +68,7 @@ public class ThoriumChestplateMagnet {
                         if (pulled > 200)
                             break;
 
-                        MathHelper.setEntityMotionFromVector(xpOrb, new Vector3(x, y, z), 0.45F);
+                        MathHelper.setEntityMotionFromVector(xpOrb, new Vector3(x, y, z), 1.5F);
                     }
                 }
             }
