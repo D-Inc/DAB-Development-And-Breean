@@ -5,6 +5,7 @@ import com.rocker1337.dab.Reference;
 import com.rocker1337.dab.init.entities.derek.EntityDerek;
 import com.rocker1337.dab.init.entities.derek.RenderDerek;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelPlayer;
 import net.minecraft.client.renderer.entity.Render;
@@ -18,6 +19,10 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.URL;
 import java.util.Map;
 
 /**
@@ -28,6 +33,7 @@ public class RenderJenna extends RenderLiving
     Minecraft mc = Minecraft.getMinecraft();
 
     protected ResourceLocation jennaTexture;
+    protected ResourceLocation jennaTexture2;
     public static final Factory FACTORY = new Factory();
 
     public RenderJenna(RenderManager rm)
@@ -52,7 +58,9 @@ public class RenderJenna extends RenderLiving
 
     protected void setEntityTexture()
     {
-        jennaTexture = Minecraft.getMinecraft().getTextureManager().getDynamicTextureLocation("https://crafatar.com/skins/2a20bf57fde04dec81bd1d50ce1059ec", new DynamicTexture(64, 64));
+        //jennaTexture = Minecraft.getMinecraft().getTextureManager().getDynamicTextureLocation("https://crafatar.com/skins/2a20bf57fde04dec81bd1d50ce1059ec", new DynamicTexture(64, 64));
+        jennaTexture = AbstractClientPlayer.getLocationSkin("Rocker545");
+        System.out.println(jennaTexture);
     }
 
     /**

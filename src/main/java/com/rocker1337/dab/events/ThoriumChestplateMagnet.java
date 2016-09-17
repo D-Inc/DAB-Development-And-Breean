@@ -56,7 +56,7 @@ public class ThoriumChestplateMagnet {
                         if(pickupEvent.getResult() == Event.Result.ALLOW || player.inventory.addItemStackToInventory(itemStackToGet))
                         {
                             player.onItemPickup(item, stackSize);
-                            world.playSound(player, player.getPosition(), SoundEvents.ENTITY_ITEM_PICKUP , SoundCategory.AMBIENT,
+                            world.playSound(player, player.getPosition(), SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP , SoundCategory.AMBIENT,
                                     0.15F, ((world.rand.nextFloat() - world.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
                         }
                         //MathHelper.setEntityMotionFromVector(item, new Vector3(x, y, z), 1.5F);

@@ -13,10 +13,7 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.event.*;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 import java.io.File;
@@ -54,6 +51,8 @@ public class maindab
         EntityRegistry.registerModEntity(EntityPlatypus.class, "platypus", 1, this, 80, 3, true, 1609872, 14180352);
         EntityRegistry.registerModEntity(EntityDerek.class, "derek", 2, this, 80, 3, true, 16777215, 2560771);
         EntityRegistry.registerModEntity(EntityJenna.class, "jenna", 3, this, 80, 3, true, 10170623, 16711935);
+        FMLInterModComms.sendRuntimeMessage("dab", "VersionChecker", "addVersionCheck", link)
+
     }
     @EventHandler
     public void init(FMLInitializationEvent e)

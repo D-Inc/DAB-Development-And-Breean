@@ -1,0 +1,15 @@
+{
+  "versionList":
+  [
+    {
+      "mcVersion":"Minecraft 1.10.2",
+      "modVersion":"1.7.5",
+      "changeLog": [
+        "Made this mod with the Version Checker Mod"
+      ],
+      "updateURL":"http://minecraft.curseforge.com/mc-mods/221140-version-checker/files/2242814/download",
+      "isDirectLink":"true",
+      "newFileName":""
+    }
+  ]
+}
