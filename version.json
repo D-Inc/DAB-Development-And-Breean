@@ -7,7 +7,7 @@
       "changeLog": [
         "Made this mod with the Version Checker Mod"
       ],
-      "updateURL":"http://minecraft.curseforge.com/mc-mods/221140-version-checker/files/2242814/download",
+      "updateURL":"https://raw.githubusercontent.com/ninjawarrior1337/DAB-Development-And-Breean/master/version.json",
       "isDirectLink":"true",
       "newFileName":""
     }

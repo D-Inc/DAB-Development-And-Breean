@@ -51,7 +51,7 @@ public class maindab
         EntityRegistry.registerModEntity(EntityPlatypus.class, "platypus", 1, this, 80, 3, true, 1609872, 14180352);
         EntityRegistry.registerModEntity(EntityDerek.class, "derek", 2, this, 80, 3, true, 16777215, 2560771);
         EntityRegistry.registerModEntity(EntityJenna.class, "jenna", 3, this, 80, 3, true, 10170623, 16711935);
-        FMLInterModComms.sendRuntimeMessage("dab", "VersionChecker", "addVersionCheck", link)
+        FMLInterModComms.sendRuntimeMessage("dab", "VersionChecker", "addVersionCheck", "https://raw.githubusercontent.com/ninjawarrior1337/DAB-Development-And-Breean/master/version.json");
 
     }
     @EventHandler
