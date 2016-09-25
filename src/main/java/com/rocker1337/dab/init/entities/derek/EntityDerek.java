@@ -31,7 +31,7 @@ public class EntityDerek extends EntitySkeleton
     @Override
     protected void initEntityAI()
     {
-        tasks.addTask(1, new EntityAIAttackRangedBow(this, 1.0D, 0, 20F));
+        tasks.addTask(1, new EntityAIAttackRangedBow(this, 20.0D, 0, 20F));
         this.targetTasks.addTask(1, new EntityAINearestAttackableTarget(this, EntityPlayer.class, true));
     }
 

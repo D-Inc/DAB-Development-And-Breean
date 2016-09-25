@@ -172,11 +172,18 @@ public class DABItems
         nvidiasword.setCreativeTab(tabDAB);
     }
 
-    public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean") {
+    public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean")
+    {
         @Override
         public Item getTabIconItem()
         {
             return DABItems.weed;
+        }
+
+        @Override
+        public boolean hasSearchBar()
+        {
+            return true;
         }
     };
 }
