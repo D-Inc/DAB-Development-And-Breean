@@ -13,5 +13,6 @@ public class dab_controller_stairs extends BlockStairs
         super(modelState);
         setUnlocalizedName("dab_controller_stairs");
         setRegistryName("dab_controller_stairs");
+        this.useNeighborBrightness = true;
     }
 }

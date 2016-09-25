@@ -4,6 +4,7 @@ import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
 import com.rocker1337.dab.init.items.DABItems;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.item.Item;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
@@ -23,6 +24,12 @@ public class EntityPlatypus extends EntityCreature
         super.applyEntityAttributes();
         getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.2D);
         getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(40.0D);
+    }
+
+    @Override
+    protected void initEntityAI()
+    {
+        this.tasks.addTask(1, new EntityAIWander(this, 1.0D));
     }
 
     @Override

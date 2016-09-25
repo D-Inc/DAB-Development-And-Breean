@@ -1,5 +1,6 @@
 package com.rocker1337.dab.init.entities.jenna;
 
+import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.minecraft.MinecraftProfileTexture;
 import com.rocker1337.dab.Reference;
 import com.rocker1337.dab.init.entities.derek.EntityDerek;
@@ -33,7 +34,7 @@ public class RenderJenna extends RenderLiving
     Minecraft mc = Minecraft.getMinecraft();
 
     protected ResourceLocation jennaTexture;
-    protected ResourceLocation jennaTexture2;
+    protected String jennaTexture2;
     public static final Factory FACTORY = new Factory();
 
     public RenderJenna(RenderManager rm)
@@ -58,8 +59,8 @@ public class RenderJenna extends RenderLiving
 
     protected void setEntityTexture()
     {
-        //jennaTexture = Minecraft.getMinecraft().getTextureManager().getDynamicTextureLocation("https://crafatar.com/skins/2a20bf57fde04dec81bd1d50ce1059ec", new DynamicTexture(64, 64));
-        jennaTexture = AbstractClientPlayer.getLocationSkin("Rocker545");
+        jennaTexture2 = AbstractClientPlayer.getLocationSkin("Apriicot").toString();
+        jennaTexture = new ResourceLocation(jennaTexture2);
         System.out.println(jennaTexture);
     }
 
