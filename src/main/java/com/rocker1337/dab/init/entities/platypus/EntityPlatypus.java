@@ -2,9 +2,11 @@ package com.rocker1337.dab.init.entities.platypus;
 
 import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
 import com.rocker1337.dab.init.items.DABItems;
-import net.minecraft.entity.EntityCreature;
+import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAISit;
 import net.minecraft.entity.ai.EntityAIWander;
+import net.minecraft.entity.passive.EntityTameable;
 import net.minecraft.item.Item;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
@@ -12,11 +14,19 @@ import net.minecraft.world.World;
 /**
  * Created by troth on 9/10/2016.
  */
-public class EntityPlatypus extends EntityCreature
+public class EntityPlatypus extends EntityTameable
 {
     public EntityPlatypus(World worldIn)
     {
         super(worldIn);
+        this.setSize(0.6F, 0.65F);
+    }
+
+    @Override
+    public EntityAgeable createChild(EntityAgeable ageable)
+    {
+        EntityPlatypus entplat = new EntityPlatypus(this.worldObj);
+        return entplat;
     }
 
     @Override
@@ -30,6 +40,7 @@ public class EntityPlatypus extends EntityCreature
     protected void initEntityAI()
     {
         this.tasks.addTask(1, new EntityAIWander(this, 1.0D));
+        tasks.addTask(1, new EntityAISit(this));
     }
 
     @Override
@@ -42,5 +53,10 @@ public class EntityPlatypus extends EntityCreature
     protected SoundEvent getAmbientSound()
     {
         return RegisterSoundEvents.perry_chatter;
+    }
+
+    public int getMaxSpawnedInChunk()
+    {
+        return 8;
     }
 }

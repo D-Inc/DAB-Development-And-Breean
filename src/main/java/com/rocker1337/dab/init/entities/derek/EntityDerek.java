@@ -1,11 +1,8 @@
 package com.rocker1337.dab.init.entities.derek;
 
 import com.rocker1337.dab.init.items.DABItems;
-import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.EntityAIAttackRanged;
 import net.minecraft.entity.ai.EntityAIAttackRangedBow;
-import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.player.EntityPlayer;
@@ -40,5 +37,10 @@ public class EntityDerek extends EntitySkeleton
     {
         return DABItems.Derek;
     }
+
+    public int getMaxSpawnedInChunk()
+{
+    return 8;
+}
 
 }
