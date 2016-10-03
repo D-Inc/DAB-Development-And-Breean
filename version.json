@@ -10,6 +10,17 @@
       "updateURL":"https://raw.githubusercontent.com/ninjawarrior1337/DAB-Development-And-Breean/master/version.json",
       "isDirectLink":"true",
       "newFileName":""
+    },
+    {
+      "mcVersion":"Minecraft 1.10.2",
+      "modVersion":"1.7.6",
+      "changeLog": [
+        "Accually Made this mod with the Version Checker Mod"
+      ],
+      "updateURL":"http://99.186.17.41:8080/job/DAB-Development-And-Breean/lastSuccessfulBuild/artifact/build/libs/dab-1.7.5%20-%201.10.2.jar",
+      "isDirectLink":"true",
+      "newFileName":""
     }
   ]
+
 }
