@@ -1,9 +1,6 @@
 package com.rocker1337.dab.init.entities.derek;
 
 import com.rocker1337.dab.Reference;
-import com.rocker1337.dab.init.entities.platypus.EntityPlatypus;
-import com.rocker1337.dab.init.entities.platypus.ModelPlatypus;
-import com.rocker1337.dab.init.entities.platypus.RenderPlatypus;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderLiving;
@@ -32,13 +29,9 @@ public class RenderDerek extends RenderLiving
             preRenderCallbackDerek((EntityDerek) entity, f);
         }
 
-        protected void preRenderCallbackDerek(EntityDerek entity, float f) {
-            // some people do some G11 transformations or blends here, like you can do
-            // GL11.glScalef(2F, 2F, 2F); to scale up the entity
-            // which is used for Slime entities.  I suggest having the entity cast to
-            // your custom type to make it easier to access fields from your
-            // custom entity, eg. GL11.glScalef(entity.scaleFactor, entity.scaleFactor,
-            // entity.scaleFactor);
+        protected void preRenderCallbackDerek(EntityDerek entity, float f)
+        {
+
         }
 
         protected void setEntityTexture() {

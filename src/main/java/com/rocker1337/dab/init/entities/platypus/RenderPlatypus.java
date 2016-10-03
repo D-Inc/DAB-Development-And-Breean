@@ -1,7 +1,6 @@
 package com.rocker1337.dab.init.entities.platypus;
 
 import com.rocker1337.dab.Reference;
-import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -24,13 +23,9 @@ public class RenderPlatypus extends RenderLiving {
         preRenderCallbackPlatypus((EntityPlatypus) entity, f);
     }
 
-    protected void preRenderCallbackPlatypus(EntityPlatypus entity, float f) {
-        // some people do some G11 transformations or blends here, like you can do
-        // GL11.glScalef(2F, 2F, 2F); to scale up the entity
-        // which is used for Slime entities.  I suggest having the entity cast to
-        // your custom type to make it easier to access fields from your
-        // custom entity, eg. GL11.glScalef(entity.scaleFactor, entity.scaleFactor,
-        // entity.scaleFactor);
+    protected void preRenderCallbackPlatypus(EntityPlatypus entity, float f)
+    {
+
     }
 
     protected void setEntityTexture() {
