@@ -47,19 +47,7 @@ public class ThoriumChestplateMagnet {
                     if (canPullItem(item)) {
                         if (pulled > 200)
                             break;
-
-                        EntityItemPickupEvent pickupEvent = new EntityItemPickupEvent(player, item);
-                        MinecraftForge.EVENT_BUS.post(pickupEvent);
-                        ItemStack itemStackToGet = item.getEntityItem();
-                        int stackSize = itemStackToGet.stackSize;
-
-                        if(pickupEvent.getResult() == Event.Result.ALLOW || player.inventory.addItemStackToInventory(itemStackToGet))
-                        {
-                            player.onItemPickup(item, stackSize);
-                            world.playSound(player, player.getPosition(), SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP , SoundCategory.AMBIENT,
-                                    0.15F, ((world.rand.nextFloat() - world.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
-                        }
-                        //MathHelper.setEntityMotionFromVector(item, new Vector3(x, y, z), 1.5F);
+                        MathHelper.setEntityMotionFromVector(item, new Vector3(x, y, z), 1.5F);
                         pulled++;
                     }
                 }
@@ -67,7 +55,7 @@ public class ThoriumChestplateMagnet {
                     if (canPullXP(xpOrb)) {
                         if (pulled > 200)
                             break;
-
+                        
                         MathHelper.setEntityMotionFromVector(xpOrb, new Vector3(x, y, z), 1.5F);
                     }
                 }
