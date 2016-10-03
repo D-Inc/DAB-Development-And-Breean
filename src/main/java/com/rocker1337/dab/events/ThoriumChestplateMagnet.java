@@ -6,15 +6,10 @@ import com.rocker1337.dab.init.items.DABItems;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.world.World;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingEvent;
-import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
-import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -47,7 +42,10 @@ public class ThoriumChestplateMagnet {
                     if (canPullItem(item)) {
                         if (pulled > 200)
                             break;
-                        MathHelper.setEntityMotionFromVector(item, new Vector3(x, y, z), 1.5F);
+                        item.setPickupDelay(0);
+                        item.motionX = item.motionY = item.motionZ = 0;
+                        item.setPosition(player.posX - 0.2 + (world.rand.nextDouble() * 0.4), player.posY - 0.6, player.posZ - 0.2 + (world.rand.nextDouble() * 0.4));
+                        //MathHelper.setEntityMotionFromVector(item, new Vector3(x, y, z), 1.5F);
                         pulled++;
                     }
                 }
@@ -55,7 +53,7 @@ public class ThoriumChestplateMagnet {
                     if (canPullXP(xpOrb)) {
                         if (pulled > 200)
                             break;
-                        
+
                         MathHelper.setEntityMotionFromVector(xpOrb, new Vector3(x, y, z), 1.5F);
                     }
                 }
