@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import static com.rocker1337.dab.ConfigHandler.swordxpmultiplier;
+import static com.rocker1337.dab.ConfigHandler.thoriumleggingstepassist;
 import static com.rocker1337.dab.init.items.GreatFlight.getGreatRing;
 
 /**
@@ -79,6 +80,15 @@ public class SuperEvent {
             {
                 player.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation("night_vision"), 20, 20, false, false));
                 player.addPotionEffect(new PotionEffect(Potion.getPotionById(23), 20, 0, false, false));
+            }
+
+            if(player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == DABItems.thoriumleggings)
+            {
+                player.stepHeight = thoriumleggingstepassist;
+            }
+            else
+            {
+                player.stepHeight = 0.5F;
             }
             // Disable flight if they don't have Greater or Lesser Flight or EnderFlight ring and if they aren't in creative or spectator mode.
             if (!hasGreatFlight & !hasLessFlight & !hasEnderFlight & !hasThoriumFlight & !isCreativeMode & !isSpectatorMode)

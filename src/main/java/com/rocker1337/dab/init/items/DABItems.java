@@ -39,6 +39,7 @@ public class DABItems
     public static Item thoriumcore;
     public static Item crasher;
     public static Item nvidiasword;
+    public static Item samsungs7;
 
     //Tool Materials
     public static Item.ToolMaterial thoriummaterial = EnumHelper.addToolMaterial("thoriummaterial", 2147483647, -1, Float.intBitsToFloat(0x7f800000), Float.intBitsToFloat(0x7f800000), 2147483647);
@@ -78,6 +79,7 @@ public class DABItems
         thoriumcore = new ThoriumCore();
         crasher = new Crasher();
         nvidiasword = new SwordOfNvidia(nvidiamaterial);
+        samsungs7 = new SamsungS7();
     }
 
     public static void register()
@@ -107,6 +109,7 @@ public class DABItems
         GameRegistry.register(thoriumcore);
         GameRegistry.register(crasher);
         GameRegistry.register(nvidiasword);
+        GameRegistry.register(samsungs7);
 
     }
 
@@ -137,6 +140,7 @@ public class DABItems
         registerRender(thoriumcore);
         registerRender(crasher);
         registerRender(nvidiasword);
+        registerRender(samsungs7);
     }
 
     private static void  registerRender(Item item)
@@ -170,9 +174,10 @@ public class DABItems
         thoriumcore.setCreativeTab(tabDAB);
         crasher.setCreativeTab(tabDAB);
         nvidiasword.setCreativeTab(tabDAB);
+        samsungs7.setCreativeTab(tabDAB);
     }
 
-    public static final CreativeTabs tabDAB = new CreativeTabs("Development and Breean")
+    public static final CreativeTabs tabDAB = new CreativeTabs("DAB")
     {
         @Override
         public Item getTabIconItem()

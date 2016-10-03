@@ -1,6 +1,6 @@
 item.jenna.name=Jenna
 item.weed.name=Weed/Hemp
-itemGroup.Development and Breean=Development and Breean
+itemGroup.DAB=DAB
 item.Derek.name=Derek
 item.LAUSD.name=LAUSD
 item.bobatea.name=Boba Tea
@@ -31,6 +31,7 @@ entity.dab.jenna.name=Jenna
 entity.dab.derek.name=Derek
 tile.moving_smiley.name=Smiley
 tile.dab_cobblestone.name=Don't Break
+item.samsungS7.name=Samsung Galaxy S7
 
 
 item.cancanrecord.name=Music Disc

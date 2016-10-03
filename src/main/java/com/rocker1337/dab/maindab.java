@@ -53,8 +53,8 @@ public class maindab
         EntityRegistry.registerModEntity(EntityPlatypus.class, "platypus", 1, this, 80, 3, true, 1609872, 14180352);
         EntityRegistry.registerModEntity(EntityDerek.class, "derek", 2, this, 80, 3, true, 16777215, 2560771);
         EntityRegistry.registerModEntity(EntityJenna.class, "jenna", 3, this, 80, 3, true, 10170623, 16711935);
-        EntityRegistry.addSpawn(EntityPlatypus.class, 7, 1, 5, EnumCreatureType.CREATURE, Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.EXTREME_HILLS, Biomes.JUNGLE, Biomes.TAIGA, Biomes.SWAMPLAND, Biomes.MESA);
-        EntityRegistry.addSpawn(EntityDerek.class, 6, 1, 1, EnumCreatureType.MONSTER, Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.EXTREME_HILLS, Biomes.JUNGLE, Biomes.TAIGA, Biomes.SWAMPLAND, Biomes.MESA);
+        EntityRegistry.addSpawn(EntityPlatypus.class, 7, 1, 5, EnumCreatureType.CREATURE, Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.EXTREME_HILLS, Biomes.JUNGLE, Biomes.TAIGA, Biomes.SWAMPLAND, Biomes.MESA, Biomes.DESERT, Biomes.DESERT_HILLS, Biomes.SAVANNA, Biomes.SAVANNA_PLATEAU);
+        EntityRegistry.addSpawn(EntityDerek.class, 6, 1, 1, EnumCreatureType.MONSTER, Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.EXTREME_HILLS, Biomes.JUNGLE, Biomes.TAIGA, Biomes.SWAMPLAND, Biomes.MESA, Biomes.DESERT, Biomes.DESERT_HILLS, Biomes.SAVANNA, Biomes.SAVANNA_PLATEAU);
         FMLInterModComms.sendRuntimeMessage("dab", "VersionChecker", "addVersionCheck", "https://raw.githubusercontent.com/ninjawarrior1337/DAB-Development-And-Breean/master/version.json");
 
     }

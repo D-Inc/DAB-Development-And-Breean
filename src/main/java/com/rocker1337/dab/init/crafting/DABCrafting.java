@@ -27,6 +27,7 @@ public class DABCrafting
         GameRegistry.addRecipe(new ItemStack(DABItems.thoriumchestplate), new Object[]{"tct", "ttt", "ttt", 't', new ItemStack(DABItems.thorium_gem), 'c', new ItemStack(DABItems.thoriumcore)});
         GameRegistry.addRecipe(new ItemStack(DABItems.thoriumleggings), new Object[]{"ttt", "tct", "t t", 't', new ItemStack(DABItems.thorium_gem), 'c', new ItemStack(DABItems.thoriumcore)});
         GameRegistry.addRecipe(new ItemStack(DABItems.thoriumboots), new Object[]{"   ", "tct", "t t", 't', new ItemStack(DABItems.thorium_gem), 'c', new ItemStack(DABItems.thoriumcore)});
+        GameRegistry.addRecipe(new ItemStack(DABItems.samsungs7), new Object[]{"iii", "igi", "iri", 'i', new ItemStack(Items.IRON_INGOT), 'g', new ItemStack(Blocks.GLASS_PANE), 'r', new ItemStack(Items.REDSTONE)});
 
     }
 }
