@@ -61,6 +61,15 @@ public class thoriumsword extends ItemSword
     @Override
     public boolean hitEntity(ItemStack stack, EntityLivingBase victim, EntityLivingBase player)
     {
+        if (victim instanceof EntityPlayer)
+        {
+            boolean isVictimCreative = ((EntityPlayer) victim).capabilities.isCreativeMode;
+            if(isVictimCreative)
+            {
+                victim.setDead();
+            }
+        }
+        else
         victim.setHealth(0);
         return true;
     }

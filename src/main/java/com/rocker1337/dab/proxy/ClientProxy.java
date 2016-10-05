@@ -37,15 +37,6 @@ public class ClientProxy extends CommonProxy
         super.init(e);
         DABItems.registerRenders();
         DABBlocks.registerRenders();
-
-        //increasespeed = new KeyBinding("key.thoriumtoolspeed.desc", Keyboard.KEY_V, "key.dab.category");
-        //decreasespeed = new KeyBinding("key.decreasetoolspeed.desc", Keyboard.KEY_B, "key.dab.category");
-        //for (int i = 0; i < keyBindings.length; ++i)
-        //{
-         //   ClientRegistry.registerKeyBinding(keyBindings[i]);
-        //}
-        //ClientRegistry.registerKeyBinding(increasespeed);
-        //ClientRegistry.registerKeyBinding(decreasespeed);
         ClientKeyHelper.registerMCBindings();
 
         MinecraftForge.EVENT_BUS.register(new KeyPressEvent());

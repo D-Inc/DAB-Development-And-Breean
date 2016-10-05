@@ -9,6 +9,9 @@ import com.rocker1337.dab.init.items.DABItems;
 import com.rocker1337.dab.init.items.thoriumpickaxe;
 import com.rocker1337.dab.world.DABBiomeRegistry;
 import com.rocker1337.dab.world.DabWorldGen;
+import net.minecraft.item.ItemStack;
+import net.minecraft.stats.Achievement;
+import net.minecraftforge.common.AchievementPage;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -31,6 +34,7 @@ public class CommonProxy
         DABBiomeRegistry.MainRegistry();
         //Init Sounds
         RegisterSoundEvents.init();
+
     }
     public void init(FMLInitializationEvent e)
     {
@@ -38,6 +42,8 @@ public class CommonProxy
         DABItems.setCreativeTab();
         DABBlocks.setCreativeTab();
         DABCrafting.initCrafting();
+        achievementCreativeKill.registerStat();
+        achievementSamsungExplode.registerStat();
         GameRegistry.registerWorldGenerator(new DabWorldGen(), 0);
         MinecraftForge.EVENT_BUS.register(new StrengthSword());
         MinecraftForge.EVENT_BUS.register(new SuperEvent());
@@ -50,10 +56,16 @@ public class CommonProxy
         MinecraftForge.EVENT_BUS.register(new thoriumpickaxe());
         MinecraftForge.EVENT_BUS.register(new FastFlyBreak());
         MinecraftForge.EVENT_BUS.register(new ThoriumEvents());
+        AchievementPage.registerAchievementPage(new AchievementPage("DAB Achievements", new Achievement[] {CommonProxy.achievementCreativeKill, CommonProxy.achievementSamsungExplode}));
     }
     public void postInit(FMLPostInitializationEvent e)
     {
         System.out.println("Starting Post Init");
         System.out.println("9+10=21");
+
     }
+
+    //Achivements
+    public static Achievement achievementCreativeKill = new Achievement("achievements.creative_kill", "creative_kill", 1, 1, new ItemStack(DABItems.thoriumsword), (Achievement)null);
+    public static Achievement achievementSamsungExplode = new Achievement("achievements.samsung_explode", "samsung_explode", 3, 1, new ItemStack(DABItems.samsungs7), (Achievement)null);
 }
