@@ -1,7 +1,6 @@
 package com.rocker1337.dab.init.items;
 
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 
@@ -22,10 +21,7 @@ public class SwordOfNvidia extends ItemSword
     public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
     {
         stack.damageItem(1, attacker);
-        if(target instanceof EntityPlayer)
-        {
-            target.setHealth(21/0);
-        }
+        target.setHealth(target.getHealth()+1);
         return true;
     }
 }
