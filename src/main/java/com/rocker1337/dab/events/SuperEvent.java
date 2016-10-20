@@ -164,6 +164,7 @@ public class SuperEvent {
         }
     }
 
+    @Optional.Method(modid = "theoneprobe")
     private ProbeMode getModeForPlayer()
     {
         return !player.isSneaking() ? ProbeMode.EXTENDED : ProbeMode.DEBUG;
