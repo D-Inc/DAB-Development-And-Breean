@@ -1,14 +1,20 @@
 package com.rocker1337.dab.events;
 
 import com.rocker1337.dab.init.items.DABItems;
+import mcjty.theoneprobe.api.ProbeMode;
+import mcjty.theoneprobe.config.Config;
+import mcjty.theoneprobe.rendering.OverlayRenderer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.PlayerPickupXpEvent;
+import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -136,5 +142,30 @@ public class SuperEvent {
                 xpEvent.getOrb().xpValue *= swordxpmultiplier;
             }
         }
+    }
+    @Optional.Method(modid = "theoneprobe")
+    @SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
+    public void renderGameOverlayEvent(RenderGameOverlayEvent.Pre event)
+    {
+        if (event.getType() != RenderGameOverlayEvent.ElementType.TEXT)
+        {
+            return;
+        }
+
+        if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == DABItems.thoriumhelmet)
+        {
+            if (Loader.isModLoaded("theoneprobe"))
+            {
+                if (Config.isVisible)
+                {
+                    OverlayRenderer.renderHUD(getModeForPlayer(), event.getPartialTicks());
+                }
+            }
+        }
+    }
+
+    private ProbeMode getModeForPlayer()
+    {
+        return !player.isSneaking() ? ProbeMode.EXTENDED : ProbeMode.DEBUG;
     }
 }
