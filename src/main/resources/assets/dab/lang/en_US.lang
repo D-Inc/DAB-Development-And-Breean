@@ -31,7 +31,8 @@ entity.dab.jenna.name=Jenna
 entity.dab.derek.name=Derek
 tile.moving_smiley.name=Smiley
 tile.dab_cobblestone.name=Don't Break
-item.samsungS7.name=Samsung Galaxy S7
+item.samsungS7.name=Samsung Galaxy Note 7
+item.chicken_staff.name=Chicken Staff
 
 
 item.cancanrecord.name=Music Disc

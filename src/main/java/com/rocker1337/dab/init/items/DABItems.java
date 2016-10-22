@@ -24,7 +24,7 @@ public class DABItems
     public static Item EnderFlight;
     public static Item Hammer;
     public static Item AirHorn;
-    public static DABRecord mlgcancan;
+    public static Item mlgcancan;
     public static Item SadAirHorn;
     public static Item thoriumpickaxe;
     public static Item thoriumsword;
@@ -40,6 +40,7 @@ public class DABItems
     public static Item crasher;
     public static Item nvidiasword;
     public static Item samsungs7;
+    public static Item ChickenStaff;
 
     //Tool Materials
     public static Item.ToolMaterial thoriummaterial = EnumHelper.addToolMaterial("thoriummaterial", 2147483647, -1, Float.intBitsToFloat(0x7f800000), Float.intBitsToFloat(0x7f800000), 2147483647);
@@ -64,7 +65,7 @@ public class DABItems
         EnderFlight = new EnderFlight();
         Hammer = new Hammer();
         AirHorn = new AirHorn();
-        mlgcancan = new DABRecord("mlgcancan", RegisterSoundEvents.records_mlgcancan);
+        mlgcancan = new DABRecord("mlgcancan", RegisterSoundEvents.records_mlgcancan).setRegistryName("record_mlgcancan").setUnlocalizedName("record_mlgcancan");
         SadAirHorn = new SadAirHorn();
         thoriumpickaxe = new thoriumpickaxe();
         thoriumaxe = new thoriumaxe(DABItems.thoriummaterial, Float.intBitsToFloat(0x7f800000), Float.intBitsToFloat(0x7f800000));
@@ -80,6 +81,8 @@ public class DABItems
         crasher = new Crasher();
         nvidiasword = new SwordOfNvidia(nvidiamaterial);
         samsungs7 = new SamsungS7();
+        ChickenStaff = new ChickenStaff();
+
     }
 
     public static void register()
@@ -110,6 +113,7 @@ public class DABItems
         GameRegistry.register(crasher);
         GameRegistry.register(nvidiasword);
         GameRegistry.register(samsungs7);
+        GameRegistry.register(ChickenStaff);
 
     }
 
@@ -141,6 +145,7 @@ public class DABItems
         registerRender(crasher);
         registerRender(nvidiasword);
         registerRender(samsungs7);
+        registerRender(ChickenStaff);
     }
 
     private static void  registerRender(Item item)
@@ -175,6 +180,7 @@ public class DABItems
         crasher.setCreativeTab(tabDAB);
         nvidiasword.setCreativeTab(tabDAB);
         samsungs7.setCreativeTab(tabDAB);
+        ChickenStaff.setCreativeTab(tabDAB);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("DAB")

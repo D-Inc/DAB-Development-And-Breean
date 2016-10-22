@@ -9,14 +9,13 @@ public class DABRecord extends ItemRecord
 {
     public DABRecord(String recordName, SoundEvent soundEvent)
     {
-        super(Reference.RESOURCE_PREFIX + recordName, soundEvent);
-        setRegistryName("record_" + recordName);
-        setUnlocalizedName("record");
+        super(recordName, soundEvent);
     }
 
     @Override
-    public ResourceLocation getRecordResource(String name) {
-        return new ResourceLocation(Reference.MODID, name);
+    public ResourceLocation getRecordResource(String name)
+    {
+        return new ResourceLocation(Reference.RESOURCE_PREFIX+name);
     }
 }
 
