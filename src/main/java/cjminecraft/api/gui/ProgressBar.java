@@ -1,9 +1,5 @@
 package cjminecraft.api.gui;
 
-import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.client.Minecraft;
-
 /**
  * This is used to create a progress bar for your GUI
  * @author CJMinecraft

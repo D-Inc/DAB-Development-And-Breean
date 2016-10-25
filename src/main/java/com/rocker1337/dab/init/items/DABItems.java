@@ -41,6 +41,9 @@ public class DABItems
     public static Item nvidiasword;
     public static Item samsungs7;
     public static Item ChickenStaff;
+    public static Item PepperCorn;
+    public static Item PepperMill;
+    public static Item CoarsePepper;
 
     //Tool Materials
     public static Item.ToolMaterial thoriummaterial = EnumHelper.addToolMaterial("thoriummaterial", 2147483647, -1, Float.intBitsToFloat(0x7f800000), Float.intBitsToFloat(0x7f800000), 2147483647);
@@ -82,6 +85,9 @@ public class DABItems
         nvidiasword = new SwordOfNvidia(nvidiamaterial);
         samsungs7 = new SamsungS7();
         ChickenStaff = new ChickenStaff();
+        PepperCorn = new PepperCorn(20, 1, true);
+        CoarsePepper = new CoarsePepper();
+        PepperMill = new PepperMill();
 
     }
 
@@ -114,6 +120,9 @@ public class DABItems
         GameRegistry.register(nvidiasword);
         GameRegistry.register(samsungs7);
         GameRegistry.register(ChickenStaff);
+        GameRegistry.register(PepperCorn);
+        GameRegistry.register(PepperMill);
+        GameRegistry.register(CoarsePepper);
 
     }
 
@@ -146,6 +155,9 @@ public class DABItems
         registerRender(nvidiasword);
         registerRender(samsungs7);
         registerRender(ChickenStaff);
+        registerRender(PepperCorn);
+        registerRender(PepperMill);
+        registerRender(CoarsePepper);
     }
 
     private static void  registerRender(Item item)
@@ -181,6 +193,9 @@ public class DABItems
         nvidiasword.setCreativeTab(tabDAB);
         samsungs7.setCreativeTab(tabDAB);
         ChickenStaff.setCreativeTab(tabDAB);
+        PepperCorn.setCreativeTab(tabDAB);
+        PepperMill.setCreativeTab(tabDAB);
+        CoarsePepper.setCreativeTab(tabDAB);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("DAB")

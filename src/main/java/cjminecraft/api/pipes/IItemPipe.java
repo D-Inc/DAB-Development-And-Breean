@@ -1,6 +1,5 @@
 package cjminecraft.api.pipes;
 
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;

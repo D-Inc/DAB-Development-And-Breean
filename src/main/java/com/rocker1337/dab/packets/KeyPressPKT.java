@@ -9,8 +9,6 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 
-import java.util.List;
-
 /**
  * Created by drkpa on 8/2/2016.
  */
