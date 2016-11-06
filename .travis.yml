@@ -5,6 +5,9 @@ script:
   - ls build/libs
 install:
 - chmod +x gradle
+branches:
+  only:
+  - master
 deploy:
   provider: releases
   api_key:
@@ -14,3 +17,4 @@ deploy:
   - "build/libs/*.jar"
   skip_cleanup: true
   on:
+
