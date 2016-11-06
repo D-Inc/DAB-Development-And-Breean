@@ -24,6 +24,7 @@ public class controller extends Block
         this.setHardness(1.0F);
         this.setResistance(1000.0F);
         this.setHarvestLevel("pickaxe", 2);
+        this.setLightLevel(20.0F);
     }
 
     @Override

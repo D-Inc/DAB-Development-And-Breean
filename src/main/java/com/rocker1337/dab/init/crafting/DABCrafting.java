@@ -23,9 +23,16 @@ public class DABCrafting
         GameRegistry.addShapelessRecipe(new ItemStack(DABBlocks.controller2, 1, 0), new Object[]{DABBlocks.controller});
         GameRegistry.addShapedRecipe(new ItemStack(DABItems.multitool, 1, 0), new Object[]{"psa", " c ", " g ", 'p', DABItems.thoriumpickaxe, 's', DABItems.thoriumshovel, 'a', DABItems.thoriumaxe, 'c', DABItems.thoriumcore, 'g', DABItems.thorium_gem});
         GameRegistry.addRecipe(new ItemStack(DABItems.samsungs7), new Object[]{"iii", "igi", "iri", 'i', new ItemStack(Items.IRON_INGOT), 'g', new ItemStack(Blocks.GLASS_PANE), 'r', new ItemStack(Items.REDSTONE)});
+        GameRegistry.addSmelting(new ItemStack(DABBlocks.dabironore), new ItemStack(DABItems.DABIron, 1, 0), 0.7F);
+        GameRegistry.addSmelting(new ItemStack(DABItems.Pepper_Raw_Steak), new ItemStack(DABItems.Pepper_Cooked_Steak, 1, 0), .7F);
 
         //Pepper Crafting
         GameRegistry.addShapelessRecipe(new ItemStack(DABItems.CoarsePepper), new Object[]{new ItemStack(DABItems.PepperMill.setContainerItem(DABItems.PepperMill)), new ItemStack(DABItems.PepperCorn)});
+        GameRegistry.addShapelessRecipe(new ItemStack(DABItems.FinePepper), new Object[]{new ItemStack(DABItems.PepperMill.setContainerItem(DABItems.PepperMill)), new ItemStack(DABItems.CoarsePepper)});
+
+        //Pepper Infusion
+        GameRegistry.addShapelessRecipe(new ItemStack(DABItems.Pepper_Raw_Steak), new Object[]{new ItemStack(Items.BEEF), new ItemStack(DABItems.FinePepper)});
+
         //Armor Crafting
         GameRegistry.addRecipe(new ItemStack(DABItems.thoriumhelmet), new Object[]{"ttt", "tct", "   ", 't', new ItemStack(DABItems.thorium_gem), 'c', new ItemStack(DABItems.thoriumcore)});
         GameRegistry.addRecipe(new ItemStack(DABItems.thoriumchestplate), new Object[]{"tct", "ttt", "ttt", 't', new ItemStack(DABItems.thorium_gem), 'c', new ItemStack(DABItems.thoriumcore)});

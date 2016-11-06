@@ -57,6 +57,7 @@ public class CommonProxy
         MinecraftForge.EVENT_BUS.register(new FastFlyBreak());
         MinecraftForge.EVENT_BUS.register(new ThoriumEvents());
         AchievementPage.registerAchievementPage(new AchievementPage("DAB Achievements", new Achievement[] {CommonProxy.achievementCreativeKill, CommonProxy.achievementSamsungExplode}));
+        DABItems.registerOreDict();
     }
     public void postInit(FMLPostInitializationEvent e)
     {

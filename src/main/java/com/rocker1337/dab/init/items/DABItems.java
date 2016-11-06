@@ -10,6 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class DABItems
 {
@@ -44,6 +45,10 @@ public class DABItems
     public static Item PepperCorn;
     public static Item PepperMill;
     public static Item CoarsePepper;
+    public static Item FinePepper;
+    public static Item Pepper_Raw_Steak;
+    public static Item DABIron;
+    public static Item Pepper_Cooked_Steak;
 
     //Tool Materials
     public static Item.ToolMaterial thoriummaterial = EnumHelper.addToolMaterial("thoriummaterial", 2147483647, -1, Float.intBitsToFloat(0x7f800000), Float.intBitsToFloat(0x7f800000), 2147483647);
@@ -85,9 +90,13 @@ public class DABItems
         nvidiasword = new SwordOfNvidia(nvidiamaterial);
         samsungs7 = new SamsungS7();
         ChickenStaff = new ChickenStaff();
-        PepperCorn = new PepperCorn(20, 1, true);
+        PepperCorn = new PepperCorn(1, 1, true);
         CoarsePepper = new CoarsePepper();
+        FinePepper = new FinePepper();
         PepperMill = new PepperMill();
+        Pepper_Raw_Steak = new pepper_raw_steak(3, 0, true);
+        DABIron = new DABIronIngot();
+        Pepper_Cooked_Steak = new pepper_cooked_steak(20, 20, true);
 
     }
 
@@ -123,6 +132,10 @@ public class DABItems
         GameRegistry.register(PepperCorn);
         GameRegistry.register(PepperMill);
         GameRegistry.register(CoarsePepper);
+        GameRegistry.register(FinePepper);
+        GameRegistry.register(Pepper_Raw_Steak);
+        GameRegistry.register(DABIron);
+        GameRegistry.register(Pepper_Cooked_Steak);
 
     }
 
@@ -158,6 +171,10 @@ public class DABItems
         registerRender(PepperCorn);
         registerRender(PepperMill);
         registerRender(CoarsePepper);
+        registerRender(FinePepper);
+        registerRender(Pepper_Raw_Steak);
+        registerRender(DABIron);
+        registerRender(Pepper_Cooked_Steak);
     }
 
     private static void  registerRender(Item item)
@@ -196,6 +213,20 @@ public class DABItems
         PepperCorn.setCreativeTab(tabDAB);
         PepperMill.setCreativeTab(tabDAB);
         CoarsePepper.setCreativeTab(tabDAB);
+        FinePepper.setCreativeTab(tabDAB);
+        Pepper_Raw_Steak.setCreativeTab(tabDAB);
+        DABIron.setCreativeTab(tabDAB);
+        Pepper_Cooked_Steak.setCreativeTab(tabDAB);
+    }
+
+    public static void registerOreDict()
+    {
+        OreDictionary.registerOre("dustPepper", FinePepper);
+        OreDictionary.registerOre("ingotPepepr", PepperCorn);
+        OreDictionary.registerOre("cropHemp", weed);
+        OreDictionary.registerOre("gemThorium", thorium_gem);
+        OreDictionary.registerOre("ingotIronCompressed", DABIron);
+        OreDictionary.registerOre("ingotIron", DABIron);
     }
 
     public static final CreativeTabs tabDAB = new CreativeTabs("DAB")
@@ -212,4 +243,6 @@ public class DABItems
             return true;
         }
     };
+
+
 }

@@ -1,5 +1,6 @@
 package com.rocker1337.dab.world;
 
+import com.rocker1337.dab.init.blocks.DABBlocks;
 import net.minecraft.block.state.pattern.BlockMatcher;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -24,6 +25,7 @@ public class DabWorldGen implements IWorldGenerator
         {
             case 0: //Overworld Dimension
                 this.runGenerator(diamondGenerator, world, random, chunkX, chunkZ, 3, 0, 30);
+                this.runGenerator(dabirongenerator, world, random, chunkX, chunkZ, 77, 1, 63);
                 break;
             case 1: //End Dimension
 
@@ -37,12 +39,13 @@ public class DabWorldGen implements IWorldGenerator
 
     public WorldGenerator diamondGenerator;
     public WorldGenerator netherGoldGenerator;
+    public WorldGenerator dabirongenerator;
 
     public DabWorldGen()
     {
         diamondGenerator = new WorldGenMinable(Blocks.DIAMOND_BLOCK.getDefaultState(), 4);
         netherGoldGenerator = new WorldGenMinable(Blocks.GOLD_BLOCK.getDefaultState(), 4, BlockMatcher.forBlock(Blocks.NETHERRACK));
-
+        dabirongenerator = new WorldGenMinable(DABBlocks.dabironore.getDefaultState(), 10);
     }
 
     private void runGenerator(WorldGenerator generator, World world, Random rand, int chunk_X, int chunk_Z, int chancesToSpawn, int minHeight, int maxHeight)

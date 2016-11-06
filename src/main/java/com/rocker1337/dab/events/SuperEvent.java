@@ -107,6 +107,10 @@ public class SuperEvent {
                 player.capabilities.setFlySpeed(0.1F);
                 player.capabilities.setPlayerWalkSpeed(0.1F);
             }
+            if (heldItem != null && heldItem.getItem() == DABItems.thoriumsword)
+            {
+                player.capabilities.re
+            }
 
         }
     }

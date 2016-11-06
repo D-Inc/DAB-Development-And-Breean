@@ -33,7 +33,14 @@ tile.moving_smiley.name=Smiley
 tile.dab_cobblestone.name=Don't Break
 item.samsungS7.name=Samsung Galaxy Note 7
 item.chicken_staff.name=Chicken Staff
-
+item.crasher.name=Magical Gift Giver
+item.pepper_raw_steak.name=Raw Pepper Infused Steak
+item.pepper_cooked_steak.name=Cooked Pepper Infused Steak
+item.fine_ground_pepper.name=Fine Ground Pepper
+item.coarse_pepper.name=Coarsely Ground Pepper
+item.pepper_mill.name=Pepper Mill
+item.pepper_corn.name=Pepper Corn
+item.dab_iron_ingot.name=DAB Iron Ingot
 
 item.cancanrecord.name=Music Disc
 item.record.dab:mlgcancan.desc=Derek on Weed - MLG Can Can
@@ -41,7 +48,6 @@ item.record.dab:mlgcancan.desc=Derek on Weed - MLG Can Can
 tile.dab_controller.name=DAB Controller (Smooth)
 tile.dab_controller2.name=DAB Controller (Original)
 tile.derek_crop.name=Derek Essenence Crop
-tile.tyler_fluid.name=Tyler Fluid
-fluid.tyler_fluid=Tyler Fluid
+tile.dab_iron_ore.name=DAB Iron Ore
 
 entity.dab.platypus.name=Platypus
