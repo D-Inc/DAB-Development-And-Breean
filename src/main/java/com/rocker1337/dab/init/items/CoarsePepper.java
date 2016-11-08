@@ -12,4 +12,6 @@ public class CoarsePepper extends Item
         setUnlocalizedName("coarse_pepper");
         setRegistryName("coarse_pepper");
     }
+
+
 }

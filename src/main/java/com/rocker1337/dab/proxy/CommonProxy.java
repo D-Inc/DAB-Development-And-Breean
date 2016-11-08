@@ -2,6 +2,7 @@ package com.rocker1337.dab.proxy;
 
 import com.rocker1337.dab.ConfigHandler;
 import com.rocker1337.dab.events.*;
+import com.rocker1337.dab.helper.FuelHandler;
 import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
 import com.rocker1337.dab.init.blocks.DABBlocks;
 import com.rocker1337.dab.init.crafting.DABCrafting;
@@ -34,6 +35,8 @@ public class CommonProxy
         DABBiomeRegistry.MainRegistry();
         //Init Sounds
         RegisterSoundEvents.init();
+        //Init Fuel
+        GameRegistry.registerFuelHandler(new FuelHandler());
 
     }
     public void init(FMLInitializationEvent e)

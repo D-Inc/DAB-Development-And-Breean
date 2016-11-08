@@ -17,7 +17,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import java.util.List;
 
 /**
- * Created by ninjawarrior1337 on 7/28/16.
+ * Created by ninjawarrior1337 on 7/28/16 at 8:13 PM.
  */
 public class thoriumpickaxe extends ItemPickaxe {
 

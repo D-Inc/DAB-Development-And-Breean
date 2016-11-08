@@ -49,6 +49,7 @@ public class DABItems
     public static Item Pepper_Raw_Steak;
     public static Item DABIron;
     public static Item Pepper_Cooked_Steak;
+    public static Item ThoriumCoal;
 
     //Tool Materials
     public static Item.ToolMaterial thoriummaterial = EnumHelper.addToolMaterial("thoriummaterial", 2147483647, -1, Float.intBitsToFloat(0x7f800000), Float.intBitsToFloat(0x7f800000), 2147483647);
@@ -97,6 +98,7 @@ public class DABItems
         Pepper_Raw_Steak = new pepper_raw_steak(3, 0, true);
         DABIron = new DABIronIngot();
         Pepper_Cooked_Steak = new pepper_cooked_steak(20, 20, true);
+        ThoriumCoal = new ThoriumInfusedCoal();
 
     }
 
@@ -136,6 +138,7 @@ public class DABItems
         GameRegistry.register(Pepper_Raw_Steak);
         GameRegistry.register(DABIron);
         GameRegistry.register(Pepper_Cooked_Steak);
+        GameRegistry.register(ThoriumCoal);
 
     }
 
@@ -175,6 +178,7 @@ public class DABItems
         registerRender(Pepper_Raw_Steak);
         registerRender(DABIron);
         registerRender(Pepper_Cooked_Steak);
+        registerRender(ThoriumCoal);
     }
 
     private static void  registerRender(Item item)
@@ -217,6 +221,7 @@ public class DABItems
         Pepper_Raw_Steak.setCreativeTab(tabDAB);
         DABIron.setCreativeTab(tabDAB);
         Pepper_Cooked_Steak.setCreativeTab(tabDAB);
+        ThoriumCoal.setCreativeTab(tabDAB);
     }
 
     public static void registerOreDict()

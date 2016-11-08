@@ -29,7 +29,9 @@ public class RegisterSoundEvents
 
     private static SoundEvent registerSound(String soundName)
     {
-        final ResourceLocation soundID = new ResourceLocation(Reference.MODID, soundName);
-        return GameRegistry.register(new SoundEvent(soundID).setRegistryName(soundID));
+        ResourceLocation location = new ResourceLocation(Reference.MODID, soundName);
+        SoundEvent event = new SoundEvent(location);
+        GameRegistry.register(event, location);
+        return SoundEvent.REGISTRY.getObject(location);
     }
 }
