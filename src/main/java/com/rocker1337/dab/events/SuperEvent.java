@@ -4,6 +4,7 @@ import com.rocker1337.dab.init.items.DABItems;
 import mcjty.theoneprobe.api.ProbeMode;
 import mcjty.theoneprobe.config.Config;
 import mcjty.theoneprobe.rendering.OverlayRenderer;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -151,7 +152,7 @@ public class SuperEvent {
             return;
         }
 
-        if (player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == DABItems.thoriumhelmet)
+        if (Minecraft.getMinecraft().thePlayer.inventory.armorItemInSlot(3) != null && Minecraft.getMinecraft().thePlayer.inventory.armorItemInSlot(3).getItem() == DABItems.thoriumhelmet)
         {
             if (Loader.isModLoaded("theoneprobe"))
             {

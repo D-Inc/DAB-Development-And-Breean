@@ -26,6 +26,9 @@ public class DABCrafting
         GameRegistry.addSmelting(new ItemStack(DABBlocks.dabironore), new ItemStack(DABItems.DABIron, 1, 0), 0.7F);
         GameRegistry.addSmelting(new ItemStack(DABItems.Pepper_Raw_Steak), new ItemStack(DABItems.Pepper_Cooked_Steak, 1, 0), .7F);
 
+        GameRegistry.addShapelessRecipe(new ItemStack(DABItems.mlgcancan), new Object[]{new ItemStack(DABItems.Derek), new ItemStack(DABItems.weed)});
+        GameRegistry.addShapelessRecipe(new ItemStack(DABItems.trumpbattle), new Object[]{new ItemStack(DABItems.AirHorn), new ItemStack(DABItems.samsungs7)});
+
         //Pepper Crafting
         GameRegistry.addShapelessRecipe(new ItemStack(DABItems.CoarsePepper), new Object[]{new ItemStack(DABItems.PepperMill.setContainerItem(DABItems.PepperMill)), new ItemStack(DABItems.PepperCorn)});
         GameRegistry.addShapelessRecipe(new ItemStack(DABItems.FinePepper), new Object[]{new ItemStack(DABItems.PepperMill.setContainerItem(DABItems.PepperMill)), new ItemStack(DABItems.CoarsePepper)});

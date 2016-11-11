@@ -1,6 +1,6 @@
 package com.rocker1337.dab.init.items;
 
-import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
+import com.rocker1337.dab.Reference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -8,6 +8,8 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
@@ -50,6 +52,7 @@ public class DABItems
     public static Item DABIron;
     public static Item Pepper_Cooked_Steak;
     public static Item ThoriumCoal;
+    public static Item trumpbattle;
 
     //Tool Materials
     public static Item.ToolMaterial thoriummaterial = EnumHelper.addToolMaterial("thoriummaterial", 2147483647, -1, Float.intBitsToFloat(0x7f800000), Float.intBitsToFloat(0x7f800000), 2147483647);
@@ -74,7 +77,6 @@ public class DABItems
         EnderFlight = new EnderFlight();
         Hammer = new Hammer();
         AirHorn = new AirHorn();
-        mlgcancan = new DABRecord("mlgcancan", RegisterSoundEvents.records_mlgcancan).setRegistryName("record_mlgcancan").setUnlocalizedName("record_mlgcancan");
         SadAirHorn = new SadAirHorn();
         thoriumpickaxe = new thoriumpickaxe();
         thoriumaxe = new thoriumaxe(DABItems.thoriummaterial, Float.intBitsToFloat(0x7f800000), Float.intBitsToFloat(0x7f800000));
@@ -99,7 +101,9 @@ public class DABItems
         DABIron = new DABIronIngot();
         Pepper_Cooked_Steak = new pepper_cooked_steak(20, 20, true);
         ThoriumCoal = new ThoriumInfusedCoal();
-
+        //Records
+        trumpbattle = new UniversalDABDisc("trumpbattle", new SoundEvent(new ResourceLocation(Reference.MODID, "trumpbattle")));
+        mlgcancan = new UniversalDABDisc("mlgcancan", new SoundEvent(new ResourceLocation(Reference.MODID, "mlgcancan")));
     }
 
     public static void register()
@@ -139,6 +143,7 @@ public class DABItems
         GameRegistry.register(DABIron);
         GameRegistry.register(Pepper_Cooked_Steak);
         GameRegistry.register(ThoriumCoal);
+        GameRegistry.register(trumpbattle);
 
     }
 
@@ -179,6 +184,7 @@ public class DABItems
         registerRender(DABIron);
         registerRender(Pepper_Cooked_Steak);
         registerRender(ThoriumCoal);
+        registerRender(trumpbattle);
     }
 
     private static void  registerRender(Item item)

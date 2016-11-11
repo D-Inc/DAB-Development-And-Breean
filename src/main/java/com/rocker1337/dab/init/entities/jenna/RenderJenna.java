@@ -40,9 +40,8 @@ public class RenderJenna extends RenderLiving
 
     protected void setEntityTexture()
     {
-        jennaTexture2 = AbstractClientPlayer.getLocationSkin("Apriicot").toString();
-        jennaTexture = new ResourceLocation(jennaTexture2);
-        System.out.println(jennaTexture);
+        jennaTexture = AbstractClientPlayer.getLocationSkin("Rocker545");
+        System.out.println(jennaTexture.toString());
     }
 
     /**

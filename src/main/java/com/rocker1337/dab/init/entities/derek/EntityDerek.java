@@ -1,10 +1,11 @@
 package com.rocker1337.dab.init.entities.derek;
 
 import com.rocker1337.dab.init.items.DABItems;
+import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.EntityAIAttackRangedBow;
+import net.minecraft.entity.ai.EntityAIAttackMelee;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
-import net.minecraft.entity.monster.EntitySkeleton;
+import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
@@ -12,7 +13,7 @@ import net.minecraft.world.World;
 /**
  * Created by troth on 9/11/2016.
  */
-public class EntityDerek extends EntitySkeleton
+public class EntityDerek extends EntityCreature
 {
     public EntityDerek(World worldIn) {
         super(worldIn);
@@ -28,8 +29,9 @@ public class EntityDerek extends EntitySkeleton
     @Override
     protected void initEntityAI()
     {
-        tasks.addTask(1, new EntityAIAttackRangedBow(this, 20.0D, 0, 20F));
+        tasks.addTask(1, new EntityAIAttackMelee(this, 10D, true));
         this.targetTasks.addTask(1, new EntityAINearestAttackableTarget(this, EntityPlayer.class, true));
+        this.targetTasks.addTask(1, new EntityAINearestAttackableTarget(this, EntitySheep.class, false));
     }
 
     @Override

@@ -54,5 +54,17 @@
                 }
               ],
       "subtitle": "Platypus Chatters"
-    }
+    },
+  "trumpbattle":
+  {
+    "category": "record",
+    "sounds":
+    [
+      {
+        "name": "dab:records/trumpbattle",
+        "stream": true
+      }
+    ],
+    "subtitle": "trumpbattle"
+  }
 }

@@ -43,8 +43,11 @@ item.pepper_corn.name=Pepper Corn
 item.dab_iron_ingot.name=DAB Iron Ingot
 item.thorium_coal.name=Thorium Infused Coal
 
-item.cancanrecord.name=Music Disc
-item.record.dab:mlgcancan.desc=Derek on Weed - MLG Can Can
+item.mlgcancan.name=Music Disc
+item.record.mlgcancan.desc=Derek on Weed - MLG Can Can
+
+item.trumpbattle.name=Music Disc
+item.record.trumpbattle.desc=Epic Rap Battles of History - Donald Trump vs. Hillary Clinton
 
 tile.dab_controller.name=DAB Controller (Smooth)
 tile.dab_controller2.name=DAB Controller (Original)

@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.Optional;
  * Created by Rocker545 on 7/6/2016.
  */
 @Optional.InterfaceList({
-        @Optional.Interface(iface = "cofh.api.item.IToolHammer", modid = "CoFHLib")})
+        @Optional.Interface(iface = "cofh.thirdparty.item.IToolHammer", modid = "CoFHLib")})
 public class Hammer extends Item implements IToolHammer {
 
     public Hammer() {

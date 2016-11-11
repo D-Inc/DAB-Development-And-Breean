@@ -15,6 +15,7 @@ public class RegisterSoundEvents
     public static SoundEvent sadairhorn;
     public static SoundEvent specialcobblestone;
     public static SoundEvent perry_chatter;
+    public static SoundEvent trumpbattle;
 
 
     public static void init()
@@ -24,14 +25,13 @@ public class RegisterSoundEvents
         sadairhorn = registerSound("sadairhorn");
         specialcobblestone = registerSound("specialcobblestone");
         perry_chatter = registerSound("platypus_chatter");
+        trumpbattle = registerSound("trumpbattle");
     }
 
 
     private static SoundEvent registerSound(String soundName)
     {
-        ResourceLocation location = new ResourceLocation(Reference.MODID, soundName);
-        SoundEvent event = new SoundEvent(location);
-        GameRegistry.register(event, location);
-        return SoundEvent.REGISTRY.getObject(location);
+        final ResourceLocation soundID = new ResourceLocation(Reference.MODID, soundName);
+        return GameRegistry.register(new SoundEvent(soundID).setRegistryName(soundID));
     }
 }
