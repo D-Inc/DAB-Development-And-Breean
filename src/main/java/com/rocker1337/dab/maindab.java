@@ -77,4 +77,5 @@ public class maindab
         event.registerServerCommand(new gamemodec());
         event.registerServerCommand(new gamemodes());
     }
+
 }

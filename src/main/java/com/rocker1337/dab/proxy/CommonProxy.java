@@ -1,6 +1,7 @@
 package com.rocker1337.dab.proxy;
 
 import com.rocker1337.dab.ConfigHandler;
+import com.rocker1337.dab.customlanport.CLPReceiver;
 import com.rocker1337.dab.events.*;
 import com.rocker1337.dab.helper.FuelHandler;
 import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
@@ -81,6 +82,7 @@ public class CommonProxy
     {
         System.out.println("Starting Post Init");
         System.out.println("9+10=21");
+        MinecraftForge.EVENT_BUS.register(new CLPReceiver());
 
     }
 
