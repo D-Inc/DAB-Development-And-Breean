@@ -63,7 +63,11 @@ public class CommonProxy
         MinecraftForge.EVENT_BUS.register(new thoriumpickaxe());
         MinecraftForge.EVENT_BUS.register(new FastFlyBreak());
         MinecraftForge.EVENT_BUS.register(new ThoriumEvents());
-        //MinecraftForge.TERRAIN_GEN_BUS.register(new TerrainEventHandler());
+
+        if(!ConfigHandler.noTallGrass)
+        {
+            MinecraftForge.TERRAIN_GEN_BUS.register(new TerrainEventHandler());
+        }
         AchievementPage.registerAchievementPage(new AchievementPage("DAB Achievements", new Achievement[] {CommonProxy.achievementCreativeKill, CommonProxy.achievementSamsungExplode}));
         DABItems.registerOreDict();
 

@@ -12,7 +12,6 @@ public class TerrainEventHandler {
     @SubscribeEvent(receiveCanceled = true)
     public void onDecorateEvent(DecorateBiomeEvent.Decorate event)
     {
-        System.out.println("test");
         if(event.getType() == DecorateBiomeEvent.Decorate.EventType.GRASS)
         {
             event.setResult(Event.Result.DENY);
