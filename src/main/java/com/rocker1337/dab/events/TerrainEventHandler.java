@@ -2,7 +2,6 @@ package com.rocker1337.dab.events;
 
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import net.minecraftforge.fml.common.eventhandler.Event;
-import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 /**
@@ -10,7 +9,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
  */
 public class TerrainEventHandler {
 
-    @SubscribeEvent(priority = EventPriority.HIGH, receiveCanceled = true)
+    @SubscribeEvent(receiveCanceled = true)
     public void onDecorateEvent(DecorateBiomeEvent.Decorate event)
     {
         System.out.println("test");
