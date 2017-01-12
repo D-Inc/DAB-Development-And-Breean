@@ -14,6 +14,7 @@ This mod is currently [![Build Status](https://travis-ci.org/D-Inc/DAB-Developme
 
 <h2>This is for Bryan</h2>
 |Forearm Length (cm)| Height (cm)
+| --------------- |:-------------:|
 |23|143
 |26|160
 |27|173
