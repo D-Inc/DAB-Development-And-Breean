@@ -78,10 +78,12 @@ public class SuperEvent {
                 player.capabilities.setFlySpeed(0.3F);
                 player.capabilities.setPlayerWalkSpeed(2.0F);
                 hasThoriumFlight = true;
+                player.getEntityData().setBoolean("dabberoni", true);
             }
             else
             {
                 hasThoriumFlight = false;
+                player.getEntityData().setBoolean("dabberoni", false);
             }
             if(player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == DABItems.thoriumhelmet)
             {

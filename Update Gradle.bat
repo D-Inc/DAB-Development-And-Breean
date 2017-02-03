@@ -1,2 +1,3 @@
-gradlew cleanCache && gradlew setupDecompWorkspace --refresh-dependencies && gradlew idea
-PAUSE
+gradlew setupDecompWorkspace idea
+
+pause

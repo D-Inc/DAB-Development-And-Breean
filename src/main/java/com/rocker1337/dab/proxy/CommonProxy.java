@@ -4,11 +4,11 @@ import com.rocker1337.dab.ConfigHandler;
 import com.rocker1337.dab.events.*;
 import com.rocker1337.dab.helper.FuelHandler;
 import com.rocker1337.dab.init.SoundEvents.RegisterSoundEvents;
+import com.rocker1337.dab.init.TileEntity.InitTile;
 import com.rocker1337.dab.init.blocks.DABBlocks;
 import com.rocker1337.dab.init.crafting.DABCrafting;
 import com.rocker1337.dab.init.items.DABItems;
 import com.rocker1337.dab.init.items.thoriumpickaxe;
-import com.rocker1337.dab.world.DABBiomeRegistry;
 import com.rocker1337.dab.world.DabWorldGen;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -35,8 +35,6 @@ public class CommonProxy
         //Init and Register Blocks
         DABBlocks.init();
         DABBlocks.register();
-        //Init Biomes
-        DABBiomeRegistry.MainRegistry();
         //Init Sounds
         RegisterSoundEvents.init();
         //Init Fuel
@@ -62,8 +60,9 @@ public class CommonProxy
         MinecraftForge.EVENT_BUS.register(new ConfigHandler());
         MinecraftForge.EVENT_BUS.register(new thoriumpickaxe());
         MinecraftForge.EVENT_BUS.register(new FastFlyBreak());
-        MinecraftForge.EVENT_BUS.register(new ThoriumEvents());
         MinecraftForge.TERRAIN_GEN_BUS.register(new TerrainEventHandler());
+        //Init Tile
+        InitTile.init();
 
         AchievementPage.registerAchievementPage(new AchievementPage("DAB Achievements", new Achievement[] {CommonProxy.achievementCreativeKill, CommonProxy.achievementSamsungExplode}));
         DABItems.registerOreDict();

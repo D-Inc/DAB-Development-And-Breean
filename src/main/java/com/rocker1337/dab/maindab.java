@@ -20,7 +20,7 @@ import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 import java.io.File;
 
-@Mod(modid = Reference.MODID, name = Reference.MODNAME, version = Reference.VERSION, guiFactory = "com.rocker1337.dab.gui.DABGuiFactory", dependencies = "required-after:Baubles")
+@Mod(modid = Reference.MODID, name = Reference.MODNAME, version = Reference.VERSION, guiFactory = "com.rocker1337.dab.gui.DABGuiFactory", dependencies = "required-after:Baubles;required-after:RenderPlayerAPI")
 public class maindab
 {
     @SidedProxy(clientSide="com.rocker1337.dab.proxy.ClientProxy", serverSide="com.rocker1337.dab.proxy.ServerProxy")
@@ -55,7 +55,11 @@ public class maindab
         EntityRegistry.registerModEntity(EntityJenna.class, "jenna", 3, this, 80, 3, true, 10170623, 16711935);
         EntityRegistry.addSpawn(EntityPlatypus.class, 7, 1, 5, EnumCreatureType.CREATURE, Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.EXTREME_HILLS, Biomes.JUNGLE, Biomes.TAIGA, Biomes.SWAMPLAND, Biomes.MESA, Biomes.DESERT, Biomes.DESERT_HILLS, Biomes.SAVANNA, Biomes.SAVANNA_PLATEAU);
         EntityRegistry.addSpawn(EntityDerek.class, 6, 1, 1, EnumCreatureType.MONSTER, Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.EXTREME_HILLS, Biomes.JUNGLE, Biomes.TAIGA, Biomes.SWAMPLAND, Biomes.MESA, Biomes.DESERT, Biomes.DESERT_HILLS, Biomes.SAVANNA, Biomes.SAVANNA_PLATEAU);
+
+        //InterComms
         FMLInterModComms.sendRuntimeMessage("dab", "VersionChecker", "addVersionCheck", "https://raw.githubusercontent.com/ninjawarrior1337/DAB-Development-And-Breean/master/version.json");
+        FMLInterModComms.sendMessage("Waila", "register", "com.rocker1337.dab.thirdparty.Waila.onWailaCall");
+
 
     }
     @EventHandler

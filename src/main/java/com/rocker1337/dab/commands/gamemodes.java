@@ -18,7 +18,8 @@ import java.util.List;
 /**
  * Created by drkpa on 8/1/2016.
  */
-public class gamemodes implements ICommand {
+public class gamemodes implements ICommand
+{
 
     private final List aliases;
 
@@ -50,7 +51,7 @@ public class gamemodes implements ICommand {
         EntityPlayer commander = (EntityPlayer)sender;
         commander.setGameType(survival);
         EntityPlayer player = (EntityPlayer)sender;
-        player.addChatMessage(new TextComponentString("Your game mode has been updated to " + TextFormatting.ITALIC + TextFormatting.GRAY + "Survival Mode"));
+        player.addChatComponentMessage(new TextComponentString("Your game mode has been updated to " + TextFormatting.ITALIC + TextFormatting.GRAY + "Survival Mode"));
     }
 
     @Override

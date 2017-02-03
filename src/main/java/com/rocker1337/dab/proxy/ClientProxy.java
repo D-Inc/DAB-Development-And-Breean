@@ -1,5 +1,6 @@
 package com.rocker1337.dab.proxy;
 
+import api.player.model.ModelPlayerAPI;
 import com.rocker1337.dab.events.KeyPressEvent;
 import com.rocker1337.dab.helper.ClientKeyHelper;
 import com.rocker1337.dab.init.blocks.DABBlocks;
@@ -10,6 +11,7 @@ import com.rocker1337.dab.init.entities.jenna.RenderJenna;
 import com.rocker1337.dab.init.entities.platypus.EntityPlatypus;
 import com.rocker1337.dab.init.entities.platypus.RenderPlatypus;
 import com.rocker1337.dab.init.items.DABItems;
+import com.rocker1337.dab.render.dabModelPlayerBase;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -38,6 +40,8 @@ public class ClientProxy extends CommonProxy
         DABItems.registerRenders();
         DABBlocks.registerRenders();
         ClientKeyHelper.registerMCBindings();
+
+        ModelPlayerAPI.register("dab", dabModelPlayerBase.class);
 
         MinecraftForge.EVENT_BUS.register(new KeyPressEvent());
     }

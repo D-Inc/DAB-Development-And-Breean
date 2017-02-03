@@ -12,6 +12,14 @@ import net.minecraft.world.World;
 
 public class AirHorn extends Item
 {
+    private long stored;
+
+    private long capacity;
+
+    private long inputRate;
+
+    private long outputRate;
+
     public AirHorn()
     {
         setUnlocalizedName(SetItemNames.DABItems.AIRHORN.getUnlocalizedName());

@@ -10,6 +10,7 @@ public enum DABKeybind {
     DECREASE_SPEED("dab.decreasetoolspeed", Keyboard.KEY_B),
     RESET_SPEED("dab.resettoolspeed", Keyboard.KEY_C);
 
+
     public final String keyName;
     public final int defaultKeyCode;
 
