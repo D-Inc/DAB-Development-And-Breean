@@ -36,9 +36,8 @@ public class controller extends BlockContainer implements ITileEntityProvider,IT
 
     private long capacity;
 
-    private long inputRate;
+    private long rate;
 
-    private long outputRate;
 
     public static final PropertyBool UP = PropertyBool.create("up");
     public static final PropertyBool DOWN = PropertyBool.create("down");
@@ -65,8 +64,8 @@ public class controller extends BlockContainer implements ITileEntityProvider,IT
         this.setDefaultState(getDefaultState().withProperty(UP, false).withProperty(DOWN, false).withProperty(NORTH, false).withProperty(SOUTH, false).withProperty(EAST,false).withProperty(WEST,false));
 
         this.capacity = capacity;
-        this.inputRate = input;
-        this.outputRate = output;
+        this.rate = 5000L;
+
     }
 
     public controller(NBTTagCompound dataTag)
@@ -155,25 +154,21 @@ public class controller extends BlockContainer implements ITileEntityProvider,IT
     }
 
     @Override
-    public long givePower (long Tesla, boolean simulated) {
-
-        final long acceptedTesla = Math.min(this.getCapacity() - this.stored, Math.min(this.getInputRate(), Tesla));
-
-        if (!simulated)
-            this.stored += acceptedTesla;
-
-        return acceptedTesla;
+    public long takePower(long power, boolean simulated) {
+        long taken = Math.min(stored, Math.min(rate, power));
+        if (!simulated) {
+            stored -= taken;
+        }
+        return taken;
     }
 
     @Override
-    public long takePower (long Tesla, boolean simulated) {
-
-        final long removedPower = Math.min(this.capacity - this.stored, Math.min(this.getOutputRate(), Tesla));
-
-        if (!simulated)
-            this.stored -= removedPower;
-
-        return removedPower;
+    public long givePower(long power, boolean simulated) {
+        final long given = Math.min(capacity - stored, Math.min(rate, power));
+        if (!simulated) {
+            stored += given;
+        }
+        return given;
     }
 
     @Override
@@ -182,8 +177,6 @@ public class controller extends BlockContainer implements ITileEntityProvider,IT
         final NBTTagCompound dataTag = new NBTTagCompound();
         dataTag.setLong("TeslaPower", this.stored);
         dataTag.setLong("TeslaCapacity", this.capacity);
-        dataTag.setLong("TeslaInput", this.inputRate);
-        dataTag.setLong("TeslaOutput", this.outputRate);
 
         return dataTag;
     }
@@ -194,12 +187,6 @@ public class controller extends BlockContainer implements ITileEntityProvider,IT
 
         if (nbt.hasKey("TeslaCapacity"))
             this.capacity = nbt.getLong("TeslaCapacity");
-
-        if (nbt.hasKey("TeslaInput"))
-            this.inputRate = nbt.getLong("TeslaInput");
-
-        if (nbt.hasKey("TeslaOutput"))
-            this.outputRate = nbt.getLong("TeslaOutput");
 
         if (this.stored > this.getCapacity())
             this.stored = this.getCapacity();
@@ -212,35 +199,6 @@ public class controller extends BlockContainer implements ITileEntityProvider,IT
         if (this.stored > capacity)
             this.stored = capacity;
 
-        return this;
-    }
-
-    public long getInputRate () {
-
-        return this.inputRate;
-    }
-
-    public controller setInputRate (long rate) {
-
-        this.inputRate = rate;
-        return this;
-    }
-
-    public long getOutputRate () {
-
-        return this.outputRate;
-    }
-
-    public controller setOutputRate (long rate) {
-
-        this.outputRate = 1;
-        return this;
-    }
-
-    public controller setTransferRate (long rate) {
-
-        this.setInputRate(rate);
-        this.setOutputRate(rate);
         return this;
     }
 

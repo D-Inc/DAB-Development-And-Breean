@@ -1,7 +1,7 @@
 package com.rocker1337.dab.render;
 
 import api.player.model.ModelPlayerAPI;
-import com.mrcrayfish.dab.client.model.entity.ModelPlayerOverride;
+import api.player.model.ModelPlayerBase;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
@@ -9,7 +9,7 @@ import net.minecraft.entity.Entity;
 /**
  * Created by ninjawarrior1337 on 1/29/2017.
  */
-public class dabModelPlayerBase extends ModelPlayerOverride {
+public class dabModelPlayerBase extends ModelPlayerBase {
 
     public dabModelPlayerBase(ModelPlayerAPI modelPlayerAPI) {
         super(modelPlayerAPI);
@@ -31,6 +31,7 @@ public class dabModelPlayerBase extends ModelPlayerOverride {
             this.modelPlayer.bipedHead.rotateAngleY = (float) Math.toRadians(35.0D);
             this.modelPlayer.bipedHeadwear.rotateAngleX = (float) Math.toRadians(45.0D);
             this.modelPlayer.bipedHeadwear.rotateAngleY = (float) Math.toRadians(35.0D);
+
             if (paramEntity.getEntityId() == Minecraft.getMinecraft().thePlayer.getEntityId() && Minecraft.getMinecraft().gameSettings.thirdPersonView == 0)
             {
                 this.modelPlayer.bipedRightArm.rotateAngleY -= (float) Math.toRadians(125.0D);

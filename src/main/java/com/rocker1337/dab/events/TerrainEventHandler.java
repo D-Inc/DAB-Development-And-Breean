@@ -3,9 +3,8 @@ package com.rocker1337.dab.events;
 import com.rocker1337.dab.ConfigHandler;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import net.minecraftforge.fml.common.eventhandler.Event;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-
-import java.util.Random;
 
 /**
  * Created by drkpa on 11/15/2016.
@@ -27,23 +26,9 @@ public class TerrainEventHandler
         return Math.random() < ConfigHandler.grassSpawnPercentage/100;
     }
 
-    @SubscribeEvent(receiveCanceled = true)
+    @SubscribeEvent(receiveCanceled = true, priority = EventPriority.LOWEST)
     public void onDecorateEvent(DecorateBiomeEvent.Decorate event)
     {
-
-//        if(event.getType() == DecorateBiomeEvent.Decorate.EventType.GRASS && !ConfigHandler.noTallGrass)
-//        {
-//            event.setResult(Event.Result.DENY);
-//        }
-//        if(event.getType() == DecorateBiomeEvent.Decorate.EventType.FLOWERS && !ConfigHandler.noFlowers)
-//        {
-//            event.setResult(Event.Result.DENY);
-//        }
-//        if (event.getType() == DecorateBiomeEvent.Decorate.EventType.TREE && !ConfigHandler.noTrees)
-//        {
-//            event.setResult(Event.Result.DENY);
-//        }
-
         if(event.getType() == DecorateBiomeEvent.Decorate.EventType.GRASS && !getRandomGrassBoolean())
         {
             event.setResult(Event.Result.DENY);
