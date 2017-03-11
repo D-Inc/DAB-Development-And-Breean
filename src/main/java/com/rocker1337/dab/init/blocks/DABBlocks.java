@@ -22,7 +22,7 @@ public class DABBlocks
     public static void init()
     {
         controller2 = new controller2();
-        controller = new controller(Long.MAX_VALUE, 1, 3);
+        controller = new controller();
         specialcobblestone = new specialcobblestone(Material.ROCK);
         moving_smiley = new moving_smiley_request(Material.ROCK);
         dab_controller_stairs = new dab_controller_stairs(controller.getDefaultState());

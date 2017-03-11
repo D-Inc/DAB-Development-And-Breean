@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -19,9 +20,6 @@ import java.util.List;
  */
 public class ControllerHandler implements IWailaDataProvider
 {
-    TileEntity tileController = new TileController().getTile();
-    final long stored = tileController.getTileData().getLong("TeslaPower");
-
     @Override
     public ItemStack getWailaStack(IWailaDataAccessor accessor, IWailaConfigHandler config) {
         return new ItemStack(DABBlocks.controller);
@@ -35,8 +33,8 @@ public class ControllerHandler implements IWailaDataProvider
     @Override
     public List<String> getWailaBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config)
     {
-        currenttip.add(Long.toString(stored));
-        currenttip.add("21 is the best number");
+        TileController controller = new TileController(accessor.getNBTData().getCompoundTag("TeslaContainer"));
+        currenttip.add("This has " + controller.getStoredPower() + TextFormatting.BLUE + "T");
         return currenttip;
     }
 

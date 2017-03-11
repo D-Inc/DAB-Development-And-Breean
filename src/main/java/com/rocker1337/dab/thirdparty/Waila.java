@@ -1,7 +1,7 @@
 package com.rocker1337.dab.thirdparty;
 
 import com.rocker1337.dab.init.WaliaHandlers.ControllerHandler;
-import com.rocker1337.dab.init.blocks.controller;
+import com.rocker1337.dab.init.blocks.TileController;
 import mcp.mobius.waila.api.IWailaRegistrar;
 
 /**
@@ -11,6 +11,6 @@ public class Waila
 {
     public static void onWailaCall(IWailaRegistrar registrar)
     {
-        registrar.registerBodyProvider(new ControllerHandler(), controller.class);
+        registrar.registerBodyProvider(new ControllerHandler(), TileController.class);
     }
 }

@@ -1,26 +1,42 @@
 package com.rocker1337.dab.init.blocks;
 
+import net.darkhax.tesla.api.ITeslaConsumer;
+import net.darkhax.tesla.api.ITeslaHolder;
+import net.darkhax.tesla.api.ITeslaProducer;
 import net.darkhax.tesla.api.implementation.BaseTeslaContainer;
 import net.darkhax.tesla.capability.TeslaCapabilities;
+import net.darkhax.tesla.lib.TeslaUtils;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
+import net.minecraftforge.common.util.INBTSerializable;
 
 /**
  * Created by ninjawarrior1337 on 1/8/2017.
  */
-public class TileController extends TileEntity implements ITickable,ICapabilityProvider
+public class TileController extends TileEntity implements ICapabilityProvider,ITeslaConsumer,ITeslaProducer,ITeslaHolder,INBTSerializable<NBTTagCompound>,ITickable
 {
     private BaseTeslaContainer container;
-    public long var;
 
-    public TileController() {
+    private long stored;
 
-        // Initializes the container. Very straight forward.
-        this.container = new BaseTeslaContainer(Long.MAX_VALUE, 1, 3);
+    private long capacity;
+
+    private long rate;
+
+    public TileController(BaseTeslaContainer container)
+    {
+        this.container = container;
+        this.capacity = Long.MAX_VALUE;
+        this.rate = container.getInputRate();
+    }
+
+    public TileController(NBTTagCompound dataTag)
+    {
+        this.deserializeNBT(dataTag);
     }
 
     @Override
@@ -43,13 +59,13 @@ public class TileController extends TileEntity implements ITickable,ICapabilityP
     public <T> T getCapability (Capability<T> capability, EnumFacing facing) {
 
         // This method is where other things will try to access your TileEntity's Tesla
-        // capability. In the case of the analyzer, is a consumer, producer and holder so we
+        // capability. In the case of the analyzer, as a consumer, producer and holder so we
         // can allow requests that are looking for any of those things. This example also does
         // not care about which side is being accessed, however if you wanted to restrict which
         // side can be used, for example only allow power input through the back, that could be
         // done here.
         if (capability == TeslaCapabilities.CAPABILITY_CONSUMER || capability == TeslaCapabilities.CAPABILITY_PRODUCER || capability == TeslaCapabilities.CAPABILITY_HOLDER)
-            return (T) new controller(Long.MAX_VALUE, 3, 1);
+            return (T) this.container;
 
         return super.getCapability(capability, facing);
     }
@@ -69,15 +85,61 @@ public class TileController extends TileEntity implements ITickable,ICapabilityP
         return super.hasCapability(capability, facing);
     }
 
-    @Override
-    public void update()
-    {
-        var = this.container.getCapacity();
-    }
-
     public TileEntity getTile()
     {
         return getWorld().getTileEntity(getPos());
+    }
+
+    @Override
+    public long getStoredPower() {
+        return this.stored;
+    }
+
+    @Override
+    public long getCapacity() {
+        return this.capacity;
+    }
+
+    @Override
+    public long takePower (long Tesla, boolean simulated) {
+
+        final long removedPower = Math.min(this.stored, Math.min(this.rate, Tesla));
+
+        if (!simulated)
+            this.stored -= removedPower;
+
+        System.out.println("Removed Power = " + removedPower + " Stored Power= " + this.stored);
+
+        return removedPower;
+    }
+
+    @Override
+    public long givePower (long Tesla, boolean simulated) {
+
+        final long acceptedTesla = Math.min(this.getCapacity() - this.stored, Math.min(this.rate, Tesla));
+
+        if (!simulated)
+            this.stored += acceptedTesla;
+
+        System.out.println("Accepted Power = " + acceptedTesla + " Stored Power= " + this.stored);
+
+        return acceptedTesla;
+    }
+
+    @Override
+    public NBTTagCompound serializeNBT () {
+
+        return this.container.serializeNBT();
+    }
+
+    public void deserializeNBT (NBTTagCompound nbt) {
+
+        this.container.deserializeNBT(nbt);
+    }
+
+    @Override
+    public void update() {
+        TeslaUtils.distributePowerToAllFaces(this.worldObj, this.pos, rate, false);
     }
 
 
