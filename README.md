@@ -1,7 +1,6 @@
 # DAB-Development-And-Breean
 
 This is a decently new mod by Rocker545 and ninjawarrior1337<br>
-This mod is currently [![21](http://99.186.17.41:8080/job/DAB-Development-And-Breean/badge/icon)](http://99.186.17.41:8080/job/DAB-Development-And-Breean/) on Jenkins<br>
 This mod is currently [![Build Status](https://travis-ci.org/D-Inc/DAB-Development-And-Breean.svg?branch=master)](https://travis-ci.org/D-Inc/DAB-Development-And-Breean) on TravisCI<br>
 [![forthebadge](http://forthebadge.com/images/badges/uses-git.svg)](http://forthebadge.com)<br>
 
