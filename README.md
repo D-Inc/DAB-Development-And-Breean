@@ -2,6 +2,7 @@
 
 This is a decently new mod by Rocker545 and ninjawarrior1337<br>
 This mod is currently [![Build Status](https://travis-ci.org/D-Inc/DAB-Development-And-Breean.svg?branch=master)](https://travis-ci.org/D-Inc/DAB-Development-And-Breean) on TravisCI<br>
+This mod currently has a coverage of [![Coverage Status](https://coveralls.io/repos/github/D-Inc/DAB-Development-And-Breean/badge.svg?branch=master)](https://coveralls.io/github/D-Inc/DAB-Development-And-Breean?branch=master) <br>
 [![forthebadge](http://forthebadge.com/images/badges/uses-git.svg)](http://forthebadge.com)<br>
 
 <h1>Here are some metrics on popular numbers</h1>
