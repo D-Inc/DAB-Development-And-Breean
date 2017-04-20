@@ -49,7 +49,7 @@ public class controller extends BlockContainer implements ITileEntityProvider,IP
     
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
-        return new TileController(new BaseTeslaContainer(Long.MAX_VALUE, 500, 5000));
+        return new TileController(new BaseTeslaContainer(Long.MAX_VALUE, 5000, 5000));
     }
 
     @Override
