@@ -14,6 +14,8 @@ cache:
 
 script: "./gradlew build test"
 install: "./gradlew setupCIWorkspace"
+after_success: "./gradlew cobertura coveralls"
+
 branches:
   only:
   - master
