@@ -11,6 +11,10 @@ buildscript {
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
     }
+    plugins {
+    id 'net.saliman.cobertura' version '2.3.1'
+    id 'com.github.kt3k.coveralls' version '2.8.1'
+    }
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 
@@ -113,11 +117,6 @@ dependencies {
     deobfCompile "net.darkhax.tesla:Tesla:1.10.2-1.2.1.50"
 
 
-}
-
-plugins {
-    id 'net.saliman.cobertura' version '2.3.1'
-    id 'com.github.kt3k.coveralls' version '2.8.1'
 }
 
 cobertura.coverageFormats = ['html', 'xml'] // coveralls plugin depends on xml format report
