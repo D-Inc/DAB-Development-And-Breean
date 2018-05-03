@@ -1,3 +1,0 @@
-gradlew setupDecompWorkspace idea
-
-pause
